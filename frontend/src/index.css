@@ -1,5 +1,46 @@
+/**
+ * Global Styles for Wheelchair Racer
+ * 
+ * This file imports Tailwind CSS and sets global typography defaults
+ * 
+ * Font Choice: Inter - Modern, highly readable font designed for UI
+ * - Excellent readability at all sizes
+ * - Great accessibility features
+ * - Professional appearance
+ * - Loaded from Google Fonts (see index.html)
+ */
+
+/* Import Tailwind CSS utility classes */
 @import "tailwindcss";
 
+/* Global font family for the entire application */
 body {
   font-family: 'Inter', sans-serif;
+  
+  /* Optional: Add smooth scrolling for better UX */
+  scroll-behavior: smooth;
+  
+  /* Optional: Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* Screen reader only content (accessibility utility) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* TODO: Add custom CSS variables for consistent theming
+:root {
+  --color-primary: #FBA919; // Orange from logo
+  --color-secondary: #EFF6FF; // Blue-50 background
+  --color-accent: #F59E0B; // Amber-500 for borders
+} */
