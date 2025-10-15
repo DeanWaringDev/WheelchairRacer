@@ -41,7 +41,7 @@ jobs:
         username: ${{ secrets.SFTP_USERNAME }}
         password: ${{ secrets.SFTP_PASSWORD }}
         port: 22
-        local_path: './dist/*'
+        local_path: './dist/'
         remote_path: '/'
         sftp_only: true
         delete_remote_files: false
