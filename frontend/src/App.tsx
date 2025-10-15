@@ -20,9 +20,23 @@ const App: React.FC = () => {
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Welcome to Wheelchair Racer
           </h1>
+          <h2 className="text-xl font-semibold text-gray-700 mb-2">
+            Your hub for wheelchair racing resources. What is coming?
+          </h2>
           <p className="text-gray-600 mb-4">
-            This is temporary content to show the semi-transparent overlay effect when the mobile menu is open.
+            Your go-to platform for wheelchair racing resources, event information, and community support.
           </p>
+          <p className="text-gray-600 mb-4">
+            Stay tuned for upcoming features and improvements!
+            We will be adding:
+            <ul className="list-disc list-inside">
+              <li>Parkrun route accessibility analysis</li>
+              <li>Event route mapping and reviews</li>
+              <li>Personalized workout plans</li>
+              <li>Community forums and blogs</li>
+            </ul>
+          </p>
+
         </section>
         
         {/* Feature preview cards - TODO: Make these functional components */}
