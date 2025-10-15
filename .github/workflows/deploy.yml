@@ -30,6 +30,10 @@ jobs:
         cd frontend
         npm run build
         
+    - name: Copy dist files to root for deployment
+      run: |
+        cp -r frontend/dist ./dist
+        
     - name: Deploy to one.com via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
@@ -37,6 +41,7 @@ jobs:
         username: ${{ secrets.SFTP_USERNAME }}
         password: ${{ secrets.SFTP_PASSWORD }}
         port: 22
-        local_path: './frontend/dist/*'
-        remote_path: '/public_html'  # Adjust this path if needed
+        local_path: './dist/*'
+        remote_path: '/public_html'
         sftp_only: true
+        delete_remote_files: false
