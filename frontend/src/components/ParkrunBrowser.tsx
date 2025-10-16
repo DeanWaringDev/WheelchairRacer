@@ -16,7 +16,6 @@ interface ParkrunEvent {
 interface BronzeData {
   metadata: {
     total_events: number;
-    countries: string[];
   };
   events: ParkrunEvent[];
 }
@@ -27,6 +26,7 @@ const ParkrunBrowser: React.FC = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
+  const [countries, setCountries] = useState<string[]>([]);
 
   useEffect(() => {
     // Load the bronze data
@@ -35,6 +35,12 @@ const ParkrunBrowser: React.FC = () => {
         const response = await fetch('/data/bronze_data.json');
         const bronzeData = await response.json();
         setData(bronzeData);
+        
+        // Generate unique countries list from events
+        if (bronzeData.events) {
+          const uniqueCountries = [...new Set(bronzeData.events.map((event: ParkrunEvent) => event.country))].sort() as string[];
+          setCountries(uniqueCountries);
+        }
       } catch (error) {
         console.error('Error loading bronze data:', error);
       } finally {
@@ -112,7 +118,7 @@ const ParkrunBrowser: React.FC = () => {
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="All">All Countries</option>
-            {data.metadata.countries.map(country => (
+            {countries.map(country => (
               <option key={country} value={country}>{country}</option>
             ))}
           </select>
