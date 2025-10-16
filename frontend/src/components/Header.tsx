@@ -15,8 +15,11 @@
 
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const Header: React.FC = () => {
+  const { user } = useAuth()
+  
   return (
     <header className="bg-blue-50 w-full" role="banner">
       {/* Container with max width constraint and responsive padding */}
@@ -69,28 +72,40 @@ const Header: React.FC = () => {
           
           {/* User Profile/Authentication Link */}
           <Link 
-            to="/signin" /* TODO: Implement authentication logic:
-                          * - If user is logged out: go to /signin
-                          * - If user is logged in: go to /profile
-                          */
+            to={user ? "/profile" : "/signin"}
             className="flex items-center p-2 rounded-full hover:bg-blue-100 transition-colors"
-            aria-label="Sign in or view profile"
+            aria-label={user ? "View profile" : "Sign in"}
           >
-            {/* User Icon - TODO: Replace with actual user avatar when authenticated */}
-            <svg 
-              className="w-8 h-8 text-gray-600" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
+            {/* Show user avatar if logged in, otherwise show default icon */}
+            {user && user.user_metadata?.avatar_url ? (
+              <img
+                className="w-8 h-8 rounded-full object-cover border-2 border-gray-300"
+                src={user.user_metadata.avatar_url}
+                alt="Profile"
               />
-            </svg>
+            ) : (
+              <svg 
+                className="w-8 h-8 text-gray-600" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
+                />
+              </svg>
+            )}
+            
+            {/* Show username on larger screens if logged in */}
+            {user && (
+              <span className="hidden sm:block ml-2 text-sm font-medium text-gray-700">
+                {user.user_metadata?.username || 'Profile'}
+              </span>
+            )}
           </Link>
         </div>
       </div>

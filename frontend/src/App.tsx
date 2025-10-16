@@ -7,6 +7,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { AuthProvider } from './contexts/AuthContext'
 
 // Import all page components
 import Home from './pages/Home'
@@ -17,11 +18,13 @@ import Blog from './pages/Blog'
 import Forum from './pages/Forum'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import SignIn from './pages/SignIn'
+import Profile from './pages/Profile'
 
 // Define the main App component with routing
 const App: React.FC = () => {
   return (
-    <>
+    <AuthProvider>
       {/* Site header with navigation - displayed on all pages */}
       <Header />
       
@@ -35,13 +38,15 @@ const App: React.FC = () => {
         <Route path="/forum" element={<Forum />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/profile" element={<Profile />} />
         {/* Fallback route - redirects to home */}
         <Route path="*" element={<Home />} />
       </Routes>
       
       {/* Site footer with links, newsletter signup, and exercise management */}
       <Footer />
-    </>
+    </AuthProvider>
   )
 }
 
