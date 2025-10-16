@@ -24,7 +24,7 @@ const App: React.FC = () => {
             Your hub for wheelchair racing resources. What is coming?
           </h2>
           <p className="text-gray-600 mb-4">
-            Your go-to platform for wheelchair racing resources, event information, and community support.
+            Your go-to platform for wheelchair racing and Frame runningresources, event information, and community support.
           </p>
           <p className="text-gray-600 mb-4">
             Stay tuned for upcoming features and improvements!
