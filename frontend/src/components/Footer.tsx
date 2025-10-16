@@ -18,8 +18,50 @@ import { Link } from 'react-router-dom';
  */
 const Footer: React.FC = () => {
   const [isExerciseFormOpen, setIsExerciseFormOpen] = useState(false);
+  const [exerciseForm, setExerciseForm] = useState({
+    exerciseName: '',
+    equipment: [] as string[],
+    description: '',
+    gifFile: null as File | null,
+    primaryMuscles: [] as string[],
+    secondaryMuscles: [] as string[],
+    exerciseTypes: [] as string[],
+    mobilityRequirements: [] as string[],
+    impact: '',
+    difficulty: '',
+    modifications: ''
+  });
 
   const currentYear = new Date().getFullYear();
+
+  // Exercise form options
+  const equipmentOptions = [
+    'None', 'Barbell', 'Dumbbells', 'Kettlebell', 'Resistance Bands', 
+    'Bench', 'Pull Up Bar', 'Exercise Ball', 'Chair', 'Cable Pull Down',
+    'Yoga Mat', 'Foam Roller', 'Suspension Trainer (TRX)', 'Medicine Ball',
+    'Stability Ball', 'Resistance Loops', 'Ankle Weights', 'Theraband'
+  ];
+
+  const muscleGroups = [
+    'Shoulders', 'Chest', 'Back', 'Biceps', 'Triceps', 'Forearms',
+    'Core/Abs', 'Obliques', 'Lower Back', 'Glutes', 'Quadriceps', 
+    'Hamstrings', 'Calves', 'Hip Flexors', 'Wrists', 'Neck'
+  ];
+
+  const exerciseTypeOptions = [
+    'Range of Motion', 'Strength', 'Cardio', 'Flexibility', 'Balance',
+    'Coordination', 'Endurance', 'Power', 'Functional Movement', 'Rehabilitation'
+  ];
+
+  const mobilityRequirements = [
+    'Requires Standing', 'Requires Balance', 'Requires Both Legs', 
+    'Requires Both Arms', 'Single Leg', 'Single Arm', 'Seated Only',
+    'Wheelchair Accessible', 'Requires Transfer', 'Floor Exercise',
+    'Requires Fine Motor Control', 'Requires Grip Strength'
+  ];
+
+  const impactLevels = ['Low', 'Medium', 'High'];
+  const difficultyLevels = ['Beginner', 'Novice', 'Intermediate', 'Advanced', 'Expert'];
 
   /**
    * Toggle the exercise form modal
@@ -35,6 +77,60 @@ const Footer: React.FC = () => {
     e.preventDefault();
     // TODO: Implement newsletter signup
     console.log('Newsletter signup submitted');
+  };
+
+  // Exercise form handlers
+  const handleCheckboxChange = (field: 'equipment' | 'primaryMuscles' | 'secondaryMuscles' | 'exerciseTypes' | 'mobilityRequirements', value: string) => {
+    setExerciseForm(prev => ({
+      ...prev,
+      [field]: prev[field].includes(value)
+        ? prev[field].filter(item => item !== value)
+        : [...prev[field], value]
+    }));
+  };
+
+  const handleInputChange = (field: 'exerciseName' | 'description' | 'impact' | 'difficulty' | 'modifications', value: string) => {
+    setExerciseForm(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleFileChange = (file: File | null) => {
+    setExerciseForm(prev => ({
+      ...prev,
+      gifFile: file
+    }));
+  };
+
+  const handleSubmitExercise = () => {
+    // Generate exercise ID (in a real app, this would be handled by the backend)
+    const exerciseId = `EX_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    
+    const exerciseData = {
+      exerciseId,
+      ...exerciseForm,
+      createdAt: new Date().toISOString()
+    };
+
+    console.log('New Exercise Submitted:', exerciseData);
+    alert('Exercise submitted successfully! (Check console for details)');
+    
+    // Reset form and close modal
+    setExerciseForm({
+      exerciseName: '',
+      equipment: [],
+      description: '',
+      gifFile: null,
+      primaryMuscles: [],
+      secondaryMuscles: [],
+      exerciseTypes: [],
+      mobilityRequirements: [],
+      impact: '',
+      difficulty: '',
+      modifications: ''
+    });
+    setIsExerciseFormOpen(false);
   };
 
   return (
@@ -209,93 +305,250 @@ const Footer: React.FC = () => {
         </div>
       </footer>
 
-      {/* Exercise Form Modal */}
+      {/* Comprehensive Exercise Form Modal */}
       {isExerciseFormOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg max-w-md w-full p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold text-gray-900">Add Exercise</h2>
-              <button
-                onClick={toggleExerciseForm}
-                className="text-gray-500 hover:text-gray-700"
-                aria-label="Close"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              {/* Modal Header */}
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-800">Add New Exercise</h2>
+                <button
+                  onClick={() => setIsExerciseFormOpen(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+
+              {/* Exercise Form */}
+              <form className="space-y-6">
+                {/* Exercise Name */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Exercise Name *
+                  </label>
+                  <input
+                    type="text"
+                    value={exerciseForm.exerciseName}
+                    onChange={(e) => handleInputChange('exerciseName', e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    placeholder="Enter exercise name"
+                    required
+                  />
+                </div>
+
+                {/* Equipment */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Equipment Needed
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    {equipmentOptions.map((equipment) => (
+                      <label key={equipment} className="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          checked={exerciseForm.equipment.includes(equipment)}
+                          onChange={() => handleCheckboxChange('equipment', equipment)}
+                          className="rounded text-green-500 focus:ring-green-500"
+                        />
+                        <span className="text-sm text-gray-700">{equipment}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Description *
+                  </label>
+                  <textarea
+                    value={exerciseForm.description}
+                    onChange={(e) => handleInputChange('description', e.target.value)}
+                    rows={4}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    placeholder="Describe how to perform the exercise, including form cues and safety tips"
+                    required
+                  />
+                </div>
+
+                {/* GIF Upload */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Exercise Demo (GIF)
+                  </label>
+                  <input
+                    type="file"
+                    accept=".gif"
+                    onChange={(e) => handleFileChange(e.target.files?.[0] || null)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">Upload a GIF demonstrating proper exercise form</p>
+                </div>
+
+                {/* Primary Muscles */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Primary Muscles Worked *
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {muscleGroups.map((muscle) => (
+                      <label key={muscle} className="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          checked={exerciseForm.primaryMuscles.includes(muscle)}
+                          onChange={() => handleCheckboxChange('primaryMuscles', muscle)}
+                          className="rounded text-green-500 focus:ring-green-500"
+                        />
+                        <span className="text-sm text-gray-700">{muscle}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Secondary Muscles */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Secondary Muscles Worked
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {muscleGroups.map((muscle) => (
+                      <label key={muscle} className="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          checked={exerciseForm.secondaryMuscles.includes(muscle)}
+                          onChange={() => handleCheckboxChange('secondaryMuscles', muscle)}
+                          className="rounded text-green-500 focus:ring-green-500"
+                        />
+                        <span className="text-sm text-gray-700">{muscle}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Exercise Type */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Exercise Type *
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    {exerciseTypeOptions.map((type) => (
+                      <label key={type} className="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          checked={exerciseForm.exerciseTypes.includes(type)}
+                          onChange={() => handleCheckboxChange('exerciseTypes', type)}
+                          className="rounded text-green-500 focus:ring-green-500"
+                        />
+                        <span className="text-sm text-gray-700">{type}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobility Details Section */}
+                <div className="border-t pt-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Mobility & Accessibility Details</h3>
+                  
+                  {/* Mobility Requirements */}
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Mobility Requirements
+                    </label>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {mobilityRequirements.map((requirement) => (
+                        <label key={requirement} className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            checked={exerciseForm.mobilityRequirements.includes(requirement)}
+                            onChange={() => handleCheckboxChange('mobilityRequirements', requirement)}
+                            className="rounded text-green-500 focus:ring-green-500"
+                          />
+                          <span className="text-sm text-gray-700">{requirement}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Impact Level */}
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Impact Level *
+                    </label>
+                    <div className="flex gap-4">
+                      {impactLevels.map((level) => (
+                        <label key={level} className="flex items-center space-x-2">
+                          <input
+                            type="radio"
+                            name="impact"
+                            value={level}
+                            checked={exerciseForm.impact === level}
+                            onChange={(e) => handleInputChange('impact', e.target.value)}
+                            className="text-green-500 focus:ring-green-500"
+                          />
+                          <span className="text-sm text-gray-700">{level}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Difficulty */}
+                  <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Difficulty Level *
+                    </label>
+                    <div className="flex flex-wrap gap-4">
+                      {difficultyLevels.map((level) => (
+                        <label key={level} className="flex items-center space-x-2">
+                          <input
+                            type="radio"
+                            name="difficulty"
+                            value={level}
+                            checked={exerciseForm.difficulty === level}
+                            onChange={(e) => handleInputChange('difficulty', e.target.value)}
+                            className="text-green-500 focus:ring-green-500"
+                          />
+                          <span className="text-sm text-gray-700">{level}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Modifications/Adaptations */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Modifications & Adaptations
+                    </label>
+                    <textarea
+                      value={exerciseForm.modifications}
+                      onChange={(e) => handleInputChange('modifications', e.target.value)}
+                      rows={3}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      placeholder="Describe how this exercise can be adapted for different abilities, equipment alternatives, easier/harder variations, etc."
+                    />
+                  </div>
+                </div>
+
+                {/* Submit Buttons */}
+                <div className="flex justify-end gap-3 pt-6 border-t">
+                  <button
+                    type="button"
+                    onClick={() => setIsExerciseFormOpen(false)}
+                    className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleSubmitExercise}
+                    className="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors font-semibold"
+                  >
+                    Add Exercise
+                  </button>
+                </div>
+              </form>
             </div>
-            
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="exerciseName" className="block text-sm font-medium text-gray-700 mb-1">
-                  Exercise Name
-                </label>
-                <input
-                  type="text"
-                  id="exerciseName"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="e.g., Wheelchair Sprint Intervals"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="exerciseType" className="block text-sm font-medium text-gray-700 mb-1">
-                  Type
-                </label>
-                <select
-                  id="exerciseType"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select type</option>
-                  <option value="endurance">Endurance</option>
-                  <option value="speed">Speed</option>
-                  <option value="strength">Strength</option>
-                  <option value="technique">Technique</option>
-                  <option value="recovery">Recovery</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="duration" className="block text-sm font-medium text-gray-700 mb-1">
-                  Duration (minutes)
-                </label>
-                <input
-                  type="number"
-                  id="duration"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="30"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-                  Description
-                </label>
-                <textarea
-                  id="description"
-                  rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Exercise details, sets, reps, etc."
-                ></textarea>
-              </div>
-              
-              <div className="flex space-x-3 pt-4">
-                <button
-                  type="button"
-                  onClick={toggleExerciseForm}
-                  className="flex-1 px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="flex-1 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-                >
-                  Add Exercise
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       )}
