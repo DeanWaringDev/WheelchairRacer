@@ -287,11 +287,27 @@ def main():
     print("📂 Loading bronze data...")
     bronze_data = processor.load_bronze_data()
     
-    # Process ALL events with web scraping enabled
-    batch_size = len(bronze_data['events'])  # Process all 2,747 events
-    enable_scraping = True  # Enable web scraping to get course map URLs
+    # Determine batch size and processing mode from command line
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "all":
+            batch_size = len(bronze_data['events'])  # Process all 2,747 events
+            enable_scraping = True
+        elif sys.argv[1] == "sample":
+            batch_size = 5  # Process small sample
+            enable_scraping = True
+        else:
+            try:
+                batch_size = int(sys.argv[1])
+                batch_size = min(batch_size, len(bronze_data['events']))
+                enable_scraping = True
+            except ValueError:
+                print("❌ Invalid batch size. Use 'all', 'sample', or a number.")
+                return
+    else:
+        batch_size = 50  # Default batch size
+        enable_scraping = True
     
-    print(f"⚙️  Processing ALL {batch_size} events (scraping: {'enabled' if enable_scraping else 'disabled'})...")
+    print(f"⚙️  Processing {batch_size} events (scraping: {'enabled' if enable_scraping else 'disabled'})...")
     print(f"⏰ Estimated time: ~{(batch_size * 2.5) // 60:.0f} minutes with rate limiting")
     print("🤖 Being respectful to Parkrun servers with 2.5 second delays...")
     
@@ -305,11 +321,12 @@ def main():
     print("🔧 Creating silver data structure...")
     silver_data = processor.create_silver_data(bronze_data, processed_events)
     
-    # Save result
-    print("💾 Saving silver data...")
-    processor.save_silver_data(silver_data)
+    # Save result with batch info in filename if not processing all
+    filename = "silver_data.json" if batch_size == len(bronze_data['events']) else f"silver_data_batch_{batch_size}.json"
+    print(f"💾 Saving silver data to {filename}...")
+    processor.save_silver_data(silver_data, filename)
     
-    print(f"✅ Successfully created silver_data.json with {len(processed_events)} events")
+    print(f"✅ Successfully created {filename} with {len(processed_events)} events")
     print(f"📊 Processing Summary:")
     print(f"   • Processed: {processor.processed_count}")
     print(f"   • Errors: {processor.error_count}")
