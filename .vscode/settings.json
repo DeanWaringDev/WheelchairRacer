@@ -1,7 +1,6 @@
 {
-  "yaml.validate": false,
-  "yaml.schemaStore.enable": false,
   "files.associations": {
-    "*.yml": "plaintext"
+    "*.yml": "plaintext",
+    "*.yaml": "plaintext"
   }
 }

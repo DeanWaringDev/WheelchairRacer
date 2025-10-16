@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "level": "silver",
+    "created": "2025-10-16",
+    "description": "Silver level parkrun data with Google Maps URLs and enhanced metadata",
+    "total_events": 5,
+    "processing_summary": {
+      "processed_count": 5,
+      "error_count": 0,
+      "scraping_enabled": true
+    },
+    "schema": {
+      "uid": "Unique identifier from bronze data",
+      "name": "Full event name",
+      "slug": "URL slug",
+      "shortName": "Short display name",
+      "location": "Event location description",
+      "coordinates": "[longitude, latitude]",
+      "country": "Country name",
+      "baseUrl": "Base parkrun URL for country",
+      "junior": "Boolean - true if junior parkrun",
+      "coursePageUrl": "Parkrun course description page URL",
+      "courseMapUrl": "Google Maps embed URL with course route highlighted",
+      "scrapingStatus": "Status of web scraping attempt",
+      "lastUpdated": "Processing date"
+    }
+  },
+  "events": [
+    {
+      "uid": 100,
+      "name": "Bushy parkrun",
+      "slug": "bushy",
+      "shortName": "Bushy Park",
+      "location": "Bushy Park, Teddington",
+      "coordinates": [
+        -0.335791,
+        51.410992
+      ],
+      "country": "United Kingdom",
+      "baseUrl": "www.parkrun.org.uk",
+      "junior": false,
+      "coursePageUrl": "https://www.parkrun.org.uk/bushy/course",
+      "courseMapUrl": "https://www.google.com/maps/d/embed?t=h&mid=zj7h2Fr7knm4.kmi-jDrZZSRc",
+      "scrapingStatus": "completed",
+      "lastUpdated": "2025-10-16"
+    },
+    {
+      "uid": 101,
+      "name": "Wimbledon Common parkrun",
+      "slug": "wimbledon",
+      "shortName": "Wimbledon Common",
+      "location": "Wimbledon Common",
+      "coordinates": [
+        -0.232215,
+        51.442078
+      ],
+      "country": "United Kingdom",
+      "baseUrl": "www.parkrun.org.uk",
+      "junior": false,
+      "coursePageUrl": "https://www.parkrun.org.uk/wimbledon/course",
+      "courseMapUrl": "https://www.google.com/maps/d/embed?mid=19vCWqgsRlZ-ejEm0O0WdPJHQUayTo-g&ehbc=2E312F",
+      "scrapingStatus": "completed",
+      "lastUpdated": "2025-10-16"
+    },
+    {
+      "uid": 102,
+      "name": "Banstead Woods parkrun",
+      "slug": "banstead",
+      "shortName": "Banstead Woods",
+      "location": "Banstead Woods, Coulsdon",
+      "coordinates": [
+        -0.184225,
+        51.307648
+      ],
+      "country": "United Kingdom",
+      "baseUrl": "www.parkrun.org.uk",
+      "junior": false,
+      "coursePageUrl": "https://www.parkrun.org.uk/banstead/course",
+      "courseMapUrl": "https://www.google.com/maps/d/embed?t=h&mid=1hEhBBxRI0oL96m3tS7p2_eU2snY",
+      "scrapingStatus": "completed",
+      "lastUpdated": "2025-10-16"
+    },
+    {
+      "uid": 103,
+      "name": "Richmond parkrun",
+      "slug": "richmond",
+      "shortName": "Richmond Park",
+      "location": "Richmond Park, Richmond upon Thames",
+      "coordinates": [
+        -0.292886,
+        51.451962
+      ],
+      "country": "United Kingdom",
+      "baseUrl": "www.parkrun.org.uk",
+      "junior": false,
+      "coursePageUrl": "https://www.parkrun.org.uk/richmond/course",
+      "courseMapUrl": "https://www.google.com/maps/d/embed?t=h&mid=1wZYP_KUkY4Bz1643J2pZOYnGBxk",
+      "scrapingStatus": "completed",
+      "lastUpdated": "2025-10-16"
+    },
+    {
+      "uid": 104,
+      "name": "Woodhouse Moor parkrun",
+      "slug": "woodhousemoor",
+      "shortName": "Woodhouse Moor",
+      "location": "Woodhouse Moor, Leeds",
+      "coordinates": [
+        -1.560059,
+        53.808582
+      ],
+      "country": "United Kingdom",
+      "baseUrl": "www.parkrun.org.uk",
+      "junior": false,
+      "coursePageUrl": "https://www.parkrun.org.uk/woodhousemoor/course",
+      "courseMapUrl": "https://www.google.com/maps/d/u/1/embed?mid=1tNbdPx6SKQSqEYJF4Bg6ZShsDmLEnGeM",
+      "scrapingStatus": "completed",
+      "lastUpdated": "2025-10-16"
+    }
+  ]
+}

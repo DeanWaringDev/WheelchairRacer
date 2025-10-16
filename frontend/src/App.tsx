@@ -5,6 +5,8 @@
  */
 
 import Header from './components/Header'
+import Footer from './components/Footer'
+import ParkrunBrowser from './components/ParkrunBrowser'
 
 // Define the main App component using function declaration (React best practice)
 const App: React.FC = () => {
@@ -24,7 +26,7 @@ const App: React.FC = () => {
             Your hub for wheelchair racing resources. What is coming?
           </h2>
           <p className="text-gray-600 mb-4">
-            Your go-to platform for wheelchair racing and Frame runningresources, event information, and community support.
+            Your go-to platform for wheelchair racing and Frame running resources, event information, and community support.
           </p>
           <p className="text-gray-600 mb-4">
             Stay tuned for upcoming features and improvements!
@@ -37,6 +39,11 @@ const App: React.FC = () => {
             </ul>
           </p>
 
+        </section>
+        
+        {/* Parkrun Browser - Interactive component with real data */}
+        <section className="mb-8">
+          <ParkrunBrowser />
         </section>
         
         {/* Feature preview cards - TODO: Make these functional components */}
@@ -60,6 +67,9 @@ const App: React.FC = () => {
           </div>
         </section>
       </main>
+      
+      {/* Site footer with links, newsletter signup, and exercise management */}
+      <Footer />
     </>
   )
 }

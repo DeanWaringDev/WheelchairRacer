@@ -1,0 +1,11 @@
+[*.yml]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+[*.yaml] 
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+[deploy.yml]
+insert_final_newline = false
+trim_trailing_whitespace = false
