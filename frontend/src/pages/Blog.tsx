@@ -1,175 +1,347 @@
-import React from 'react';
+// WheelchairRacer/frontend/src/pages/Blog.tsx
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { supabase } from "../lib/supabase";
+import { useAuth } from "../contexts/AuthContext";
+
+const ADMIN_USER_ID = "5bc2da58-8e69-4779-ba02-52e6182b9668";
+const STORAGE_BUCKET = "post-images";
+
+type Post = {
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  image_url?: string | null;
+  author_id?: string | null;
+  author_name?: string | null;
+  created_at?: string;
+};
+
+const categories = [
+  "All",
+  "Training",
+  "Equipment",
+  "Nutrition",
+  "Race Reports",
+  "Beginner Tips",
+  "Inspiration",
+];
 
 const Blog: React.FC = () => {
-  const blogPosts = [
-    {
-      title: "Getting Started with Wheelchair Racing: A Beginner's Guide",
-      excerpt: "Everything you need to know about entering the exciting world of wheelchair racing, from equipment basics to your first race.",
-      author: "Sarah Johnson",
-      date: "October 15, 2025",
-      category: "Beginner Tips",
-      readTime: "5 min read",
-      featured: true
-    },
-    {
-      title: "Marathon Training: Building Endurance for Long Distance Events",
-      excerpt: "A comprehensive guide to preparing for marathon distances, including training schedules and nutrition strategies.",
-      author: "Mike Chen",
-      date: "October 12, 2025",
-      category: "Training",
-      readTime: "8 min read",
-      featured: false
-    },
-    {
-      title: "Equipment Review: Latest Racing Wheelchair Technologies",
-      excerpt: "An in-depth look at the newest innovations in racing wheelchair design and how they impact performance.",
-      author: "Alex Rivera",
-      date: "October 10, 2025",
-      category: "Equipment",
-      readTime: "6 min read",
-      featured: false
-    }
-  ];
+  const { user } = useAuth();
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [form, setForm] = useState({
+    title: "",
+    content: "",
+    category: "",
+  });
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const categories = ["All", "Training", "Equipment", "Nutrition", "Race Reports", "Beginner Tips", "Inspiration"];
+  const fetchPosts = useCallback(async () => {
+    setLoading(true);
+    setFetchError(null);
+
+    const { data, error } = await supabase
+      .from("posts")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      setFetchError(error.message);
+      setPosts([]);
+    } else {
+      setPosts(data ?? []);
+    }
+
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
+
+  const handleChange = (
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = event.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] ?? null;
+    setImageFile(file);
+  };
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    if (!form.title.trim() || !form.content.trim() || !form.category) {
+      setFormError("Please fill in all required fields.");
+      return;
+    }
+
+    setSubmitting(true);
+    setFormError(null);
+
+    let imageUrl: string | null = null;
+
+    if (imageFile) {
+      if (imageFile.size > 5 * 1024 * 1024) {
+        setFormError("Image must be smaller than 5MB.");
+        setSubmitting(false);
+        return;
+      }
+
+      const extension = imageFile.name.split(".").pop()?.toLowerCase() ?? "jpg";
+      const filePath = `${user?.id ?? "public"}/${Date.now()}-${Math.random()
+        .toString(36)
+        .slice(2)}.${extension}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from(STORAGE_BUCKET)
+        .upload(filePath, imageFile, {
+          cacheControl: "3600",
+          upsert: false,
+        });
+
+      if (uploadError) {
+        setFormError(`Image upload failed: ${uploadError.message}`);
+        setSubmitting(false);
+        return;
+      }
+
+      const { data: publicData } = supabase.storage
+        .from(STORAGE_BUCKET)
+        .getPublicUrl(filePath);
+      imageUrl = publicData?.publicUrl ?? null;
+    }
+
+    const { error } = await supabase.from("posts").insert([
+      {
+        title: form.title.trim(),
+        content: form.content.trim(),
+        category: form.category,
+        image_url: imageUrl,
+        author_id: user?.id ?? ADMIN_USER_ID,
+        author_name: user?.user_metadata?.username ?? "Admin",
+      },
+    ]);
+
+    if (error) {
+      setFormError(error.message);
+    } else {
+      setForm({ title: "", content: "", category: "" });
+      setImageFile(null);
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+      await fetchPosts();
+    }
+
+    setSubmitting(false);
+  };
+
+  const displayedPosts = useMemo(() => {
+    if (activeCategory === "All") return posts;
+    return posts.filter((post) => post.category === activeCategory);
+  }, [activeCategory, posts]);
+
+  const formatDate = (iso?: string) => {
+    if (!iso) return "Unknown date";
+    const parsed = new Date(iso);
+    if (Number.isNaN(parsed.getTime())) return "Unknown date";
+    return parsed.toLocaleDateString();
+  };
 
   return (
     <main className="bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* Page Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Racing Blog
-        </h1>
-        <p className="text-lg text-gray-600 mb-2">
-          Latest insights, tips, and stories from the wheelchair racing community.
-        </p>
-        <p className="text-gray-500">
-          Expert advice, athlete spotlights, and everything you need to know about wheelchair racing.
-        </p>
-      </div>
-      
-      {/* Category Filter */}
-      <section className="mb-8">
-        <h2 className="text-lg font-semibold text-gray-800 mb-4">Browse by Category</h2>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-300 transition-colors"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </section>
-      
-      {/* Featured Post */}
-      {blogPosts.filter(post => post.featured).map((post, index) => (
-        <section key={index} className="mb-8">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg">
-            <span className="inline-block bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm mb-4">
-              Featured Post
-            </span>
-            <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
-            <p className="text-lg mb-4 opacity-90">{post.excerpt}</p>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4 text-sm opacity-80">
-                <span>By {post.author}</span>
-                <span>•</span>
-                <span>{post.date}</span>
-                <span>•</span>
-                <span>{post.readTime}</span>
-              </div>
-              <button className="bg-white text-blue-600 px-6 py-2 rounded-md font-semibold hover:bg-gray-100 transition-colors">
-                Read Article
-              </button>
-            </div>
-          </div>
-        </section>
-      ))}
-      
-      {/* Recent Posts */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Recent Posts</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.filter(post => !post.featured).map((post, index) => (
-            <article key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <div className="mb-3">
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                  post.category === 'Training' ? 'bg-blue-100 text-blue-800' :
-                  post.category === 'Equipment' ? 'bg-green-100 text-green-800' :
-                  'bg-gray-100 text-gray-800'
-                }`}>
-                  {post.category}
-                </span>
-              </div>
-              <h3 className="font-semibold text-gray-800 mb-3 hover:text-blue-600 cursor-pointer">
-                {post.title}
-              </h3>
-              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                {post.excerpt}
-              </p>
-              <div className="flex items-center justify-between text-sm text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <span>{post.author}</span>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
-                </div>
-                <span>{post.date}</span>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-      
-      {/* Newsletter Signup */}
-      <section className="bg-gray-50 p-8 rounded-lg">
-        <div className="text-center">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Stay Updated</h3>
-          <p className="text-gray-600 mb-6">
-            Get the latest racing tips, training advice, and community news delivered to your inbox.
+      <div className="max-w-4xl mx-auto px-4 py-12 space-y-12">
+        <header className="space-y-2">
+          <h1 className="text-3xl font-bold text-gray-900">
+            Wheelchair Racing Blog
+          </h1>
+          <p className="text-gray-600">
+            Training notes, race reports, and stories from the community.
           </p>
-          <div className="max-w-md mx-auto flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors">
-              Subscribe
-            </button>
+        </header>
+
+        {user?.id === ADMIN_USER_ID && (
+          <section className="rounded-lg border border-gray-200 p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              Add New Post
+            </h2>
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Title
+                </label>
+                <input
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="title"
+                  onChange={handleChange}
+                  type="text"
+                  value={form.title}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Content
+                </label>
+                <textarea
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  name="content"
+                  onChange={handleChange}
+                  rows={5}
+                  value={form.content}
+                  required
+                />
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Category
+                  </label>
+                  <select
+                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    name="category"
+                    onChange={handleChange}
+                    value={form.category}
+                    required
+                  >
+                    <option value="">Select category</option>
+                    {categories
+                      .filter((category) => category !== "All")
+                      .map((category) => (
+                        <option key={category} value={category}>
+                          {category}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Image
+                  </label>
+                  <input
+                    ref={fileInputRef}
+                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                    type="file"
+                  />
+                  <p className="mt-1 text-xs text-gray-500">
+                    Optional; JPG/PNG up to 5MB.
+                  </p>
+                </div>
+              </div>
+              {formError && <p className="text-sm text-red-600">{formError}</p>}
+              <div className="flex justify-end">
+                <button
+                  className="rounded-md bg-blue-600 px-4 py-2 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-300"
+                  disabled={submitting}
+                  type="submit"
+                >
+                  {submitting ? "Posting..." : "Add Post"}
+                </button>
+              </div>
+            </form>
+          </section>
+        )}
+
+        <section className="space-y-4">
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => {
+              const isActive = activeCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`rounded-full border px-4 py-1 text-sm font-medium transition ${
+                    isActive
+                      ? "border-blue-600 bg-blue-600 text-white"
+                      : "border-gray-300 bg-white text-gray-700 hover:border-blue-400 hover:text-blue-600"
+                  }`}
+                  type="button"
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
-        </div>
-      </section>
-      
-      {/* Coming Soon Notice */}
-      <section className="mt-8 bg-purple-50 border border-purple-200 p-6 rounded-lg">
-        <h3 className="text-lg font-semibold text-purple-800 mb-2">📝 Community Blog Coming Soon</h3>
-        <p className="text-purple-700 mb-4">
-          We're building a platform where community members can share their own racing stories, training tips, and experiences.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-medium text-purple-800 mb-2">Planned Features:</h4>
-            <ul className="text-purple-700 text-sm space-y-1">
-              <li>• User-generated content</li>
-              <li>• Race reports and reviews</li>
-              <li>• Training diaries</li>
-              <li>• Photo galleries</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-medium text-purple-800 mb-2">Get Involved:</h4>
-            <ul className="text-purple-700 text-sm space-y-1">
-              <li>• Submit article ideas</li>
-              <li>• Share your racing story</li>
-              <li>• Become a contributor</li>
-              <li>• Join our writing community</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+
+          {loading ? (
+            <div className="rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+              Loading posts...
+            </div>
+          ) : (
+            <>
+              {fetchError && (
+                <div className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                  {fetchError}
+                </div>
+              )}
+
+              {displayedPosts.length === 0 ? (
+                <div className="rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+                  No posts to show yet. Check back soon!
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {displayedPosts.map((post) => (
+                    <article
+                      key={post.id}
+                      className="rounded-lg border border-gray-200 p-6 shadow-sm transition hover:shadow-md"
+                    >
+                      <div className="flex flex-wrap items-center justify-between gap-y-2 text-sm text-gray-500">
+                        <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-700">
+                          {post.category || "Uncategorized"}
+                        </span>
+                        <span>{formatDate(post.created_at)}</span>
+                      </div>
+
+                      <h3 className="mt-4 text-2xl font-semibold text-gray-900">
+                        {post.title}
+                      </h3>
+
+                      <p className="mt-3 whitespace-pre-line text-gray-700">
+                        {post.content}
+                      </p>
+
+                      {post.image_url && (
+                        <img
+                          alt={post.title}
+                          className="mt-4 h-56 w-full rounded-md object-cover"
+                          src={post.image_url}
+                        />
+                      )}
+
+                      <div className="mt-4 text-sm text-gray-400">
+                        {post.author_name
+                          ? `Posted by ${post.author_name}`
+                          : "Posted by Admin"}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </section>
       </div>
     </main>
   );
