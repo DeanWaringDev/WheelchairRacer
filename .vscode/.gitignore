@@ -1,0 +1,2 @@
+# Ignore workflow files from validation
+.github/workflows/
