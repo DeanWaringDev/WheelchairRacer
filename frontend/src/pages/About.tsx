@@ -30,7 +30,8 @@ const About: React.FC = () => {
   ];
 
   return (
-    <main className="bg-white min-h-screen p-8">
+    <main className="bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Hero Section */}
       <section className="mb-12">
         <div className="text-center mb-8">
@@ -174,6 +175,7 @@ const About: React.FC = () => {
           </button>
         </div>
       </section>
+      </div>
     </main>
   );
 };

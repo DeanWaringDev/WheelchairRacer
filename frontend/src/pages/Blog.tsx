@@ -34,7 +34,8 @@ const Blog: React.FC = () => {
   const categories = ["All", "Training", "Equipment", "Nutrition", "Race Reports", "Beginner Tips", "Inspiration"];
 
   return (
-    <main className="bg-white min-h-screen p-8">
+    <main className="bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Page Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
@@ -169,6 +170,7 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 };

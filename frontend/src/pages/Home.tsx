@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
-    <main className="bg-white min-h-screen p-8">
+    <main className="bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Welcome section */}
       <section className="mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
@@ -104,6 +105,7 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </section>
+      </div>
     </main>
   );
 };
