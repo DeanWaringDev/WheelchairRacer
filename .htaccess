@@ -1,0 +1,11 @@
+# React SPA rewrite: serve index.html for any path that isn't a real file/dir
+RewriteEngine On
+RewriteBase /
+
+# Skip rewrites for the actual index file
+RewriteRule ^index\.html$ - [L]
+
+# If the request isn't a file or directory, rewrite to /index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
