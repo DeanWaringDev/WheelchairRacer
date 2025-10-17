@@ -9,9 +9,7 @@ import React, {
 import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../contexts/AuthContext";
-
-const ADMIN_USER_ID = "5bc2da58-8e69-4779-ba02-52e6182b9668";
-const STORAGE_BUCKET = "post-images";
+import { ADMIN_USER_ID, STORAGE_BUCKET } from "../lib/constants";
 
 type Post = {
   id: string;

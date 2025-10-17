@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { logger } from '../lib/logger';
 
 /**
  * Footer Component
@@ -76,7 +77,7 @@ const Footer: React.FC = () => {
   const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: Implement newsletter signup
-    console.log('Newsletter signup submitted');
+    logger.info('Newsletter signup submitted');
   };
 
   // Exercise form handlers
@@ -113,7 +114,7 @@ const Footer: React.FC = () => {
       createdAt: new Date().toISOString()
     };
 
-    console.log('New Exercise Submitted:', exerciseData);
+    logger.info('New Exercise Submitted:', exerciseData);
     alert('Exercise submitted successfully! (Check console for details)');
     
     // Reset form and close modal

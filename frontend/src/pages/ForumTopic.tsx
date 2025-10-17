@@ -3,8 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
-
-const ADMIN_USER_ID = '5bc2da58-8e69-4779-ba02-52e6182b9668';
+import { ADMIN_USER_ID } from '../lib/constants';
 
 type Topic = {
   id: string;
