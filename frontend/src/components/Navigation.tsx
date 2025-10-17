@@ -66,7 +66,7 @@ const Navigation: React.FC = () => {
       {/* Visible on mobile/tablet, hidden on large screens (lg:hidden) */}
       <button
         onClick={toggleMobileMenu}
-        className="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors"
+        className="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors max-[469px]:p-1"
         aria-label="Toggle mobile menu"
         aria-expanded={isMobileMenuOpen}
         aria-controls="mobile-menu"

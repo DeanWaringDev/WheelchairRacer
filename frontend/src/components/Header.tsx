@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-blue-50 w-full" role="banner">
       {/* Container with max width constraint and responsive padding */}
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between min-[470px]:px-4 max-[469px]:px-2 max-[469px]:py-2">
         
         {/* Left side: Logo and Site Title */}
         <Link 
@@ -33,19 +33,19 @@ const Header: React.FC = () => {
         >
           {/* Logo - using public/logo.svg (80px square) */}
           <img 
-            className="w-20 h-20" 
+            className="w-20 h-20 max-[469px]:w-14 max-[469px]:h-14" 
             src="/logo.svg" 
             alt="Wheelchair Racer Logo - Orange wheelchair racing icon" 
           />
           
           {/* Site Title with orange accent border */}
-          <h1 className="text-3xl font-bold text-gray-800 border-l-4 pl-4 border-amber-400">
+          <h1 className="text-3xl font-bold text-gray-800 border-l-4 pl-4 border-amber-400 max-[469px]:text-xl max-[469px]:pl-2 max-[469px]:border-l-2">
             Wheelchair Racer
           </h1>
         </Link>
         
         {/* Right side: Navigation, Social Icons, and Profile */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 max-[469px]:gap-1">
           
           {/* Main Navigation Component */}
           <Navigation />
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
           {/* User Profile/Authentication Link */}
           <Link 
             to={user ? "/profile" : "/signin"}
-            className="flex items-center p-2 rounded-full hover:bg-blue-100 transition-colors"
+            className="flex items-center p-2 rounded-full hover:bg-blue-100 transition-colors max-[469px]:p-1"
             aria-label={user ? "View profile" : "Sign in"}
           >
             {/* Show user avatar if logged in, otherwise show default icon */}
