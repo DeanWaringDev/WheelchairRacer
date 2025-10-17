@@ -2,5 +2,14 @@
   "files.associations": {
     "*.yml": "plaintext",
     "*.yaml": "plaintext"
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  // Exclude Deno functions from TypeScript checking
+  "typescript.exclude": [
+    "**/supabase/functions/**"
+  ]
 }

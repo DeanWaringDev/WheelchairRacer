@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["deno.ns", "deno.unstable"],
+    "types": ["https://deno.land/x/deploy@1.8.0/types/deploy.d.ts"]
+  },
+  "imports": {
+    "https://deno.land/std@0.168.0/": "https://deno.land/std@0.168.0/"
+  }
+}
