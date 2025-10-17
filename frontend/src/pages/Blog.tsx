@@ -155,9 +155,16 @@ const Blog: React.FC = () => {
           newSet.delete(postId);
           return newSet;
         });
+        
+        // Count the actual likes from post_likes table
+        const { count } = await supabase
+          .from("post_likes")
+          .select("*", { count: "exact", head: true })
+          .eq("post_id", postId);
+        
         setPosts(prev =>
           prev.map(p =>
-            p.id === postId ? { ...p, likes_count: Math.max((p.likes_count || 0) - 1, 0) } : p
+            p.id === postId ? { ...p, likes_count: count ?? 0 } : p
           )
         );
       }
@@ -172,9 +179,16 @@ const Blog: React.FC = () => {
 
       if (!error) {
         setUserLikes(prev => new Set(prev).add(postId));
+        
+        // Count the actual likes from post_likes table
+        const { count } = await supabase
+          .from("post_likes")
+          .select("*", { count: "exact", head: true })
+          .eq("post_id", postId);
+        
         setPosts(prev =>
           prev.map(p =>
-            p.id === postId ? { ...p, likes_count: (p.likes_count || 0) + 1 } : p
+            p.id === postId ? { ...p, likes_count: count ?? 0 } : p
           )
         );
       }

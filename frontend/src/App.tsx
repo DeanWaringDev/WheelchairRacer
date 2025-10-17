@@ -16,10 +16,17 @@ import Events from './pages/Events'
 import Workouts from './pages/Workouts'
 import Blog from './pages/Blog'
 import Forum from './pages/Forum'
+import ForumCategory from './pages/ForumCategory'
+import ForumTopic from './pages/ForumTopic'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import SignIn from './pages/SignIn'
 import Profile from './pages/Profile'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
+import CookiePolicy from './pages/CookiePolicy'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 
 // Define the main App component with routing
 const App: React.FC = () => {
@@ -36,10 +43,19 @@ const App: React.FC = () => {
         <Route path="/workouts" element={<Workouts />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/forum" element={<Forum />} />
+        <Route path="/forum/category/:categoryId" element={<ForumCategory />} />
+        <Route path="/forum/topic/:topicId" element={<ForumTopic />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profile" element={<Profile />} />
+        {/* Legal pages */}
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
+        {/* Password reset pages */}
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         {/* Fallback route - redirects to home */}
         <Route path="*" element={<Home />} />
       </Routes>
