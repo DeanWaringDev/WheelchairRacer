@@ -1,0 +1,578 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "description": "Accessibility keywords for analyzing parkrun course suitability for all mobility aid users and adaptive athletes",
+    "created": "2025-10-17",
+    "updated": "2025-10-17",
+    "mobility_types": {
+      "racing_chair": "Racing chair - narrow wheels, low to ground, designed for speed on smooth surfaces",
+      "day_chair": "Day chair - standard wheelchair for daily use, moderate off-road capability",
+      "off_road_chair": "Off-road/sports chair - wider tires, better suspension, designed for rough terrain",
+      "handbike": "Handbike - three-wheeled hand-powered cycle, good on most surfaces",
+      "frame_runner": "Frame runner/RaceRunner - three-wheeled frame with saddle and body plate, user propels with feet, requires stable surface",
+      "walking_frame": "Walking frame/walker - four-legged frame for stability, slow pace, requires even surface",
+      "crutches": "Crutches (forearm or underarm) - requires upper body strength, challenging on uneven surfaces",
+      "walking_stick": "Walking stick/cane - single or quad cane, provides light support, requires relatively even surface"
+    },
+    "suitability_scale": {
+      "excellent": 5,
+      "good": 4,
+      "moderate": 3,
+      "difficult": 2,
+      "unsuitable": 1
+    },
+    "notes": "Frame runners need stable surfaces as users push with feet. Walking aids require even surfaces to prevent trips/falls."
+  },
+  "surface_types": {
+    "smooth_surfaces": {
+      "keywords": [
+        "tarmac",
+        "asphalt",
+        "paved",
+        "concrete",
+        "smooth path",
+        "hard surface",
+        "sealed surface",
+        "road",
+        "pavement"
+      ],
+      "suitability": {
+        "racing_chair": 5,
+        "day_chair": 5,
+        "off_road_chair": 5,
+        "handbike": 5,
+        "frame_runner": 5,
+        "walking_frame": 5,
+        "crutches": 5,
+        "walking_stick": 5
+      },
+      "notes": "Ideal for all mobility aid users - smooth, predictable, stable surface"
+    },
+    "packed_surfaces": {
+      "keywords": [
+        "compacted",
+        "hard packed",
+        "firmly packed",
+        "packed gravel",
+        "hoggin",
+        "aggregate",
+        "crushed stone",
+        "limestone path"
+      ],
+      "suitability": {
+        "racing_chair": 4,
+        "day_chair": 4,
+        "off_road_chair": 5,
+        "handbike": 4,
+        "frame_runner": 4,
+        "walking_frame": 3,
+        "crutches": 4,
+        "walking_stick": 4
+      },
+      "notes": "Good for most users if well-maintained. Walking frames may find it slightly challenging due to smaller wheels. Frame runners need firm surface for foot push-off."
+    },
+    "loose_surfaces": {
+      "keywords": [
+        "gravel",
+        "loose gravel",
+        "shingle",
+        "loose stone",
+        "chippings",
+        "pebbles",
+        "loose aggregate",
+        "unmade path"
+      ],
+      "suitability": {
+        "racing_chair": 1,
+        "day_chair": 2,
+        "off_road_chair": 3,
+        "handbike": 2,
+        "frame_runner": 1,
+        "walking_frame": 1,
+        "crutches": 2,
+        "walking_stick": 2
+      },
+      "notes": "Very difficult for racing chairs, frame runners, and walking frames. Unstable surface makes foot push-off difficult for frame runners. Walking frames wheels sink in. Crutches/sticks can slip."
+    },
+    "grass_surfaces": {
+      "keywords": [
+        "grass",
+        "lawn",
+        "meadow",
+        "field",
+        "grassland",
+        "turf",
+        "green",
+        "playing field"
+      ],
+      "suitability": {
+        "racing_chair": 1,
+        "day_chair": 3,
+        "off_road_chair": 4,
+        "handbike": 3,
+        "frame_runner": 3,
+        "walking_frame": 2,
+        "crutches": 3,
+        "walking_stick": 3
+      },
+      "notes": "Highly condition-dependent. Wet grass is very difficult for all users. Frame runners can manage short dry grass with good foot grip. Walking frames struggle with any grass. Crutches/sticks sink in soft grass."
+    },
+    "trail_surfaces": {
+      "keywords": [
+        "trail",
+        "woodland path",
+        "woodland track",
+        "forest path",
+        "dirt path",
+        "earth path",
+        "natural surface",
+        "unpaved",
+        "track"
+      ],
+      "suitability": {
+        "racing_chair": 1,
+        "day_chair": 2,
+        "off_road_chair": 4,
+        "handbike": 3,
+        "frame_runner": 2,
+        "walking_frame": 1,
+        "crutches": 3,
+        "walking_stick": 3
+      },
+      "notes": "Generally challenging, suitability varies greatly with conditions. Frame runners need stable footing for propulsion. Walking frames very difficult on uneven trails. Crutches/sticks manage better on firm trails."
+    },
+    "mixed_surfaces": {
+      "keywords": [
+        "mixed surface",
+        "variety of surfaces",
+        "varied surfaces",
+        "combination of",
+        "mixture of"
+      ],
+      "suitability": {
+        "racing_chair": 2,
+        "day_chair": 3,
+        "off_road_chair": 4,
+        "handbike": 3,
+        "frame_runner": 2,
+        "walking_frame": 2,
+        "crutches": 3,
+        "walking_stick": 3
+      },
+      "notes": "Suitability depends on which surfaces are included - needs further analysis. Surface transitions can be challenging for all mobility aid users."
+    }
+  },
+  "terrain_features": {
+    "elevation": {
+      "keywords": [
+        "hill",
+        "hills",
+        "hilly",
+        "steep",
+        "incline",
+        "gradient",
+        "climb",
+        "ascent",
+        "descent",
+        "elevation",
+        "uphill",
+        "downhill",
+        "slope",
+        "undulating",
+        "rolling"
+      ],
+      "impact": {
+        "racing_chair": -2,
+        "day_chair": -2,
+        "off_road_chair": -1,
+        "handbike": -1,
+        "frame_runner": -2,
+        "walking_frame": -3,
+        "crutches": -2,
+        "walking_stick": -2
+      },
+      "notes": "Hills significantly increase difficulty for all users. Walking frames particularly challenging uphill. Frame runners need strong leg power for inclines. Downhill can be dangerous for walking aids due to loss of control."
+    },
+    "flat_terrain": {
+      "keywords": [
+        "flat",
+        "level",
+        "even",
+        "pancake flat",
+        "no hills",
+        "flat course"
+      ],
+      "impact": {
+        "racing_chair": 2,
+        "day_chair": 1,
+        "off_road_chair": 1,
+        "handbike": 1,
+        "frame_runner": 2,
+        "walking_frame": 2,
+        "crutches": 1,
+        "walking_stick": 1
+      },
+      "notes": "Flat terrain is beneficial for all mobility aid users. Particularly important for frame runners (efficient propulsion) and walking frames (stability and reduced fatigue)."
+    }
+  },
+  "obstacles": {
+    "physical_barriers": {
+      "keywords": [
+        "steps",
+        "stairs",
+        "stile",
+        "gate",
+        "kissing gate",
+        "turnstile",
+        "barrier",
+        "chicane",
+        "narrow section",
+        "narrow path",
+        "tight turn",
+        "sharp turn",
+        "hairpin"
+      ],
+      "impact": {
+        "racing_chair": -3,
+        "day_chair": -3,
+        "off_road_chair": -3,
+        "handbike": -3,
+        "frame_runner": -3,
+        "walking_frame": -3,
+        "crutches": -3,
+        "walking_stick": -2
+      },
+      "notes": "Steps are major barriers for all wheeled mobility aids - may make course impossible. Gates can be very difficult. Narrow sections and tight turns challenging for walking frames and frame runners (wider footprint). Walking stick users may manage steps with effort."
+    },
+    "surface_hazards": {
+      "keywords": [
+        "roots",
+        "tree roots",
+        "exposed roots",
+        "rocks",
+        "boulders",
+        "uneven",
+        "rough",
+        "rutted",
+        "potholes",
+        "cracks",
+        "trip hazard",
+        "rough surface",
+        "cobbles",
+        "cobblestone",
+        "stone flags",
+        "flagstone"
+      ],
+      "impact": {
+        "racing_chair": -2,
+        "day_chair": -1,
+        "off_road_chair": 0,
+        "handbike": -1,
+        "frame_runner": -2,
+        "walking_frame": -2,
+        "crutches": -2,
+        "walking_stick": -2
+      },
+      "notes": "Surface hazards problematic for racing chairs (low clearance) and major trip/fall risk for all walking aid users. Frame runner wheels can catch on roots. Walking frames unstable on uneven surfaces. Crutches/sticks can slip into cracks."
+    }
+  },
+  "weather_conditions": {
+    "wet_conditions": {
+      "keywords": [
+        "mud",
+        "muddy",
+        "boggy",
+        "waterlogged",
+        "puddles",
+        "wet",
+        "after rain",
+        "flooding",
+        "standing water",
+        "slippery when wet"
+      ],
+      "impact": {
+        "racing_chair": -3,
+        "day_chair": -2,
+        "off_road_chair": -1,
+        "handbike": -2,
+        "frame_runner": -3,
+        "walking_frame": -3,
+        "crutches": -3,
+        "walking_stick": -3
+      },
+      "notes": "Wet conditions dramatically reduce accessibility for all users. Frame runners lose foot traction. Walking frames wheels get stuck in mud. Crutches/sticks slip on wet surfaces creating major fall risk. Racing chairs nearly impossible in mud."
+    },
+    "seasonal_factors": {
+      "keywords": [
+        "leaves",
+        "leaf cover",
+        "autumn leaves",
+        "snow",
+        "ice",
+        "winter conditions",
+        "seasonal"
+      ],
+      "impact": {
+        "racing_chair": -2,
+        "day_chair": -1,
+        "off_road_chair": -1,
+        "handbike": -1,
+        "frame_runner": -2,
+        "walking_frame": -2,
+        "crutches": -2,
+        "walking_stick": -2
+      },
+      "notes": "Seasonal conditions significantly impact accessibility. Leaves hide hazards and create slippery surface for walking aids and frame runner feet. Ice/snow extremely dangerous for all walking aids."
+    }
+  },
+  "course_characteristics": {
+    "path_width": {
+      "keywords": [
+        "wide path",
+        "wide",
+        "broad",
+        "spacious",
+        "narrow",
+        "single track",
+        "single file",
+        "tight"
+      ],
+      "impact": {
+        "racing_chair": 1,
+        "day_chair": 1,
+        "off_road_chair": 1,
+        "handbike": 2,
+        "frame_runner": 2,
+        "walking_frame": 2,
+        "crutches": 1,
+        "walking_stick": 1
+      },
+      "notes": "Wide paths allow for easier maneuvering and overtaking. Particularly important for frame runners (wider turning circle), walking frames (wider footprint), and handbikes (three wheels). Narrow paths require walking frames to turn sideways."
+    },
+    "surface_condition": {
+      "keywords": [
+        "well maintained",
+        "maintained",
+        "good condition",
+        "poor condition",
+        "worn",
+        "eroded",
+        "damaged",
+        "smooth",
+        "rough"
+      ],
+      "impact": {
+        "racing_chair": 1,
+        "day_chair": 1,
+        "off_road_chair": 0,
+        "handbike": 1,
+        "frame_runner": 1,
+        "walking_frame": 1,
+        "crutches": 1,
+        "walking_stick": 1
+      },
+      "notes": "Maintenance level significantly affects accessibility for all users. Poor condition creates hazards for walking aids and unstable surface for frame runners."
+    }
+  },
+  "positive_indicators": {
+    "accessibility_features": {
+      "keywords": [
+        "wheelchair accessible",
+        "accessible",
+        "wheelchair friendly",
+        "disability access",
+        "ramped",
+        "ramp access",
+        "level access",
+        "accessible parking",
+        "accessible toilets",
+        "disabled facilities",
+        "adapted",
+        "mobility aid friendly",
+        "walker friendly",
+        "suitable for all abilities"
+      ],
+      "impact": {
+        "racing_chair": 2,
+        "day_chair": 2,
+        "off_road_chair": 2,
+        "handbike": 2,
+        "frame_runner": 2,
+        "walking_frame": 2,
+        "crutches": 2,
+        "walking_stick": 2
+      },
+      "notes": "Explicit mention of accessibility features is a strong positive indicator for all mobility aid users. Shows course designers considered inclusivity."
+    },
+    "good_conditions": {
+      "keywords": [
+        "fast course",
+        "smooth",
+        "well-surfaced",
+        "quality surface",
+        "excellent condition",
+        "newly resurfaced",
+        "pb course",
+        "quick course"
+      ],
+      "impact": {
+        "racing_chair": 2,
+        "day_chair": 1,
+        "off_road_chair": 1,
+        "handbike": 2,
+        "frame_runner": 2,
+        "walking_frame": 1,
+        "crutches": 1,
+        "walking_stick": 1
+      },
+      "notes": "Descriptions suggesting speed typically indicate good surface quality - beneficial for all users. Frame runners can achieve good speeds on smooth surfaces."
+    }
+  },
+  "multi_lap_courses": {
+    "lap_indicators": {
+      "keywords": [
+        "lap",
+        "laps",
+        "two lap",
+        "three lap",
+        "multiple laps",
+        "out and back",
+        "loop"
+      ],
+      "impact": {
+        "racing_chair": 0,
+        "day_chair": 0,
+        "off_road_chair": 0,
+        "handbike": 0,
+        "frame_runner": 0,
+        "walking_frame": 1,
+        "crutches": 0,
+        "walking_stick": 0
+      },
+      "notes": "Multi-lap courses easier to plan and assess - can adjust strategy or withdraw after first lap if too difficult. Particularly beneficial for walking frame users to gauge fatigue levels."
+    }
+  },
+  "exclusions": {
+    "explicit_barriers": {
+      "keywords": [
+        "not suitable for wheelchairs",
+        "wheelchairs not permitted",
+        "no wheelchair access",
+        "too difficult for wheelchairs",
+        "wheelchair users should not attempt",
+        "not accessible",
+        "mobility aid users advised against",
+        "requires full mobility"
+      ],
+      "impact": {
+        "racing_chair": -5,
+        "day_chair": -5,
+        "off_road_chair": -5,
+        "handbike": -5,
+        "frame_runner": -5,
+        "walking_frame": -5,
+        "crutches": -4,
+        "walking_stick": -3
+      },
+      "notes": "Explicit statements that course is unsuitable for mobility aid users. Critical red flags for all users, though walking stick users may have slightly more options."
+    }
+  },
+  "special_surfaces": {
+    "unique_surfaces": {
+      "keywords": [
+        "sand",
+        "sandy",
+        "beach",
+        "boardwalk",
+        "wooden path",
+        "metal grating",
+        "bridge",
+        "canal towpath",
+        "towpath",
+        "railway path",
+        "cycle path",
+        "shared use path"
+      ],
+      "suitability": {
+        "racing_chair": "varies",
+        "day_chair": "varies",
+        "off_road_chair": "varies",
+        "handbike": "varies",
+        "frame_runner": "varies",
+        "walking_frame": "varies",
+        "crutches": "varies",
+        "walking_stick": "varies"
+      },
+      "notes": "These surfaces require individual assessment. Sand extremely difficult for all. Boardwalks good if gaps are small (crutches/sticks can get caught in gaps). Metal grating dangerous for crutches/sticks/frame runner feet. Cycle paths generally good for all."
+    }
+  },
+  "distance_considerations": {
+    "distance_factors": {
+      "keywords": [
+        "5k",
+        "5km",
+        "3.1 miles",
+        "long distance",
+        "endurance",
+        "stamina required"
+      ],
+      "impact": {
+        "racing_chair": 0,
+        "day_chair": 0,
+        "off_road_chair": 0,
+        "handbike": 0,
+        "frame_runner": -1,
+        "walking_frame": -2,
+        "crutches": -1,
+        "walking_stick": 0
+      },
+      "notes": "5K is significant distance for some users. Frame runners require considerable leg strength and stamina. Walking frames very fatiguing over 5K (typically 45-90 minutes). Crutches cause upper body fatigue. Walking sticks generally manageable."
+    },
+    "pace_indicators": {
+      "keywords": [
+        "suitable for walking",
+        "walkers welcome",
+        "no time limit",
+        "tail walker",
+        "takes your time",
+        "at your own pace"
+      ],
+      "impact": {
+        "racing_chair": 0,
+        "day_chair": 0,
+        "off_road_chair": 0,
+        "handbike": 0,
+        "frame_runner": 1,
+        "walking_frame": 2,
+        "crutches": 1,
+        "walking_stick": 1
+      },
+      "notes": "Welcoming slower paces is positive for walking aid users who take longer to complete 5K. Frame runners typically 15-30 mins. Walking frames can take 45-90+ mins."
+    }
+  },
+  "fatigue_factors": {
+    "energy_impact": {
+      "keywords": [
+        "challenging",
+        "tough",
+        "demanding",
+        "strenuous",
+        "easy",
+        "gentle",
+        "leisurely",
+        "beginner friendly"
+      ],
+      "impact": {
+        "racing_chair": 0,
+        "day_chair": 0,
+        "off_road_chair": 0,
+        "handbike": 0,
+        "frame_runner": -1,
+        "walking_frame": -2,
+        "crutches": -1,
+        "walking_stick": -1
+      },
+      "notes": "Descriptions of course difficulty particularly relevant for users with fatigue conditions. 'Challenging' courses significantly harder for walking frame users who tire quickly. 'Beginner friendly' or 'gentle' courses ideal."
+    }
+  }
+}
