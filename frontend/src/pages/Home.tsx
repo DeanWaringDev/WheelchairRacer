@@ -1,7 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
+
+type Post = {
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  image_url?: string | null;
+  image_urls?: string[] | null;
+  author_name?: string | null;
+  created_at?: string;
+};
 
 const Home: React.FC = () => {
+  const [latestPost, setLatestPost] = useState<Post | null>(null);
+  const [loadingPost, setLoadingPost] = useState(true);
+
+  useEffect(() => {
+    const fetchLatestPost = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("posts")
+          .select("*")
+          .order("created_at", { ascending: false })
+          .limit(1)
+          .single();
+
+        if (!error && data) {
+          setLatestPost(data);
+        }
+      } catch (err) {
+        console.error("Error fetching latest post:", err);
+      } finally {
+        setLoadingPost(false);
+      }
+    };
+
+    fetchLatestPost();
+  }, []);
+
+  const formatDate = (iso?: string) => {
+    if (!iso) return "Unknown date";
+    const parsed = new Date(iso);
+    if (Number.isNaN(parsed.getTime())) return "Unknown date";
+    return parsed.toLocaleDateString();
+  };
+
+  const truncateContent = (content: string, maxLength: number = 200) => {
+    if (content.length <= maxLength) return content;
+    return content.substring(0, maxLength).trim() + "...";
+  };
+
   return (
     <main className="bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -26,6 +76,77 @@ const Home: React.FC = () => {
           <li>Community forums and blogs</li>
         </ul>
       </section>
+      
+      {/* Latest Blog Post Section */}
+      {!loadingPost && latestPost && (
+        <section className="mb-8 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6 shadow-md border border-yellow-200">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold text-gray-800">Latest from the Blog</h2>
+            <Link 
+              to="/blog" 
+              className="text-yellow-700 hover:text-yellow-900 font-semibold text-sm transition-colors"
+            >
+              View All Posts →
+            </Link>
+          </div>
+          
+          <article className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-3">
+              <span className="rounded-full bg-yellow-100 px-3 py-1 text-yellow-800 font-medium">
+                {latestPost.category || "Uncategorized"}
+              </span>
+              <span>{formatDate(latestPost.created_at)}</span>
+            </div>
+            
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              {latestPost.title}
+            </h3>
+            
+            <p className="text-gray-700 mb-4 whitespace-pre-line">
+              {truncateContent(latestPost.content)}
+            </p>
+            
+            {/* Display images if available */}
+            {latestPost.image_urls && latestPost.image_urls.length > 0 ? (
+              <div className={`mb-4 grid gap-2 ${
+                latestPost.image_urls.length === 1 ? 'grid-cols-1' :
+                latestPost.image_urls.length === 2 ? 'grid-cols-2' :
+                'grid-cols-2 md:grid-cols-3'
+              }`}>
+                {latestPost.image_urls.slice(0, 3).map((url, index) => (
+                  <img
+                    key={index}
+                    alt={`${latestPost.title} - Image ${index + 1}`}
+                    className="h-32 w-full rounded-md object-cover"
+                    src={url}
+                  />
+                ))}
+              </div>
+            ) : latestPost.image_url ? (
+              <img
+                alt={latestPost.title}
+                className="mb-4 h-48 w-full rounded-md object-cover"
+                src={latestPost.image_url}
+              />
+            ) : null}
+            
+            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+              <span className="text-sm text-gray-500">
+                {latestPost.author_name ? `By ${latestPost.author_name}` : "By Admin"}
+              </span>
+              <Link 
+                to="/blog" 
+                className="inline-flex items-center gap-2 bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition-colors font-medium text-sm"
+              >
+                Read Full Post
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </article>
+        </section>
+      )}
       
       {/* Feature preview cards - Now with proper routing */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">

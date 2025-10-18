@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import MapView from './MapView';
 
 interface ParkrunEvent {
@@ -165,14 +166,12 @@ const ParkrunBrowser: React.FC = () => {
                   <span className="text-xs text-gray-400">
                     {event.coordinates[1].toFixed(3)}, {event.coordinates[0].toFixed(3)}
                   </span>
-                  <a 
-                    href={`https://${event.baseUrl}/${event.slug}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link 
+                    to={`/parkrun/${event.slug}`}
                     className="text-blue-600 hover:text-blue-800 text-xs font-medium"
                   >
-                    View →
-                  </a>
+                    View Details →
+                  </Link>
                 </div>
               </div>
             ))}

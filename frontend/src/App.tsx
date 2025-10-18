@@ -27,6 +27,7 @@ import TermsOfService from './pages/TermsOfService'
 import CookiePolicy from './pages/CookiePolicy'
 import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
+import ParkrunDetail from './pages/ParkrunDetail'
 
 // Define the main App component with routing
 const App: React.FC = () => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/parkrun" element={<Parkrun />} />
+        <Route path="/parkrun/:slug" element={<ParkrunDetail />} />
         <Route path="/events" element={<Events />} />
         <Route path="/workouts" element={<Workouts />} />
         <Route path="/blog" element={<Blog />} />
