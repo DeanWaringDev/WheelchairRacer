@@ -74,18 +74,18 @@ const SignIn: React.FC = () => {
   }
 
   return (
-    <main className="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <main className="page-container flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       {/* Email Verification Modal */}
       {showVerifyModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full text-center">
-            <h3 className="text-xl font-bold mb-4 text-blue-700">Verify your email address</h3>
-            <p className="mb-4 text-gray-700">
+        <div className="fixed inset-0 z-50 flex items-center justify-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+          <div className="card p-8 max-w-sm w-full text-center">
+            <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>Verify your email address</h3>
+            <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>
               Please check your email and click the verification link before signing in.<br />
               Once verified, you can log in with your email and password.
             </p>
             <button
-              className="mt-2 px-6 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-colors"
+              className="btn-primary"
               onClick={() => setShowVerifyModal(false)}
             >
               Close
@@ -101,10 +101,10 @@ const SignIn: React.FC = () => {
             src="/logo.svg"
             alt="Wheelchair Racer Logo"
           />
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-3xl font-extrabold" style={{ color: 'var(--color-secondary)' }}>
             {isSignUp ? 'Create your account' : 'Sign in to your account'}
           </h2>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-sm" style={{ color: 'var(--color-text-body)' }}>
             {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
             <button
               type="button"
@@ -112,7 +112,10 @@ const SignIn: React.FC = () => {
                 setIsSignUp(!isSignUp)
                 setError('')
               }}
-              className="font-medium text-blue-600 hover:text-blue-500"
+              className="font-medium"
+              style={{ color: 'var(--color-primary)' }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
               {isSignUp ? 'Sign in here' : 'Sign up here'}
             </button>
@@ -125,8 +128,15 @@ const SignIn: React.FC = () => {
             type="button"
             onClick={handleGoogleSignIn}
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 rounded-md bg-white text-gray-700 font-medium shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-            style={{ boxShadow: '0 1px 2px rgba(60,64,67,.08)' }}
+            className="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-md font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{ 
+              border: '1px solid rgba(0, 0, 0, 0.2)', 
+              backgroundColor: 'var(--color-white)', 
+              color: 'var(--color-secondary)',
+              boxShadow: 'var(--shadow-card)'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-background)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-white)'}
           >
             <svg width="20" height="20" viewBox="0 0 48 48" className="mr-2" aria-hidden="true">
               <g>
@@ -147,7 +157,7 @@ const SignIn: React.FC = () => {
             {/* Username field (only for sign up) */}
             {isSignUp && (
               <div>
-                <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="username" className="label">
                   Username
                 </label>
                 <input
@@ -157,7 +167,7 @@ const SignIn: React.FC = () => {
                   required={isSignUp}
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="input-field"
                   placeholder="Choose a username"
                 />
               </div>
@@ -165,7 +175,7 @@ const SignIn: React.FC = () => {
 
             {/* Email field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="label">
                 Email address
               </label>
               <input
@@ -176,14 +186,14 @@ const SignIn: React.FC = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="input-field"
                 placeholder="Enter your email"
               />
             </div>
 
             {/* Password field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="label">
                 Password
               </label>
               <input
@@ -194,7 +204,7 @@ const SignIn: React.FC = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="input-field"
                 placeholder={isSignUp ? "Create a password" : "Enter your password"}
               />
             </div>
@@ -202,8 +212,8 @@ const SignIn: React.FC = () => {
 
           {/* Error message */}
           {error && (
-            <div className="bg-red-50 border border-red-200 rounded-md p-3">
-              <p className="text-sm text-red-800">{error}</p>
+            <div className="rounded-md p-3" style={{ backgroundColor: '#FEE', border: '1px solid #FCC' }}>
+              <p className="text-sm" style={{ color: '#C33' }}>{error}</p>
             </div>
           )}
 
@@ -211,7 +221,7 @@ const SignIn: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Processing...' : isSignUp ? 'Create Account' : 'Sign In'}
           </button>
@@ -221,7 +231,10 @@ const SignIn: React.FC = () => {
             <div className="text-center">
               <Link
                 to="/forgot-password"
-                className="text-sm text-blue-600 hover:text-blue-500"
+                className="text-sm"
+                style={{ color: 'var(--color-primary)' }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 Forgot your password?
               </Link>
@@ -233,7 +246,10 @@ const SignIn: React.FC = () => {
         <div className="text-center">
           <Link
             to="/"
-            className="text-sm text-gray-600 hover:text-gray-500"
+            className="text-sm"
+            style={{ color: 'var(--color-text-body)' }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
           >
             ← Back to home
           </Link>

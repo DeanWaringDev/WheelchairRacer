@@ -54,7 +54,10 @@ const Navigation: React.FC = () => {
           <Link
             key={item.path}
             to={item.path}
-            className="text-gray-700 hover:text-amber-600 font-medium transition-colors flex items-center text-center"
+            className="font-medium transition-colors flex items-center text-center"
+            style={{ color: 'var(--color-secondary)' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-secondary)'}
             /* TODO: Add aria-current="page" for active page highlighting */
           >
             {item.name}
@@ -66,7 +69,8 @@ const Navigation: React.FC = () => {
       {/* Visible on mobile/tablet, hidden on large screens (lg:hidden) */}
       <button
         onClick={toggleMobileMenu}
-        className="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors max-[469px]:p-1"
+        className="lg:hidden p-2 transition-colors max-[469px]:p-1"
+        style={{ color: 'var(--color-secondary)' }}
         aria-label="Toggle mobile menu"
         aria-expanded={isMobileMenuOpen}
         aria-controls="mobile-menu"
@@ -108,13 +112,17 @@ const Navigation: React.FC = () => {
           />
           
           {/* Slide-in Menu Panel */}
-          {/* Slides in from right, matches header background color */}
-          <div className="fixed right-0 top-0 h-full w-64 bg-blue-50 shadow-lg transform transition-transform">
+          {/* Slides in from right */}
+          <div 
+            className="fixed right-0 top-0 h-full w-64 shadow-lg transform transition-transform"
+            style={{ backgroundColor: 'var(--color-white)' }}
+          >
             {/* Close Button */}
             <div className="flex justify-end p-4">
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 text-gray-700 hover:text-gray-900 transition-colors"
+                className="p-2 transition-colors"
+                style={{ color: 'var(--color-secondary)' }}
                 aria-label="Close mobile menu"
               >
                 {/* X Icon for closing */}
@@ -146,7 +154,13 @@ const Navigation: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="text-gray-700 hover:text-amber-600 font-medium py-2 border-b border-gray-200 transition-colors"
+                  className="font-medium py-2 transition-colors"
+                  style={{ 
+                    color: 'var(--color-secondary)', 
+                    borderBottom: '1px solid rgba(0, 0, 0, 0.1)' 
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-secondary)'}
                   onClick={toggleMobileMenu} /* Close menu when item is clicked */
                   /* TODO: Add aria-current="page" for active page highlighting */
                 >

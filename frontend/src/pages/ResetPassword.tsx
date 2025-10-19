@@ -63,7 +63,7 @@ const ResetPassword: React.FC = () => {
   };
 
   return (
-    <main className="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <main className="page-container flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
@@ -72,20 +72,21 @@ const ResetPassword: React.FC = () => {
             src="/logo.svg"
             alt="Wheelchair Racer Logo"
           />
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-3xl font-extrabold" style={{ color: 'var(--color-secondary)' }}>
             Create a new password
           </h2>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-sm" style={{ color: 'var(--color-text-body)' }}>
             Enter your new password below
           </p>
         </div>
 
         {/* Success Message */}
         {success ? (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+          <div className="card p-6 text-center">
             <div className="flex justify-center mb-4">
               <svg
-                className="h-12 w-12 text-green-500"
+                className="h-12 w-12"
+                style={{ color: 'var(--color-accent)' }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -98,22 +99,23 @@ const ResetPassword: React.FC = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-green-900 mb-2">
+            <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-secondary)' }}>
               Password reset successful!
             </h3>
-            <p className="text-sm text-green-800 mb-4">
+            <p className="text-sm mb-4" style={{ color: 'var(--color-text-body)' }}>
               Your password has been successfully updated.
             </p>
-            <p className="text-xs text-green-700">
+            <p className="text-xs" style={{ color: 'var(--color-text-body)' }}>
               Redirecting to sign in page...
             </p>
           </div>
         ) : !validToken ? (
           /* Invalid Token Message */
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+          <div className="card p-6 text-center" style={{ borderLeft: '4px solid #C33' }}>
             <div className="flex justify-center mb-4">
               <svg
-                className="h-12 w-12 text-red-500"
+                className="h-12 w-12"
+                style={{ color: '#C33' }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -126,15 +128,15 @@ const ResetPassword: React.FC = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-red-900 mb-2">
+            <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-secondary)' }}>
               Invalid or expired link
             </h3>
-            <p className="text-sm text-red-800 mb-6">
+            <p className="text-sm mb-6" style={{ color: 'var(--color-text-body)' }}>
               This password reset link is invalid or has expired. Please request a new one.
             </p>
             <button
               onClick={() => navigate('/forgot-password')}
-              className="px-4 py-2 bg-red-600 text-white rounded-md font-medium hover:bg-red-700 transition-colors"
+              className="btn-primary"
             >
               Request new reset link
             </button>
@@ -145,7 +147,7 @@ const ResetPassword: React.FC = () => {
             <div className="space-y-4">
               {/* New Password field */}
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="label">
                   New Password
                 </label>
                 <input
@@ -156,18 +158,18 @@ const ResetPassword: React.FC = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="input-field"
                   placeholder="Enter new password"
                   minLength={6}
                 />
-                <p className="mt-1 text-xs text-gray-500">
+                <p className="mt-1 text-xs" style={{ color: 'var(--color-text-body)' }}>
                   Must be at least 6 characters
                 </p>
               </div>
 
               {/* Confirm Password field */}
               <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="confirmPassword" className="label">
                   Confirm Password
                 </label>
                 <input
@@ -178,7 +180,7 @@ const ResetPassword: React.FC = () => {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="input-field"
                   placeholder="Confirm new password"
                   minLength={6}
                 />
@@ -188,18 +190,16 @@ const ResetPassword: React.FC = () => {
               {password && (
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <div className="flex-1 bg-gray-200 rounded-full h-2">
+                    <div className="flex-1 rounded-full h-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}>
                       <div
-                        className={`h-2 rounded-full transition-all ${
-                          password.length < 6
-                            ? 'w-1/3 bg-red-500'
-                            : password.length < 10
-                            ? 'w-2/3 bg-yellow-500'
-                            : 'w-full bg-green-500'
-                        }`}
+                        className="h-2 rounded-full transition-all"
+                        style={{
+                          width: password.length < 6 ? '33%' : password.length < 10 ? '66%' : '100%',
+                          backgroundColor: password.length < 6 ? '#C33' : password.length < 10 ? '#FB3' : 'var(--color-accent)'
+                        }}
                       ></div>
                     </div>
-                    <span className="text-xs text-gray-600">
+                    <span className="text-xs" style={{ color: 'var(--color-text-body)' }}>
                       {password.length < 6
                         ? 'Weak'
                         : password.length < 10
@@ -213,8 +213,8 @@ const ResetPassword: React.FC = () => {
 
             {/* Error message */}
             {error && (
-              <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                <p className="text-sm text-red-800">{error}</p>
+              <div className="rounded-md p-3" style={{ backgroundColor: '#FEE', border: '1px solid #FCC' }}>
+                <p className="text-sm" style={{ color: '#C33' }}>{error}</p>
               </div>
             )}
 
@@ -222,12 +222,13 @@ const ResetPassword: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
-                <span className="flex items-center">
+                <span className="flex items-center justify-center">
                   <svg
-                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    className="animate-spin -ml-1 mr-3 h-5 w-5"
+                    style={{ color: 'var(--color-white)' }}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -258,7 +259,10 @@ const ResetPassword: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate('/signin')}
-                className="text-sm text-gray-600 hover:text-gray-500"
+                className="text-sm"
+                style={{ color: 'var(--color-text-body)' }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 ← Back to Sign In
               </button>

@@ -201,12 +201,12 @@ const ForumCategory: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-500">
+            <div className="text-sm" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>
               {topics.length} {topics.length === 1 ? 'topic' : 'topics'}
             </div>
             <button
               onClick={openTopicModal}
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="btn-primary px-4 py-2 text-sm"
             >
               New Topic
             </button>
@@ -339,14 +339,15 @@ const ForumCategory: React.FC = () => {
                     setTopicForm({ title: '', content: '' });
                     setTopicError('');
                   }}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  className="btn-secondary flex-1 px-4 py-2"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={topicLoading}
-                  className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+                  className="btn-primary flex-1 px-4 py-2"
+                  style={{ opacity: topicLoading ? 0.5 : 1 }}
                 >
                   {topicLoading ? 'Creating...' : 'Create Topic'}
                 </button>

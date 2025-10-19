@@ -3,17 +3,17 @@ import React from 'react';
 
 const CookiePolicy: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
+    <div className="page-container py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto card p-8">
+        <h1 className="text-4xl font-bold mb-6" style={{ color: 'var(--color-secondary)' }}>Cookie Policy</h1>
         
-        <p className="text-sm text-gray-500 mb-8">
+        <p className="text-sm mb-8" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>
           Last Updated: October 17, 2025
         </p>
 
-        <div className="space-y-6 text-gray-700">
+        <div className="space-y-6" style={{ color: 'var(--color-text-body)' }}>
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">1. What Are Cookies?</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>1. What Are Cookies?</h2>
             <p>
               Cookies are small text files that are placed on your device when you visit a website. They are 
               widely used to make websites work more efficiently and provide information to website owners. 
@@ -23,7 +23,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Types of Cookies We Use</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>2. Types of Cookies We Use</h2>
             
             <div className="space-y-4">
               <div>
@@ -83,7 +83,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Third-Party Cookies</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>3. Third-Party Cookies</h2>
             <p className="mb-3">
               We may use third-party services that set cookies on your device. These include:
             </p>
@@ -99,7 +99,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. How Long Do Cookies Last?</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>4. How Long Do Cookies Last?</h2>
             <div className="space-y-3">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">Session Cookies</h3>
@@ -119,7 +119,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. Managing Cookies</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>5. Managing Cookies</h2>
             <p className="mb-3">
               You have several options for managing cookies:
             </p>
@@ -167,7 +167,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. Do Not Track Signals</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>6. Do Not Track Signals</h2>
             <p>
               Some browsers have a "Do Not Track" feature that lets you tell websites you do not want to have 
               your online activities tracked. Currently, we do not respond to Do Not Track signals, but we are 
@@ -176,7 +176,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Cookie Table</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>7. Cookie Table</h2>
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200 border border-gray-300">
                 <thead className="bg-gray-50">
@@ -218,7 +218,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">8. Updates to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>8. Updates to This Policy</h2>
             <p>
               We may update this Cookie Policy from time to time to reflect changes in technology, legislation, 
               or our practices. We will notify you of significant changes by posting a notice on our website or 
@@ -227,7 +227,7 @@ const CookiePolicy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">9. Contact Us</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>9. Contact Us</h2>
             <p className="mb-3">
               If you have questions about our use of cookies, please contact us:
             </p>

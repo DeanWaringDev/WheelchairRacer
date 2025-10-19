@@ -62,26 +62,26 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="page-container">
       <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Page Header */}
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+        <h1 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-secondary)' }}>
           Contact Us
         </h1>
-        <p className="text-lg text-gray-600 mb-2">
+        <p className="text-lg mb-2" style={{ color: 'var(--color-text-body)' }}>
           We'd love to hear from you. Send us a message and we'll respond as soon as possible.
         </p>
       </div>
 
       {/* Success Message */}
       {success && (
-        <div className="mb-8 max-w-6xl mx-auto bg-green-50 border border-green-200 rounded-lg p-6">
+        <div className="mb-8 max-w-6xl mx-auto card p-6" style={{ borderLeft: '4px solid var(--color-accent)' }}>
           <div className="flex items-start">
-            <span className="text-2xl mr-3">✅</span>
+            <span className="text-2xl mr-3" style={{ color: 'var(--color-accent)' }}>✅</span>
             <div>
-              <h3 className="text-lg font-semibold text-green-800 mb-2">Message Sent Successfully!</h3>
-              <p className="text-green-700">
+              <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-secondary)' }}>Message Sent Successfully!</h3>
+              <p style={{ color: 'var(--color-text-body)' }}>
                 Your message has been sent to our team. We'll get back to you as soon as possible.
               </p>
             </div>
@@ -91,12 +91,12 @@ const Contact: React.FC = () => {
 
       {/* Error Message */}
       {error && (
-        <div className="mb-8 max-w-6xl mx-auto bg-red-50 border border-red-200 rounded-lg p-6">
+        <div className="mb-8 max-w-6xl mx-auto card p-6" style={{ borderLeft: '4px solid #C33' }}>
           <div className="flex items-start">
-            <span className="text-2xl mr-3">❌</span>
+            <span className="text-2xl mr-3" style={{ color: '#C33' }}>❌</span>
             <div>
-              <h3 className="text-lg font-semibold text-red-800 mb-2">Failed to Send Message</h3>
-              <p className="text-red-700">{error}</p>
+              <h3 className="text-lg font-semibold mb-2" style={{ color: '#C33' }}>Failed to Send Message</h3>
+              <p style={{ color: 'var(--color-text-body)' }}>{error}</p>
             </div>
           </div>
         </div>
@@ -105,12 +105,12 @@ const Contact: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {/* Contact Form */}
         <div className="lg:col-span-2">
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">Send us a Message</h2>
+          <div className="card p-8">
+            <h2 className="text-xl font-semibold mb-6" style={{ color: 'var(--color-secondary)' }}>Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="label">
                     Full Name *
                   </label>
                   <input
@@ -120,12 +120,12 @@ const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="input-field"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="label">
                     Email Address *
                   </label>
                   <input
@@ -135,14 +135,14 @@ const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="input-field"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="category" className="label">
                   Category
                 </label>
                 <select
@@ -150,7 +150,7 @@ const Contact: React.FC = () => {
                   name="category"
                   value={formData.category}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-field"
                 >
                   <option value="general">General Inquiry</option>
                   <option value="support">Technical Support</option>
@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="label">
                   Subject *
                 </label>
                 <input
@@ -171,13 +171,13 @@ const Contact: React.FC = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-field"
                   placeholder="Brief description of your inquiry"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="label">
                   Message *
                 </label>
                 <textarea
@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-field"
                   placeholder="Please provide details about your inquiry..."
                 />
               </div>
@@ -195,7 +195,8 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="btn-primary w-full py-3 px-6 flex items-center justify-center"
+                style={{ opacity: loading ? 0.5 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}
               >
                 {loading ? (
                   <>
@@ -216,82 +217,82 @@ const Contact: React.FC = () => {
         {/* Contact Information */}
         <div className="space-y-6">
           {/* Contact Details */}
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Get in Touch</h3>
+          <div className="card p-6">
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--color-secondary)' }}>Get in Touch</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <div className="text-blue-600 mt-1">📧</div>
+                <div className="mt-1" style={{ color: 'var(--color-primary)' }}>📧</div>
                 <div>
-                  <p className="font-medium text-gray-800">Email</p>
-                  <a href="mailto:contact@wheelchairracer.com" className="text-blue-600 hover:underline text-sm">
+                  <p className="font-medium" style={{ color: 'var(--color-secondary)' }}>Email</p>
+                  <a href="mailto:contact@wheelchairracer.com" className="text-sm hover:underline" style={{ color: 'var(--color-primary)' }}>
                     contact@wheelchairracer.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
-                <div className="text-blue-600 mt-1">🌐</div>
+                <div className="mt-1" style={{ color: 'var(--color-primary)' }}>🌐</div>
                 <div>
-                  <p className="font-medium text-gray-800">Website</p>
-                  <p className="text-gray-600 text-sm">www.wheelchairracer.com</p>
+                  <p className="font-medium" style={{ color: 'var(--color-secondary)' }}>Website</p>
+                  <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>www.wheelchairracer.com</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
-                <div className="text-blue-600 mt-1">📱</div>
+                <div className="mt-1" style={{ color: 'var(--color-primary)' }}>📱</div>
                 <div>
-                  <p className="font-medium text-gray-800">Social Media</p>
-                  <p className="text-gray-600 text-sm">Follow us for updates</p>
+                  <p className="font-medium" style={{ color: 'var(--color-secondary)' }}>Social Media</p>
+                  <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>Follow us for updates</p>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Response Times */}
-          <div className="bg-green-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-green-800 mb-4">Response Times</h3>
+          <div className="card p-6" style={{ borderLeft: '4px solid var(--color-accent)' }}>
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--color-accent)' }}>Response Times</h3>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-green-700">General Inquiries</span>
-                <span className="text-green-600 font-medium">24-48 hours</span>
+                <span style={{ color: 'var(--color-text-body)' }}>General Inquiries</span>
+                <span className="font-medium" style={{ color: 'var(--color-accent)' }}>24-48 hours</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-green-700">Technical Support</span>
-                <span className="text-green-600 font-medium">12-24 hours</span>
+                <span style={{ color: 'var(--color-text-body)' }}>Technical Support</span>
+                <span className="font-medium" style={{ color: 'var(--color-accent)' }}>12-24 hours</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-green-700">Press Inquiries</span>
-                <span className="text-green-600 font-medium">24 hours</span>
+                <span style={{ color: 'var(--color-text-body)' }}>Press Inquiries</span>
+                <span className="font-medium" style={{ color: 'var(--color-accent)' }}>24 hours</span>
               </div>
             </div>
           </div>
           
           {/* FAQ Link */}
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-blue-800 mb-4">Need Quick Answers?</h3>
-            <p className="text-blue-700 mb-4 text-sm">
+          <div className="card p-6">
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--color-secondary)' }}>Need Quick Answers?</h3>
+            <p className="mb-4 text-sm" style={{ color: 'var(--color-text-body)' }}>
               Check out our frequently asked questions for immediate help with common topics.
             </p>
-            <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-medium hover:bg-blue-700 transition-colors">
+            <button className="btn-primary w-full py-2 px-4">
               View FAQ
             </button>
           </div>
           
           {/* Office Hours */}
-          <div className="bg-purple-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-purple-800 mb-4">Support Hours</h3>
+          <div className="card p-6" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--color-primary)' }}>Support Hours</h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-purple-700">Monday - Friday</span>
-                <span className="text-purple-600">9:00 AM - 6:00 PM GMT</span>
+                <span style={{ color: 'var(--color-text-body)' }}>Monday - Friday</span>
+                <span style={{ color: 'var(--color-primary)' }}>9:00 AM - 6:00 PM GMT</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-purple-700">Saturday</span>
-                <span className="text-purple-600">10:00 AM - 4:00 PM GMT</span>
+                <span style={{ color: 'var(--color-text-body)' }}>Saturday</span>
+                <span style={{ color: 'var(--color-primary)' }}>10:00 AM - 4:00 PM GMT</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-purple-700">Sunday</span>
-                <span className="text-purple-600">Closed</span>
+                <span style={{ color: 'var(--color-text-body)' }}>Sunday</span>
+                <span style={{ color: 'var(--color-primary)' }}>Closed</span>
               </div>
             </div>
           </div>
@@ -299,25 +300,25 @@ const Contact: React.FC = () => {
       </div>
       
       {/* Partnership Section */}
-      <section className="mt-12 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg">
-        <div className="text-center max-w-3xl mx-auto">
+      <section className="mt-12 card-xl p-8" style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%)' }}>
+        <div className="text-center max-w-3xl mx-auto" style={{ color: 'var(--color-white)' }}>
           <h2 className="text-2xl font-bold mb-4">Interested in Partnering?</h2>
           <p className="mb-6">
             We're always looking to collaborate with organizations, coaches, and individuals 
             who share our passion for wheelchair racing and accessibility.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
               <h4 className="font-semibold mb-2">Event Organizers</h4>
-              <p className="text-sm opacity-90">List your events on our platform</p>
+              <p className="text-sm" style={{ opacity: 0.9 }}>List your events on our platform</p>
             </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
               <h4 className="font-semibold mb-2">Equipment Manufacturers</h4>
-              <p className="text-sm opacity-90">Showcase your products to athletes</p>
+              <p className="text-sm" style={{ opacity: 0.9 }}>Showcase your products to athletes</p>
             </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
               <h4 className="font-semibold mb-2">Coaches & Trainers</h4>
-              <p className="text-sm opacity-90">Share your expertise with our community</p>
+              <p className="text-sm" style={{ opacity: 0.9 }}>Share your expertise with our community</p>
             </div>
           </div>
         </div>

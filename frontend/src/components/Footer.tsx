@@ -136,15 +136,15 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-gray-900 text-white">
+      <footer style={{ backgroundColor: 'var(--color-secondary)' }}>
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">Wheelchair Racer</h3>
-              <p className="text-gray-400 text-sm">
+              <h3 className="text-xl font-bold" style={{ color: 'var(--color-white)' }}>Wheelchair Racer</h3>
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                 Making parkrun accessible for everyone. Find wheelchair-friendly 
                 routes, plan your training, and connect with the community.
               </p>
@@ -154,7 +154,9 @@ const Footer: React.FC = () => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  style={{ color: 'rgba(255, 255, 255, 0.7)', transition: 'color 0.2s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
                   aria-label="Facebook"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -165,7 +167,9 @@ const Footer: React.FC = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  style={{ color: 'rgba(255, 255, 255, 0.7)', transition: 'color 0.2s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
                   aria-label="Twitter"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -176,7 +180,9 @@ const Footer: React.FC = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  style={{ color: 'rgba(255, 255, 255, 0.7)', transition: 'color 0.2s' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -188,30 +194,60 @@ const Footer: React.FC = () => {
 
             {/* Quick Links */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Quick Links</h3>
+              <h3 className="text-lg font-semibold" style={{ color: 'var(--color-white)' }}>Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/routes" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/routes" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Find Routes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/accessibility" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Accessibility Guide
                   </Link>
                 </li>
                 <li>
-                  <Link to="/community" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/community" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Community
                   </Link>
                 </li>
                 <li>
-                  <Link to="/training" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/training" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Training Plans
                   </Link>
                 </li>
@@ -220,25 +256,49 @@ const Footer: React.FC = () => {
 
             {/* Support */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Support</h3>
+              <h3 className="text-lg font-semibold" style={{ color: 'var(--color-white)' }}>Support</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/about" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/contact" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link to="/help" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/help" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Help Center
                   </Link>
                 </li>
                 <li>
-                  <Link to="/feedback" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link 
+                    to="/feedback" 
+                    className="text-sm"
+                    style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                  >
                     Feedback
                   </Link>
                 </li>
@@ -247,20 +307,21 @@ const Footer: React.FC = () => {
 
             {/* Newsletter Signup */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Stay Updated</h3>
-              <p className="text-gray-400 text-sm">
+              <h3 className="text-lg font-semibold" style={{ color: 'var(--color-white)' }}>Stay Updated</h3>
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                 Get accessibility updates and new route announcements.
               </p>
               <form onSubmit={handleNewsletterSubmit} className="space-y-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 bg-gray-800 text-white rounded-md border border-gray-700 focus:border-blue-500 focus:outline-none text-sm"
+                  className="input-field"
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'var(--color-white)', border: '1px solid rgba(255, 255, 255, 0.2)' }}
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="btn-primary w-full"
                 >
                   Subscribe
                 </button>
@@ -270,24 +331,39 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800">
+        <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               
               {/* Copyright */}
-              <div className="text-gray-400 text-sm">
+              <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
                 © {currentYear} Wheelchair Racer. All rights reserved.
               </div>
 
               {/* Legal Links */}
               <div className="flex space-x-6 text-sm">
-                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                <Link 
+                  to="/privacy" 
+                  style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                >
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+                <Link 
+                  to="/terms" 
+                  style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                >
                   Terms of Service
                 </Link>
-                <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
+                <Link 
+                  to="/cookies" 
+                  style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-white)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+                >
                   Cookie Policy
                 </Link>
               </div>
@@ -295,7 +371,20 @@ const Footer: React.FC = () => {
               {/* Custom Exercise Management Button */}
               <button
                 onClick={toggleExerciseForm}
-                className="bg-green-600 hover:bg-green-700 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg transition-colors"
+                className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg"
+                style={{ 
+                  backgroundColor: 'var(--color-accent)', 
+                  color: 'var(--color-white)',
+                  transition: 'all 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '';
+                  e.currentTarget.style.transform = '';
+                }}
                 aria-label="Add Exercise"
                 title="Add Exercise to Database"
               >

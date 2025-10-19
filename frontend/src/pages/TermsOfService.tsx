@@ -3,17 +3,17 @@ import React from 'react';
 
 const TermsOfService: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Terms of Service</h1>
+    <div className="page-container py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto card p-8">
+        <h1 className="text-4xl font-bold mb-6" style={{ color: 'var(--color-secondary)' }}>Terms of Service</h1>
         
-        <p className="text-sm text-gray-500 mb-8">
+        <p className="text-sm mb-8" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>
           Last Updated: October 17, 2025
         </p>
 
-        <div className="space-y-6 text-gray-700">
+        <div className="space-y-6" style={{ color: 'var(--color-text-body)' }}>
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">1. Acceptance of Terms</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>1. Acceptance of Terms</h2>
             <p>
               Welcome to Wheelchair Racer. By accessing or using our website and services, you agree to be bound 
               by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.
@@ -21,7 +21,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Description of Service</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>2. Description of Service</h2>
             <p>
               Wheelchair Racer provides a platform for wheelchair athletes and enthusiasts to access training resources, 
               workout programs, nutritional guidance, race information, and community features including blogs and forums. 
@@ -30,7 +30,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. User Accounts</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>3. User Accounts</h2>
             <p className="mb-3">To access certain features, you must create an account. You agree to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Provide accurate, current, and complete information</li>
@@ -45,7 +45,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. User Conduct</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>4. User Conduct</h2>
             <p className="mb-3">You agree not to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Violate any laws or regulations</li>
@@ -62,7 +62,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. User Content</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>5. User Content</h2>
             <p className="mb-3">
               You retain ownership of content you post ("User Content"), but you grant us a worldwide, non-exclusive, 
               royalty-free license to use, reproduce, modify, publish, and distribute your User Content in connection 
@@ -80,7 +80,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. Medical Disclaimer</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>6. Medical Disclaimer</h2>
             <p className="mb-3">
               <strong>IMPORTANT:</strong> The information provided on Wheelchair Racer is for educational and 
               informational purposes only and is not intended as medical advice.
@@ -95,7 +95,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Intellectual Property</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>7. Intellectual Property</h2>
             <p>
               All content on Wheelchair Racer, including text, graphics, logos, images, videos, and software, 
               is the property of Wheelchair Racer or its licensors and is protected by copyright, trademark, 
@@ -105,7 +105,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">8. Third-Party Links</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>8. Third-Party Links</h2>
             <p>
               Our services may contain links to third-party websites or services. We are not responsible for 
               the content, privacy policies, or practices of third-party sites. Your use of third-party sites 
@@ -114,7 +114,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">9. Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>9. Limitation of Liability</h2>
             <p className="mb-3">
               TO THE MAXIMUM EXTENT PERMITTED BY LAW, WHEELCHAIR RACER SHALL NOT BE LIABLE FOR:
             </p>
@@ -130,7 +130,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">10. Indemnification</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>10. Indemnification</h2>
             <p>
               You agree to indemnify, defend, and hold harmless Wheelchair Racer, its officers, directors, 
               employees, and agents from any claims, losses, damages, liabilities, and expenses (including 
@@ -139,7 +139,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">11. Termination</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>11. Termination</h2>
             <p>
               We reserve the right to suspend or terminate your account and access to our services at any time, 
               with or without notice, for any reason, including violation of these Terms. Upon termination, 
@@ -148,7 +148,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">12. Dispute Resolution</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>12. Dispute Resolution</h2>
             <p>
               Any disputes arising from these Terms or your use of our services shall be resolved through 
               binding arbitration in accordance with applicable arbitration rules. You waive your right to 
@@ -157,7 +157,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">13. Governing Law</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>13. Governing Law</h2>
             <p>
               These Terms shall be governed by and construed in accordance with the laws of your jurisdiction, 
               without regard to its conflict of law provisions.
@@ -165,7 +165,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">14. Changes to Terms</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>14. Changes to Terms</h2>
             <p>
               We reserve the right to modify these Terms at any time. We will notify you of material changes 
               by posting the updated Terms on our website and updating the "Last Updated" date. Your continued 
@@ -174,7 +174,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-3">15. Contact Information</h2>
+            <h2 className="text-2xl font-semibold mb-3" style={{ color: 'var(--color-secondary)' }}>15. Contact Information</h2>
             <p className="mb-3">
               If you have questions about these Terms, please contact us:
             </p>

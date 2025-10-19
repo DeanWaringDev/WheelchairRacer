@@ -298,23 +298,23 @@ const Forum: React.FC = () => {
         )}
 
         {/* Forum Stats */}
-        <section className="mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg">
+        <section className="mb-8 card-xl p-6" style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%)', color: 'var(--color-white)' }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="text-2xl font-bold">{totalMembers}</div>
-              <div className="text-sm opacity-80">Total Members</div>
+              <div className="text-sm" style={{ opacity: 0.8 }}>Total Members</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold">{totalPosts}</div>
-              <div className="text-sm opacity-80">Total Posts</div>
+              <div className="text-sm" style={{ opacity: 0.8 }}>Total Posts</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold">{activeTopics}</div>
-              <div className="text-sm opacity-80">Active Topics</div>
+              <div className="text-sm" style={{ opacity: 0.8 }}>Active Topics</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold">{user ? '1' : '0'}</div>
-              <div className="text-sm opacity-80">Online Now</div>
+              <div className="text-sm" style={{ opacity: 0.8 }}>Online Now</div>
             </div>
           </div>
         </section>
@@ -322,11 +322,11 @@ const Forum: React.FC = () => {
         {/* Forum Categories */}
         <section className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-gray-800">Forum Categories</h2>
+            <h2 className="text-2xl font-semibold" style={{ color: 'var(--color-secondary)' }}>Forum Categories</h2>
             {isAdmin && (
               <button
                 onClick={() => setShowCategoryModal(true)}
-                className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors"
+                className="btn-accent px-4 py-2 text-sm"
               >
                 + Add Category
               </button>
@@ -377,10 +377,10 @@ const Forum: React.FC = () => {
         {/* Recent Topics */}
         <section className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-gray-800">Recent Topics</h2>
+            <h2 className="text-2xl font-semibold" style={{ color: 'var(--color-secondary)' }}>Recent Topics</h2>
             <button
               onClick={() => openTopicModal()}
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="btn-primary px-4 py-2 text-sm"
             >
               New Topic
             </button>
@@ -456,12 +456,12 @@ const Forum: React.FC = () => {
         </section>
 
         {/* Community Guidelines */}
-        <section className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
-          <h3 className="text-lg font-semibold text-yellow-800 mb-4">Community Guidelines</h3>
+        <section className="card p-6" style={{ borderLeft: '4px solid var(--color-accent)' }}>
+          <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--color-accent)' }}>Community Guidelines</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-medium text-yellow-800 mb-2">Please Remember:</h4>
-              <ul className="text-yellow-700 text-sm space-y-1">
+              <h4 className="font-medium mb-2" style={{ color: 'var(--color-secondary)' }}>Please Remember:</h4>
+              <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-body)' }}>
                 <li>• Be respectful and supportive</li>
                 <li>• Stay on topic</li>
                 <li>• Share constructive feedback</li>
@@ -469,8 +469,8 @@ const Forum: React.FC = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-medium text-yellow-800 mb-2">Forum Features:</h4>
-              <ul className="text-yellow-700 text-sm space-y-1">
+              <h4 className="font-medium mb-2" style={{ color: 'var(--color-secondary)' }}>Forum Features:</h4>
+              <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-body)' }}>
                 <li>✓ Create and reply to topics</li>
                 <li>✓ Multiple categories</li>
                 <li>✓ Real-time stats</li>
@@ -558,14 +558,15 @@ const Forum: React.FC = () => {
                     setCategoryForm({ name: '', description: '', icon: '💬', color: 'blue' });
                     setCategoryError('');
                   }}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  className="btn-secondary flex-1 px-4 py-2"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={categoryLoading}
-                  className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+                  className="btn-primary flex-1 px-4 py-2"
+                  style={{ opacity: categoryLoading ? 0.5 : 1 }}
                 >
                   {categoryLoading ? 'Creating...' : 'Create Category'}
                 </button>
@@ -643,14 +644,15 @@ const Forum: React.FC = () => {
                     setSelectedCategory('');
                     setTopicError('');
                   }}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  className="btn-secondary flex-1 px-4 py-2"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={topicLoading}
-                  className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+                  className="btn-primary flex-1 px-4 py-2"
+                  style={{ opacity: topicLoading ? 0.5 : 1 }}
                 >
                   {topicLoading ? 'Creating...' : 'Create Topic'}
                 </button>

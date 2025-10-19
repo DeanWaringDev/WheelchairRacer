@@ -33,7 +33,7 @@ const ForgotPassword: React.FC = () => {
   };
 
   return (
-    <main className="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <main className="page-container flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
@@ -42,20 +42,21 @@ const ForgotPassword: React.FC = () => {
             src="/logo.svg"
             alt="Wheelchair Racer Logo"
           />
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-3xl font-extrabold" style={{ color: 'var(--color-secondary)' }}>
             Reset your password
           </h2>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-sm" style={{ color: 'var(--color-text-body)' }}>
             Enter your email address and we'll send you a link to reset your password.
           </p>
         </div>
 
         {/* Success Message */}
         {success ? (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+          <div className="card p-6 text-center">
             <div className="flex justify-center mb-4">
               <svg
-                className="h-12 w-12 text-green-500"
+                className="h-12 w-12"
+                style={{ color: 'var(--color-accent)' }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -68,19 +69,19 @@ const ForgotPassword: React.FC = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-green-900 mb-2">
+            <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-secondary)' }}>
               Check your email
             </h3>
-            <p className="text-sm text-green-800 mb-4">
+            <p className="text-sm mb-4" style={{ color: 'var(--color-text-body)' }}>
               We've sent a password reset link to <strong>{email}</strong>
             </p>
-            <p className="text-xs text-green-700 mb-6">
+            <p className="text-xs mb-6" style={{ color: 'var(--color-text-body)' }}>
               Click the link in the email to reset your password. The link will expire in 1 hour.
             </p>
             <div className="space-y-2">
               <Link
                 to="/signin"
-                className="block w-full px-4 py-2 bg-green-600 text-white rounded-md font-medium hover:bg-green-700 transition-colors"
+                className="btn-primary block w-full text-center"
               >
                 Back to Sign In
               </Link>
@@ -89,7 +90,7 @@ const ForgotPassword: React.FC = () => {
                   setSuccess(false);
                   setEmail('');
                 }}
-                className="block w-full px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md font-medium hover:bg-gray-50 transition-colors"
+                className="btn-secondary w-full"
               >
                 Send another email
               </button>
@@ -99,7 +100,7 @@ const ForgotPassword: React.FC = () => {
           /* Reset Form */
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="label">
                 Email address
               </label>
               <input
@@ -110,15 +111,15 @@ const ForgotPassword: React.FC = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="input-field"
                 placeholder="Enter your email"
               />
             </div>
 
             {/* Error message */}
             {error && (
-              <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                <p className="text-sm text-red-800">{error}</p>
+              <div className="rounded-md p-3" style={{ backgroundColor: '#FEE', border: '1px solid #FCC' }}>
+                <p className="text-sm" style={{ color: '#C33' }}>{error}</p>
               </div>
             )}
 
@@ -126,12 +127,13 @@ const ForgotPassword: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
-                <span className="flex items-center">
+                <span className="flex items-center justify-center">
                   <svg
-                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    className="animate-spin -ml-1 mr-3 h-5 w-5"
+                    style={{ color: 'var(--color-white)' }}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -162,15 +164,23 @@ const ForgotPassword: React.FC = () => {
               <div>
                 <Link
                   to="/signin"
-                  className="text-sm text-blue-600 hover:text-blue-500"
+                  className="text-sm"
+                  style={{ color: 'var(--color-primary)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                  onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                 >
                   ← Back to Sign In
                 </Link>
               </div>
               <div>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm" style={{ color: 'var(--color-text-body)' }}>
                   Don't have an account?{' '}
-                  <Link to="/signin" className="text-blue-600 hover:text-blue-500">
+                  <Link 
+                    to="/signin"
+                    style={{ color: 'var(--color-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                    onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                  >
                     Sign up here
                   </Link>
                 </span>
@@ -181,10 +191,11 @@ const ForgotPassword: React.FC = () => {
 
         {/* Help text */}
         {!success && (
-          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-md p-4">
+          <div className="card p-4">
             <div className="flex">
               <svg
-                className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0"
+                className="h-5 w-5 mr-2 flex-shrink-0"
+                style={{ color: 'var(--color-accent)' }}
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -194,8 +205,8 @@ const ForgotPassword: React.FC = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <div className="text-sm text-blue-700">
-                <p className="font-medium mb-1">Having trouble?</p>
+              <div className="text-sm" style={{ color: 'var(--color-text-body)' }}>
+                <p className="font-medium mb-1" style={{ color: 'var(--color-secondary)' }}>Having trouble?</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Make sure you use the email address associated with your account</li>
                   <li>Check your spam folder if you don't see the email</li>

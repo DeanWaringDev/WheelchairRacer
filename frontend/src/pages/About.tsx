@@ -30,24 +30,24 @@ const About: React.FC = () => {
   ];
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="page-container">
       <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Hero Section */}
       <section className="mb-12">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--color-secondary)' }}>
             About Wheelchair Racer
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: 'var(--color-text-body)' }}>
             Empowering wheelchair racers worldwide with accessible resources, 
             community connections, and data-driven insights.
           </p>
         </div>
         
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg">
+        <div className="card-xl p-8" style={{ background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%)' }}>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="text-lg leading-relaxed">
+            <h2 className="text-2xl font-bold mb-4" style={{ color: 'var(--color-white)' }}>Our Mission</h2>
+            <p className="text-lg leading-relaxed" style={{ color: 'var(--color-white)' }}>
               To create the world's most comprehensive platform for wheelchair racing, 
               providing athletes with the tools, information, and community support 
               they need to achieve their racing goals and push the boundaries of what's possible.
@@ -58,42 +58,42 @@ const About: React.FC = () => {
       
       {/* Our Story */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Our Story</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-center" style={{ color: 'var(--color-secondary)' }}>Our Story</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
-            <p className="text-gray-600 mb-4">
+            <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>
               Wheelchair Racer was born from a simple observation: wheelchair racing 
               was growing rapidly, but athletes lacked centralized resources for 
               training, event discovery, and community connection.
             </p>
-            <p className="text-gray-600 mb-4">
+            <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>
               Founded by Paralympic athletes and technology professionals, our platform 
               combines deep sport expertise with cutting-edge technology to serve 
               the wheelchair racing community.
             </p>
-            <p className="text-gray-600">
+            <p style={{ color: 'var(--color-text-body)' }}>
               From accessibility mapping to AI-powered training plans, we're building 
               the future of wheelchair racing support, one feature at a time.
             </p>
           </div>
-          <div className="bg-gray-100 p-8 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">By the Numbers</h3>
+          <div className="card p-8">
+            <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--color-secondary)' }}>By the Numbers</h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">2,747</div>
-                <div className="text-sm text-gray-600">Parkrun Events Mapped</div>
+                <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>2,747</div>
+                <div className="text-sm" style={{ color: 'var(--color-text-body)' }}>Parkrun Events Mapped</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">1,200+</div>
-                <div className="text-sm text-gray-600">Community Members</div>
+                <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>1,200+</div>
+                <div className="text-sm" style={{ color: 'var(--color-text-body)' }}>Community Members</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">150+</div>
-                <div className="text-sm text-gray-600">Training Plans</div>
+                <div className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>150+</div>
+                <div className="text-sm" style={{ color: 'var(--color-text-body)' }}>Training Plans</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-red-600">50+</div>
-                <div className="text-sm text-gray-600">Countries Represented</div>
+                <div className="text-2xl font-bold" style={{ color: 'var(--color-accent)' }}>50+</div>
+                <div className="text-sm" style={{ color: 'var(--color-text-body)' }}>Countries Represented</div>
               </div>
             </div>
           </div>
@@ -102,14 +102,14 @@ const About: React.FC = () => {
       
       {/* Team Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Meet Our Team</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-center" style={{ color: 'var(--color-secondary)' }}>Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center bg-gray-50 p-6 rounded-lg">
+            <div key={index} className="card text-center p-6">
               <div className="text-4xl mb-4">{member.image}</div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">{member.name}</h3>
-              <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-              <p className="text-gray-600 text-sm">{member.bio}</p>
+              <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-secondary)' }}>{member.name}</h3>
+              <p className="font-medium mb-3" style={{ color: 'var(--color-primary)' }}>{member.role}</p>
+              <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>{member.bio}</p>
             </div>
           ))}
         </div>
@@ -117,15 +117,18 @@ const About: React.FC = () => {
       
       {/* Timeline */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Our Journey</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-center" style={{ color: 'var(--color-secondary)' }}>Our Journey</h2>
         <div className="max-w-3xl mx-auto">
           {milestones.map((milestone, index) => (
             <div key={index} className="flex items-center mb-6">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center font-bold mr-6">
+              <div 
+                className="w-16 h-16 rounded-full flex items-center justify-center font-bold mr-6"
+                style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-white)' }}
+              >
                 {milestone.year}
               </div>
               <div className="flex-1">
-                <p className="text-gray-700 font-medium">{milestone.event}</p>
+                <p className="font-medium" style={{ color: 'var(--color-text-body)' }}>{milestone.event}</p>
               </div>
             </div>
           ))}
@@ -134,43 +137,43 @@ const About: React.FC = () => {
       
       {/* Values */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Our Values</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-center" style={{ color: 'var(--color-secondary)' }}>Our Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-blue-50 p-6 rounded-lg text-center">
+          <div className="card p-6 text-center">
             <div className="text-3xl mb-3">🎯</div>
-            <h3 className="font-semibold text-blue-800 mb-2">Excellence</h3>
-            <p className="text-blue-600 text-sm">Pursuing the highest standards in everything we build</p>
+            <h3 className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>Excellence</h3>
+            <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>Pursuing the highest standards in everything we build</p>
           </div>
-          <div className="bg-green-50 p-6 rounded-lg text-center">
+          <div className="card p-6 text-center">
             <div className="text-3xl mb-3">🤝</div>
-            <h3 className="font-semibold text-green-800 mb-2">Community</h3>
-            <p className="text-green-600 text-sm">Building connections that empower athletes worldwide</p>
+            <h3 className="font-semibold mb-2" style={{ color: 'var(--color-accent)' }}>Community</h3>
+            <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>Building connections that empower athletes worldwide</p>
           </div>
-          <div className="bg-purple-50 p-6 rounded-lg text-center">
+          <div className="card p-6 text-center">
             <div className="text-3xl mb-3">♿</div>
-            <h3 className="font-semibold text-purple-800 mb-2">Accessibility</h3>
-            <p className="text-purple-600 text-sm">Ensuring our platform works for everyone</p>
+            <h3 className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>Accessibility</h3>
+            <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>Ensuring our platform works for everyone</p>
           </div>
-          <div className="bg-yellow-50 p-6 rounded-lg text-center">
+          <div className="card p-6 text-center">
             <div className="text-3xl mb-3">🚀</div>
-            <h3 className="font-semibold text-yellow-800 mb-2">Innovation</h3>
-            <p className="text-yellow-600 text-sm">Pioneering new solutions for athlete development</p>
+            <h3 className="font-semibold mb-2" style={{ color: 'var(--color-accent)' }}>Innovation</h3>
+            <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>Pioneering new solutions for athlete development</p>
           </div>
         </div>
       </section>
       
       {/* Contact CTA */}
-      <section className="bg-gray-50 p-8 rounded-lg text-center">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get In Touch</h2>
-        <p className="text-gray-600 mb-6">
+      <section className="card p-8 text-center">
+        <h2 className="text-2xl font-semibold mb-4" style={{ color: 'var(--color-secondary)' }}>Get In Touch</h2>
+        <p className="mb-6" style={{ color: 'var(--color-text-body)' }}>
           Have questions, suggestions, or want to partner with us? 
           We'd love to hear from the wheelchair racing community.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors">
+          <button className="btn-primary px-6 py-3">
             Contact Us
           </button>
-          <button className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+          <button className="btn-secondary px-6 py-3">
             Join Our Team
           </button>
         </div>

@@ -375,29 +375,29 @@ const Blog: React.FC = () => {
   };
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="page-container">
       <div className="max-w-4xl mx-auto px-4 py-12 space-y-12">
         <header className="space-y-2">
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-3xl font-bold" style={{ color: 'var(--color-secondary)' }}>
             Wheelchair Racing Blog
           </h1>
-          <p className="text-gray-600">
+          <p style={{ color: 'var(--color-text-body)' }}>
             Training notes, race reports, and stories from the community.
           </p>
         </header>
 
         {user?.id === ADMIN_USER_ID && (
-          <section className="rounded-lg border border-gray-200 p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <section className="card p-6">
+            <h2 className="text-xl font-semibold mb-4" style={{ color: 'var(--color-secondary)' }}>
               Add New Post
             </h2>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="label">
                   Title
                 </label>
                 <input
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-field"
                   name="title"
                   onChange={handleChange}
                   type="text"
@@ -406,11 +406,11 @@ const Blog: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="label">
                   Content
                 </label>
                 <textarea
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input-field"
                   name="content"
                   onChange={handleChange}
                   rows={5}
@@ -420,11 +420,11 @@ const Blog: React.FC = () => {
               </div>
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label className="label">
                     Category
                   </label>
                   <select
-                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="input-field"
                     name="category"
                     onChange={handleChange}
                     value={form.category}
@@ -452,20 +452,20 @@ const Blog: React.FC = () => {
                     type="file"
                     multiple
                   />
-                  <p className="mt-1 text-xs text-gray-500">
+                  <p className="mt-1 text-xs" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>
                     Optional; select multiple images (JPG/PNG up to 5MB each). Perfect for route maps and race photos!
                   </p>
                   {imageFiles.length > 0 && (
-                    <p className="mt-1 text-sm text-gray-700">
+                    <p className="mt-1 text-sm" style={{ color: 'var(--color-text-body)' }}>
                       📸 {imageFiles.length} image{imageFiles.length > 1 ? 's' : ''} selected
                     </p>
                   )}
                 </div>
               </div>
-              {formError && <p className="text-sm text-red-600">{formError}</p>}
+              {formError && <p className="text-sm" style={{ color: '#C33' }}>{formError}</p>}
               <div className="flex justify-end">
                 <button
-                  className="rounded-md bg-blue-600 px-4 py-2 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-300"
+                  className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={submitting}
                   type="submit"
                 >
@@ -484,11 +484,28 @@ const Blog: React.FC = () => {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`rounded-full border px-4 py-1 text-sm font-medium transition ${
-                    isActive
-                      ? "border-blue-600 bg-blue-600 text-white"
-                      : "border-gray-300 bg-white text-gray-700 hover:border-blue-400 hover:text-blue-600"
-                  }`}
+                  className={`rounded-full px-4 py-1 text-sm font-medium transition`}
+                  style={isActive ? {
+                    backgroundColor: 'var(--color-primary)',
+                    color: 'var(--color-white)',
+                    border: '1px solid var(--color-primary)'
+                  } : {
+                    backgroundColor: 'var(--color-white)',
+                    color: 'var(--color-text-body)',
+                    border: '1px solid rgba(0, 0, 0, 0.2)'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderColor = 'var(--color-primary)';
+                      e.currentTarget.style.color = 'var(--color-primary)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)';
+                      e.currentTarget.style.color = 'var(--color-text-body)';
+                    }
+                  }}
                   type="button"
                 >
                   {category}
@@ -498,19 +515,19 @@ const Blog: React.FC = () => {
           </div>
 
           {loading ? (
-            <div className="rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+            <div className="card p-8 text-center" style={{ color: 'var(--color-text-body)' }}>
               Loading posts...
             </div>
           ) : (
             <>
               {fetchError && (
-                <div className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                <div className="rounded-md px-4 py-3 text-sm" style={{ backgroundColor: '#FEE', border: '1px solid #FCC', color: '#C33' }}>
                   {fetchError}
                 </div>
               )}
 
               {displayedPosts.length === 0 ? (
-                <div className="rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+                <div className="card p-8 text-center" style={{ color: 'var(--color-text-body)' }}>
                   No posts to show yet. Check back soon!
                 </div>
               ) : (
@@ -518,18 +535,24 @@ const Blog: React.FC = () => {
                   {displayedPosts.map((post) => (
                     <article
                       key={post.id}
-                      className="rounded-lg border border-gray-200 p-6 shadow-sm transition hover:shadow-md"
+                      className="card p-6"
                     >
-                      <div className="flex flex-wrap items-center justify-between gap-y-2 text-sm text-gray-500">
-                        <span className="rounded-full bg-blue-50 px-3 py-1 text-blue-700">
+                      <div className="flex flex-wrap items-center justify-between gap-y-2 text-sm">
+                        <span 
+                          className="rounded-full px-3 py-1" 
+                          style={{ backgroundColor: 'rgba(245, 124, 0, 0.1)', color: 'var(--color-primary)' }}
+                        >
                           {post.category || "Uncategorized"}
                         </span>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3" style={{ color: 'var(--color-text-body)' }}>
                           <span>{formatDate(post.created_at)}</span>
                           {user?.id === ADMIN_USER_ID && (
                             <button
                               onClick={() => handleDeletePost(post.id)}
-                              className="text-red-600 hover:text-red-800 font-medium transition-colors"
+                              className="font-medium transition-colors"
+                              style={{ color: '#C33' }}
+                              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
                               aria-label="Delete post"
                             >
                               Delete
@@ -538,11 +561,11 @@ const Blog: React.FC = () => {
                         </div>
                       </div>
 
-                      <h3 className="mt-4 text-2xl font-semibold text-gray-900">
+                      <h3 className="mt-4 text-2xl font-semibold" style={{ color: 'var(--color-secondary)' }}>
                         {post.title}
                       </h3>
 
-                      <p className="mt-3 whitespace-pre-line text-gray-700">
+                      <p className="mt-3 whitespace-pre-line" style={{ color: 'var(--color-text-body)' }}>
                         {post.content}
                       </p>
 
@@ -636,7 +659,7 @@ const Blog: React.FC = () => {
 
                       {/* Comments Section */}
                       {showComments[post.id] && (
-                        <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
+                        <div className="mt-4 pt-4 space-y-4" style={{ borderTop: '1px solid rgba(0, 0, 0, 0.1)' }}>
                           {/* Add Comment Form (only for logged-in users) */}
                           {user ? (
                             <div className="flex gap-2">
@@ -652,19 +675,19 @@ const Blog: React.FC = () => {
                                   }
                                 }}
                                 placeholder="Add a comment..."
-                                className="flex-1 rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="input-field text-sm flex-1"
                               />
                               <button
                                 onClick={() => handleCommentSubmit(post.id)}
                                 disabled={commentSubmitting[post.id] || !commentForm[post.id]?.trim()}
-                                className="px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                                className="btn-primary px-4 py-2 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                               >
                                 {commentSubmitting[post.id] ? "Posting..." : "Post"}
                               </button>
                             </div>
                           ) : (
-                            <p className="text-sm text-gray-500 italic">
-                              Please <Link to="/signin" className="text-blue-600 hover:underline">sign in</Link> to comment.
+                            <p className="text-sm italic" style={{ color: 'var(--color-text-body)' }}>
+                              Please <Link to="/signin" style={{ color: 'var(--color-primary)' }} className="hover:underline">sign in</Link> to comment.
                             </p>
                           )}
 

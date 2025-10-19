@@ -1,7 +1,6 @@
 /**
  * Global Styles for Wheelchair Racer
- * 
- * This file imports Tailwind CSS and sets global typography defaults
+ * Premium Design System v2.0
  * 
  * Font Choice: Inter - Modern, highly readable font designed for UI
  * - Excellent readability at all sizes
@@ -13,14 +12,42 @@
 /* Import Tailwind CSS utility classes */
 @import "tailwindcss";
 
-/* Global font family for the entire application */
+/* Design System - Premium Color Palette & Spacing */
+@theme {
+  /* Premium Color Palette */
+  --color-primary: #F57C00;
+  --color-secondary: #263238;
+  --color-accent: #00897B;
+  --color-background: #FAFAFA;
+  --color-white: #FFFFFF;
+  --color-text-body: #546E7A;
+  
+  /* Consistent Spacing Scale */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2.5rem;   /* 40px */
+  --spacing-xl: 4rem;     /* 64px */
+  
+  /* Border Radius */
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  
+  /* Shadows for Premium Cards */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Global font family and base styles */
 body {
   font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-body);
   
-  /* Optional: Add smooth scrolling for better UX */
+  /* Smooth scrolling for better UX */
   scroll-behavior: smooth;
   
-  /* Optional: Improve text rendering */
+  /* Improve text rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,9 +65,113 @@ body {
   border: 0;
 }
 
-/* TODO: Add custom CSS variables for consistent theming
-:root {
-  --color-primary: #FBA919; // Orange from logo
-  --color-secondary: #EFF6FF; // Blue-50 background
-  --color-accent: #F59E0B; // Amber-500 for borders
-} */
+/* Premium Card Styles */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-xl {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease;
+}
+
+.card-xl:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Premium Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  padding: 0.75rem 2rem;
+  border-radius: var(--color-lg);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 2px solid var(--color-secondary);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
+
+/* Premium Form Inputs */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  color: var(--color-secondary);
+  background-color: var(--color-white);
+  transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.1);
+}
+
+/* Premium Labels */
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+}
+
+/* Premium Page Container */
+.page-container {
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+.page-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}

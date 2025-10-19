@@ -204,18 +204,18 @@ const Profile: React.FC = () => {
   }
 
   return (
-    <main className="bg-gray-50 min-h-screen py-8">
+    <main className="page-container py-8">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="bg-white shadow rounded-lg mb-6">
-          <div className="px-6 py-4 border-b border-gray-200">
-            <h1 className="text-2xl font-bold text-gray-900">Profile Settings</h1>
-            <p className="text-gray-600">Manage your account information and preferences</p>
+        <div className="card mb-6">
+          <div className="px-6 py-4" style={{ borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
+            <h1 className="text-2xl font-bold" style={{ color: 'var(--color-secondary)' }}>Profile Settings</h1>
+            <p style={{ color: 'var(--color-text-body)' }}>Manage your account information and preferences</p>
           </div>
         </div>
 
         {/* Profile Form */}
-        <div className="bg-white shadow rounded-lg">
+        <div className="card">
           <form onSubmit={handleUpdateProfile} className="p-6 space-y-6">
             
             {/* Profile Picture Section */}
@@ -223,20 +223,21 @@ const Profile: React.FC = () => {
               <div className="shrink-0">
                 {avatarUrl ? (
                   <img
-                    className="h-24 w-24 rounded-full object-cover border-4 border-gray-200"
+                    className="h-24 w-24 rounded-full object-cover"
+                    style={{ border: '4px solid rgba(0,0,0,0.1)' }}
                     src={avatarUrl}
                     alt="Profile"
                   />
                 ) : (
-                  <div className="h-24 w-24 rounded-full bg-gray-300 flex items-center justify-center">
-                    <svg className="h-12 w-12 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="h-24 w-24 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(0,0,0,0.1)' }}>
+                    <svg className="h-12 w-12" style={{ color: 'var(--color-text-body)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
                 )}
               </div>
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="label">
                   Profile Picture
                 </label>
                 <input
@@ -244,9 +245,14 @@ const Profile: React.FC = () => {
                   accept="image/*"
                   onChange={handleAvatarUpload}
                   disabled={uploading}
-                  className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                  className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium hover:file:opacity-90"
+                  style={{ 
+                    color: 'var(--color-text-body)',
+                    backgroundColor: 'rgba(245, 124, 0, 0.1)',
+                    borderRadius: 'var(--radius-lg)'
+                  }}
                 />
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs mt-1" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>
                   {uploading ? 'Uploading...' : 'PNG, JPG up to 2MB'}
                 </p>
               </div>
@@ -254,7 +260,7 @@ const Profile: React.FC = () => {
 
             {/* Username */}
             <div>
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="username" className="label">
                 Username
               </label>
               <input
@@ -262,14 +268,14 @@ const Profile: React.FC = () => {
                 id="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="input-field"
                 placeholder="Enter your username"
               />
             </div>
 
             {/* Email (read-only) */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="label">
                 Email
               </label>
               <input
@@ -277,32 +283,34 @@ const Profile: React.FC = () => {
                 id="email"
                 value={user.email || ''}
                 disabled
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-50 text-gray-500"
+                className="input-field"
+                style={{ opacity: 0.6, cursor: 'not-allowed' }}
               />
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs mt-1" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>
                 Email cannot be changed. Contact support if needed.
               </p>
             </div>
 
             {/* Messages */}
             {message && (
-              <div className="bg-green-50 border border-green-200 rounded-md p-3">
-                <p className="text-sm text-green-800">{message}</p>
+              <div className="card p-3" style={{ borderLeft: '4px solid var(--color-accent)' }}>
+                <p className="text-sm" style={{ color: 'var(--color-accent)' }}>{message}</p>
               </div>
             )}
 
             {error && (
-              <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                <p className="text-sm text-red-800">{error}</p>
+              <div className="card p-3" style={{ borderLeft: '4px solid #C33' }}>
+                <p className="text-sm" style={{ color: '#C33' }}>{error}</p>
               </div>
             )}
 
             {/* Action Buttons */}
-            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+            <div className="flex items-center justify-between pt-4" style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}>
               <button
                 type="button"
                 onClick={handleSignOut}
-                className="text-sm text-red-600 hover:text-red-500 font-medium"
+                className="text-sm font-medium"
+                style={{ color: '#C33' }}
               >
                 Sign Out
               </button>
@@ -311,14 +319,15 @@ const Profile: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => navigate('/')}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+                  className="btn-secondary px-4 py-2 text-sm"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={loading || uploading}
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-primary px-4 py-2 text-sm"
+                  style={{ opacity: (loading || uploading) ? 0.5 : 1, cursor: (loading || uploading) ? 'not-allowed' : 'pointer' }}
                 >
                   {loading ? 'Saving...' : 'Save Changes'}
                 </button>
@@ -328,17 +337,17 @@ const Profile: React.FC = () => {
         </div>
 
         {/* Change Password Section */}
-        <div className="bg-white shadow rounded-lg mt-6">
-          <div className="px-6 py-4 border-b border-gray-200">
+        <div className="card mt-6">
+          <div className="px-6 py-4" style={{ borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-xl font-bold text-gray-900">Change Password</h2>
-                <p className="text-sm text-gray-600">Update your password to keep your account secure</p>
+                <h2 className="text-xl font-bold" style={{ color: 'var(--color-secondary)' }}>Change Password</h2>
+                <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>Update your password to keep your account secure</p>
               </div>
               {!showPasswordSection && (
                 <button
                   onClick={() => setShowPasswordSection(true)}
-                  className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 border border-blue-600 rounded-md hover:bg-blue-50"
+                  className="btn-secondary px-4 py-2 text-sm"
                 >
                   Change Password
                 </button>
@@ -350,7 +359,7 @@ const Profile: React.FC = () => {
             <form onSubmit={handlePasswordChange} className="p-6 space-y-4">
               {/* Current Password */}
               <div>
-                <label htmlFor="currentPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="currentPassword" className="label">
                   Current Password *
                 </label>
                 <input
@@ -358,7 +367,7 @@ const Profile: React.FC = () => {
                   id="currentPassword"
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="input-field"
                   placeholder="Enter your current password"
                   required
                 />
@@ -366,7 +375,7 @@ const Profile: React.FC = () => {
 
               {/* New Password */}
               <div>
-                <label htmlFor="newPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="newPassword" className="label">
                   New Password *
                 </label>
                 <input
@@ -374,34 +383,28 @@ const Profile: React.FC = () => {
                   id="newPassword"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="input-field"
                   placeholder="Enter new password"
                   minLength={6}
                   required
                 />
-                <p className="text-xs text-gray-500 mt-1">Must be at least 6 characters</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--color-text-body)', opacity: 0.8 }}>Must be at least 6 characters</p>
                 
                 {/* Password Strength Indicator */}
                 {newPassword && (
                   <div className="mt-2 space-y-1">
                     <div className="flex items-center space-x-2">
-                      <div className="flex-1 bg-gray-200 rounded-full h-2">
+                      <div className="flex-1 rounded-full h-2" style={{ backgroundColor: 'rgba(0,0,0,0.1)' }}>
                         <div
-                          className={`h-2 rounded-full transition-all ${
-                            newPassword.length < 6
-                              ? 'w-1/3 bg-red-500'
-                              : newPassword.length < 10
-                              ? 'w-2/3 bg-yellow-500'
-                              : 'w-full bg-green-500'
-                          }`}
+                          className="h-2 rounded-full transition-all"
+                          style={{
+                            width: newPassword.length < 6 ? '33%' : newPassword.length < 10 ? '66%' : '100%',
+                            backgroundColor: newPassword.length < 6 ? '#C33' : newPassword.length < 10 ? '#FB3' : 'var(--color-accent)'
+                          }}
                         ></div>
                       </div>
-                      <span className="text-xs text-gray-600">
-                        {newPassword.length < 6
-                          ? 'Weak'
-                          : newPassword.length < 10
-                          ? 'Good'
-                          : 'Strong'}
+                      <span className="text-xs" style={{ color: 'var(--color-text-body)' }}>
+                        {newPassword.length < 6 ? 'Weak' : newPassword.length < 10 ? 'Good' : 'Strong'}
                       </span>
                     </div>
                   </div>
@@ -410,7 +413,7 @@ const Profile: React.FC = () => {
 
               {/* Confirm New Password */}
               <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="confirmPassword" className="label">
                   Confirm New Password *
                 </label>
                 <input
@@ -418,34 +421,34 @@ const Profile: React.FC = () => {
                   id="confirmPassword"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="input-field"
                   placeholder="Re-enter new password"
                   minLength={6}
                   required
                 />
                 {confirmPassword && newPassword !== confirmPassword && (
-                  <p className="text-xs text-red-600 mt-1">Passwords do not match</p>
+                  <p className="text-xs mt-1" style={{ color: '#C33' }}>Passwords do not match</p>
                 )}
                 {confirmPassword && newPassword === confirmPassword && (
-                  <p className="text-xs text-green-600 mt-1">✓ Passwords match</p>
+                  <p className="text-xs mt-1" style={{ color: 'var(--color-accent)' }}>✓ Passwords match</p>
                 )}
               </div>
 
               {/* Password Messages */}
               {passwordMessage && (
-                <div className="bg-green-50 border border-green-200 rounded-md p-3">
-                  <p className="text-sm text-green-800">{passwordMessage}</p>
+                <div className="card p-3" style={{ borderLeft: '4px solid var(--color-accent)' }}>
+                  <p className="text-sm" style={{ color: 'var(--color-accent)' }}>{passwordMessage}</p>
                 </div>
               )}
 
               {passwordError && (
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                  <p className="text-sm text-red-800">{passwordError}</p>
+                <div className="card p-3" style={{ borderLeft: '4px solid #C33' }}>
+                  <p className="text-sm" style={{ color: '#C33' }}>{passwordError}</p>
                 </div>
               )}
 
               {/* Action Buttons */}
-              <div className="flex items-center justify-end space-x-3 pt-4 border-t border-gray-200">
+              <div className="flex items-center justify-end space-x-3 pt-4" style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}>
                 <button
                   type="button"
                   onClick={() => {
@@ -456,14 +459,18 @@ const Profile: React.FC = () => {
                     setPasswordError('')
                     setPasswordMessage('')
                   }}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+                  className="btn-secondary px-4 py-2 text-sm"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={passwordLoading || !currentPassword || !newPassword || !confirmPassword || newPassword !== confirmPassword}
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-primary px-4 py-2 text-sm"
+                  style={{ 
+                    opacity: (passwordLoading || !currentPassword || !newPassword || !confirmPassword || newPassword !== confirmPassword) ? 0.5 : 1, 
+                    cursor: (passwordLoading || !currentPassword || !newPassword || !confirmPassword || newPassword !== confirmPassword) ? 'not-allowed' : 'pointer' 
+                  }}
                 >
                   {passwordLoading ? 'Updating...' : 'Update Password'}
                 </button>

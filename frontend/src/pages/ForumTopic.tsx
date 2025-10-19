@@ -352,13 +352,13 @@ const ForumTopic: React.FC = () => {
                   <textarea
                     value={editContent}
                     onChange={(e) => setEditContent(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="input-field"
                     rows={4}
                   />
                   <div className="flex gap-2 mt-2">
                     <button
                       onClick={() => handleEditReply(reply.id)}
-                      className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
+                      className="btn-primary px-3 py-1 text-sm"
                     >
                       Save
                     </button>
@@ -367,7 +367,7 @@ const ForumTopic: React.FC = () => {
                         setEditingReplyId(null);
                         setEditContent('');
                       }}
-                      className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
+                      className="btn-secondary px-3 py-1 text-sm"
                     >
                       Cancel
                     </button>
@@ -410,7 +410,8 @@ const ForumTopic: React.FC = () => {
                 <button
                   type="submit"
                   disabled={replyLoading || !replyContent.trim()}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+                  className="btn-primary px-6 py-2"
+                  style={{ opacity: (replyLoading || !replyContent.trim()) ? 0.5 : 1 }}
                 >
                   {replyLoading ? 'Posting...' : 'Post Reply'}
                 </button>
@@ -418,17 +419,17 @@ const ForumTopic: React.FC = () => {
             </form>
           </div>
         ) : topic.is_locked ? (
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
-            <p className="text-yellow-800">
+          <div className="card p-6 text-center" style={{ borderLeft: '4px solid #FB3' }}>
+            <p style={{ color: 'var(--color-text-body)' }}>
               🔒 This topic is locked. No new replies can be posted.
             </p>
           </div>
         ) : (
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-            <p className="text-gray-600 mb-4">Please sign in to post a reply</p>
+          <div className="card p-6 text-center">
+            <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>Please sign in to post a reply</p>
             <Link
               to="/signin"
-              className="inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+              className="btn-primary inline-block px-6 py-2"
             >
               Sign In
             </Link>

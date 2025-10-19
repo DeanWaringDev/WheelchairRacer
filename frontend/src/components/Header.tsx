@@ -21,9 +21,13 @@ const Header: React.FC = () => {
   const { user } = useAuth()
   
   return (
-    <header className="bg-blue-50 w-full" role="banner">
+    <header 
+      className="w-full shadow-sm" 
+      role="banner"
+      style={{ backgroundColor: 'var(--color-white)', borderBottom: '1px solid rgba(0, 0, 0, 0.08)' }}
+    >
       {/* Container with max width constraint and responsive padding */}
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between min-[470px]:px-4 max-[469px]:px-2 max-[469px]:py-2">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between min-[470px]:px-4 max-[469px]:px-2 max-[469px]:py-3">
         
         {/* Left side: Logo and Site Title */}
         <Link 
@@ -33,13 +37,16 @@ const Header: React.FC = () => {
         >
           {/* Logo - using public/logo.svg (80px square) */}
           <img 
-            className="w-20 h-20 max-[469px]:w-14 max-[469px]:h-14" 
+            className="w-16 h-16 max-[469px]:w-12 max-[469px]:h-12" 
             src="/logo.svg" 
             alt="Wheelchair Racer Logo - Orange wheelchair racing icon" 
           />
           
-          {/* Site Title with orange accent border */}
-          <h1 className="text-3xl font-bold text-gray-800 border-l-4 pl-4 border-amber-400 max-[469px]:text-xl max-[469px]:pl-2 max-[469px]:border-l-2">
+          {/* Site Title with brand primary color border */}
+          <h1 
+            className="text-2xl font-bold border-l-4 pl-4 max-[469px]:text-lg max-[469px]:pl-2 max-[469px]:border-l-2"
+            style={{ color: 'var(--color-secondary)', borderColor: 'var(--color-primary)' }}
+          >
             Wheelchair Racer
           </h1>
         </Link>
@@ -58,7 +65,10 @@ const Header: React.FC = () => {
               href="https://facebook.com/wheelchairracer" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
+              className="transition-colors"
+              style={{ color: 'var(--color-text-body)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-body)'}
               aria-label="Visit our Facebook page (opens in new tab)"
             >
               {/* Facebook SVG Icon */}
@@ -73,19 +83,23 @@ const Header: React.FC = () => {
           {/* User Profile/Authentication Link */}
           <Link 
             to={user ? "/profile" : "/signin"}
-            className="flex items-center p-2 rounded-full hover:bg-blue-100 transition-colors max-[469px]:p-1"
+            className="flex items-center p-2 rounded-full transition-colors max-[469px]:p-1"
+            style={{ color: 'var(--color-text-body)' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             aria-label={user ? "View profile" : "Sign in"}
           >
             {/* Show user avatar if logged in, otherwise show default icon */}
             {user && user.user_metadata?.avatar_url ? (
               <img
-                className="w-8 h-8 rounded-full object-cover border-2 border-gray-300"
+                className="w-8 h-8 rounded-full object-cover border-2"
+                style={{ borderColor: 'var(--color-primary)' }}
                 src={user.user_metadata.avatar_url}
                 alt="Profile"
               />
             ) : (
               <svg 
-                className="w-8 h-8 text-gray-600" 
+                className="w-8 h-8" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -102,7 +116,10 @@ const Header: React.FC = () => {
             
             {/* Show username on larger screens if logged in */}
             {user && (
-              <span className="hidden sm:block ml-2 text-sm font-medium text-gray-700">
+              <span 
+                className="hidden sm:block ml-2 text-sm font-medium"
+                style={{ color: 'var(--color-secondary)' }}
+              >
                 {user.user_metadata?.username || 'Profile'}
               </span>
             )}
