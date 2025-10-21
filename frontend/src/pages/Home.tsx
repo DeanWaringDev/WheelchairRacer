@@ -24,11 +24,10 @@ const Home: React.FC = () => {
           .from("posts")
           .select("*")
           .order("created_at", { ascending: false })
-          .limit(1)
-          .single();
+          .limit(1);
 
-        if (!error && data) {
-          setLatestPost(data);
+        if (!error && data && data.length > 0) {
+          setLatestPost(data[0]);
         }
       } catch (err) {
         console.error("Error fetching latest post:", err);
@@ -394,6 +393,69 @@ const Home: React.FC = () => {
             >
               Find Racing Events
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Sign Up CTA Section */}
+      <section className="py-16 mb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="card p-8 md:p-12 text-center" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--color-secondary)' }}>
+              Ready to Join the Community? 🎉
+            </h2>
+            <p className="text-lg md:text-xl mb-6" style={{ color: 'var(--color-text-body)' }}>
+              Create your free account to unlock all features, like and comment on posts, 
+              share your feedback, and connect with other wheelchair athletes!
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 text-left">
+              <div className="p-4 rounded-lg" style={{ backgroundColor: 'var(--color-light-bg)' }}>
+                <span className="text-3xl mb-2 block">�</span>
+                <p className="text-sm font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                  Like posts, leave comments, and share your training experiences
+                </p>
+              </div>
+              <div className="p-4 rounded-lg" style={{ backgroundColor: 'var(--color-light-bg)' }}>
+                <span className="text-3xl mb-2 block">�</span>
+                <p className="text-sm font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                  Provide feedback on parkrun accessibility scores
+                </p>
+              </div>
+              <div className="p-4 rounded-lg" style={{ backgroundColor: 'var(--color-light-bg)' }}>
+                <span className="text-3xl mb-2 block">🤝</span>
+                <p className="text-sm font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                  Connect with the wheelchair racing community
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/signin" 
+                className="px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg"
+                style={{ 
+                  backgroundColor: 'var(--color-primary)', 
+                  color: 'var(--color-white)',
+                  borderRadius: 'var(--radius-lg)'
+                }}
+              >
+                Create Free Account
+              </Link>
+              <Link 
+                to="/signin" 
+                className="px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg"
+                style={{ 
+                  backgroundColor: 'var(--color-white)', 
+                  color: 'var(--color-secondary)',
+                  border: '2px solid var(--color-secondary)',
+                  borderRadius: 'var(--radius-lg)'
+                }}
+              >
+                Already Have an Account?
+              </Link>
+            </div>
+            <p className="text-sm mt-6" style={{ color: 'var(--color-text-light)' }}>
+              No credit card required • Takes less than 30 seconds
+            </p>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@
 
 // Admin Configuration
 // This should be set in your .env.local file as: VITE_ADMIN_USER_ID=your-admin-id
-export const ADMIN_USER_ID = import.meta.env.VITE_ADMIN_USER_ID || '5bc2da58-8e69-4779-ba02-52e6182b9668';
+export const ADMIN_USER_ID = import.meta.env.VITE_ADMIN_USER_ID || '7cd64da3-c70c-4d6c-942b-ef1e331e72a1';
 
 // Supabase Storage
 export const STORAGE_BUCKET = 'post-images';

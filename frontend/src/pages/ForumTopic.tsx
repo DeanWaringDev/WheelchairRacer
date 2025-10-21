@@ -4,6 +4,8 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 import { ADMIN_USER_ID } from '../lib/constants';
+import { sanitizeHTML } from '../lib/sanitize';
+import { rateLimiter, RateLimits, formatTimeRemaining } from '../lib/rateLimit';
 
 type Topic = {
   id: string;
@@ -105,13 +107,28 @@ const ForumTopic: React.FC = () => {
     e.preventDefault();
     if (!user || !topicId || topic?.is_locked) return;
 
+    // Rate limiting
+    const rateLimitKey = `forum:reply:${user.id}`;
+    if (!rateLimiter.check(rateLimitKey, RateLimits.FORUM_REPLY)) {
+      const resetTime = rateLimiter.resetIn(rateLimitKey);
+      setReplyError(`You're replying too quickly. Please try again in ${formatTimeRemaining(resetTime)}.`);
+      return;
+    }
+
+    // Sanitize content
+    const cleanContent = sanitizeHTML(replyContent.trim());
+    if (!cleanContent) {
+      setReplyError('Please enter valid content.');
+      return;
+    }
+
     setReplyLoading(true);
     setReplyError('');
 
     const { error } = await supabase.from('forum_replies').insert([
       {
         topic_id: topicId,
-        content: replyContent.trim(),
+        content: cleanContent,
         author_id: user.id,
         author_name: user.user_metadata?.username || 'Anonymous',
       },
@@ -120,6 +137,7 @@ const ForumTopic: React.FC = () => {
     if (error) {
       setReplyError(error.message);
     } else {
+      rateLimiter.clear(rateLimitKey); // Clear on success
       setReplyContent('');
       await fetchTopicAndReplies();
     }
@@ -440,4 +458,5 @@ const ForumTopic: React.FC = () => {
   );
 };
 
-export default ForumTopic;
+// Wrap in React.memo to prevent unnecessary re-renders
+export default React.memo(ForumTopic);

@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../contexts/AuthContext";
 import { ADMIN_USER_ID, STORAGE_BUCKET } from "../lib/constants";
+import { sanitizeRichText, stripHTML } from "../lib/sanitize";
+import { rateLimiter, RateLimits, formatTimeRemaining } from "../lib/rateLimit";
 
 type Post = {
   id: string;
@@ -46,6 +48,7 @@ const categories = [
 
 const Blog: React.FC = () => {
   const { user } = useAuth();
+  
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState<string | null>(null);
@@ -84,22 +87,33 @@ const Blog: React.FC = () => {
       setFetchError(error.message);
       setPosts([]);
     } else {
-      setPosts(data ?? []);
-      
-      // After fetching posts, fetch comment counts for each post
+      // After fetching posts, fetch comment counts and like counts for each post
       if (data) {
         const counts: Record<string, number> = {};
+        const postsWithLikes = [];
         
         for (const post of data) {
-          const { count } = await supabase
+          // Fetch comment count
+          const { count: commentCount } = await supabase
             .from("comments")
             .select("*", { count: "exact", head: true })
             .eq("post_id", post.id);
           
-          counts[post.id] = count || 0;
+          counts[post.id] = commentCount || 0;
+          
+          // Fetch like count
+          const { count: likeCount } = await supabase
+            .from("post_likes")
+            .select("*", { count: "exact", head: true })
+            .eq("post_id", post.id);
+          
+          postsWithLikes.push({ ...post, likes_count: likeCount || 0 });
         }
         
+        setPosts(postsWithLikes);
         setCommentCounts(counts);
+      } else {
+        setPosts([]);
       }
     }
 
@@ -295,6 +309,23 @@ const Blog: React.FC = () => {
       return;
     }
 
+    // Rate limiting
+    const rateLimitKey = `post:create:${user?.id}`;
+    if (!rateLimiter.check(rateLimitKey, RateLimits.POST_CREATE)) {
+      const resetTime = rateLimiter.resetIn(rateLimitKey);
+      setFormError(`You're creating posts too quickly. Please try again in ${formatTimeRemaining(resetTime)}.`);
+      return;
+    }
+
+    // Sanitize inputs
+    const cleanTitle = stripHTML(form.title.trim());
+    const cleanContent = sanitizeRichText(form.content.trim());
+
+    if (!cleanTitle || !cleanContent) {
+      setFormError("Invalid content detected. Please check your input.");
+      return;
+    }
+
     setSubmitting(true);
     setFormError(null);
 
@@ -339,8 +370,8 @@ const Blog: React.FC = () => {
 
     const { error } = await supabase.from("posts").insert([
       {
-        title: form.title.trim(),
-        content: form.content.trim(),
+        title: cleanTitle,
+        content: cleanContent,
         category: form.category,
         image_urls: imageUrls.length > 0 ? imageUrls : null,
         author_id: user?.id ?? ADMIN_USER_ID,
@@ -351,6 +382,8 @@ const Blog: React.FC = () => {
     if (error) {
       setFormError(error.message);
     } else {
+      // Clear rate limit on success
+      rateLimiter.clear(rateLimitKey);
       setForm({ title: "", content: "", category: "" });
       setImageFiles([]);
       if (fileInputRef.current) {
@@ -583,6 +616,7 @@ const Blog: React.FC = () => {
                               alt={`${post.title} - Image ${index + 1}`}
                               className="h-48 w-full rounded-md object-cover cursor-pointer hover:opacity-90 transition"
                               src={url}
+                              loading="lazy"
                               onClick={() => window.open(url, '_blank')}
                             />
                           ))}
@@ -592,6 +626,7 @@ const Blog: React.FC = () => {
                           alt={post.title}
                           className="mt-4 h-56 w-full rounded-md object-cover"
                           src={post.image_url}
+                          loading="lazy"
                         />
                       ) : null}
 
@@ -655,6 +690,52 @@ const Blog: React.FC = () => {
                             {commentCounts[post.id] || 0} {commentCounts[post.id] === 1 ? "Comment" : "Comments"}
                           </span>
                         </button>
+
+                        {/* Share Button */}
+                        <div className="relative">
+                          <button
+                            onClick={() => {
+                              const url = `${window.location.origin}/blog/${post.id}`;
+                              const text = `Check out this blog post: ${post.title}`;
+                              
+                              if (navigator.share) {
+                                navigator.share({
+                                  title: post.title,
+                                  text: text,
+                                  url: url
+                                }).catch(() => {});
+                              } else {
+                                // Fallback: copy to clipboard
+                                navigator.clipboard.writeText(url).then(() => {
+                                  alert('Link copied to clipboard!');
+                                });
+                              }
+                            }}
+                            className="flex items-center gap-2 px-3 py-1.5 rounded-md transition-colors"
+                            style={{ 
+                              backgroundColor: 'var(--color-primary)', 
+                              color: 'white'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
+                            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                            aria-label="Share post"
+                          >
+                            <svg
+                              className="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                              />
+                            </svg>
+                            <span className="font-medium">Share</span>
+                          </button>
+                        </div>
                       </div>
 
                       {/* Comments Section */}
@@ -732,9 +813,49 @@ const Blog: React.FC = () => {
             </>
           )}
         </section>
+
+        {/* Sign Up CTA - Only show if user is not logged in */}
+        {!user && (
+          <section className="mt-12 mb-8">
+            <div className="card p-8 text-center" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+              <h3 className="text-2xl font-bold mb-3" style={{ color: 'var(--color-secondary)' }}>
+                Want to Join the Conversation? 💬
+              </h3>
+              <p className="text-lg mb-6" style={{ color: 'var(--color-text-body)' }}>
+                Create a free account to like posts, leave comments, and share your own training stories 
+                with the wheelchair racing community!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link 
+                  to="/signin" 
+                  className="px-6 py-3 rounded-lg font-semibold transition-all hover:shadow-lg"
+                  style={{ 
+                    backgroundColor: 'var(--color-primary)', 
+                    color: 'var(--color-white)'
+                  }}
+                >
+                  Sign Up Free
+                </Link>
+                <span style={{ color: 'var(--color-text-light)' }}>or</span>
+                <Link 
+                  to="/signin" 
+                  className="hover:underline font-medium"
+                  style={{ color: 'var(--color-primary)' }}
+                >
+                  Sign in if you already have an account
+                </Link>
+              </div>
+              <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
+                ✓ No spam, ever  •  ✓ Free forever  •  ✓ Join 1,000+ athletes
+              </p>
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
 };
 
-export default Blog;
+// Wrap in React.memo to prevent unnecessary re-renders
+// Already optimized with useMemo for displayedPosts and useCallback for handlers
+export default React.memo(Blog);

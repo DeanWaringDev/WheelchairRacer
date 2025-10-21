@@ -33,10 +33,10 @@ const ForgotPassword: React.FC = () => {
   };
 
   return (
-    <main className="page-container flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
+    <main className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'var(--color-background)' }}>
+      <div style={{ width: '100%', maxWidth: '28rem', minWidth: '320px', margin: '0 auto', padding: '0 1rem' }}>
         {/* Header */}
-        <div className="text-center">
+        <div className="text-center mb-8">
           <img
             className="mx-auto h-20 w-20"
             src="/logo.svg"

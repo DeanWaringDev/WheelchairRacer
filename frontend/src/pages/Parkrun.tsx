@@ -1,10 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ParkrunBrowser from '../components/ParkrunBrowser';
 
 const Parkrun: React.FC = () => {
+  const [showDisclaimer, setShowDisclaimer] = useState(() => {
+    // Check if user has dismissed the disclaimer before
+    const dismissed = localStorage.getItem('parkrun-disclaimer-dismissed');
+    return dismissed !== 'true';
+  });
+
+  const handleDismissDisclaimer = () => {
+    localStorage.setItem('parkrun-disclaimer-dismissed', 'true');
+    setShowDisclaimer(false);
+  };
+
   return (
     <main className="page-container">
       <div className="max-w-7xl mx-auto px-4 py-8">
+      
+      {/* Disclaimer Alert */}
+      {showDisclaimer && (
+        <div className="mb-6 p-4 rounded-lg border-l-4 bg-blue-50 border-blue-400 relative">
+          <button
+            onClick={handleDismissDisclaimer}
+            className="absolute top-2 right-2 p-1 rounded-md hover:bg-blue-100 transition-colors"
+            aria-label="Dismiss disclaimer"
+          >
+            <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div className="flex items-start gap-3 pr-8">
+            <span className="text-2xl flex-shrink-0">ℹ️</span>
+            <div>
+              <p className="font-semibold text-blue-800 mb-1">Accessibility Information Disclaimer</p>
+              <p className="text-sm text-blue-700">
+                Course accessibility scores are provided for informational purposes based on route analysis. 
+                Conditions may vary. Always check the official Parkrun event page and contact event organizers 
+                if you have specific accessibility questions. Wheelchair Racer is not affiliated with Parkrun Global Ltd. 
+                Parkrun® is a registered trademark of Parkrun Global Ltd.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      
       {/* Page Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-secondary)' }}>

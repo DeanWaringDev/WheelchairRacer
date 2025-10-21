@@ -83,16 +83,33 @@ def calculate_scores(matches: List[Dict], mobility_types: List[str]) -> Dict[str
     """
     Calculate accessibility scores for all mobility types.
     
-    Starting score: 50/100 (neutral)
+    Base scores adjusted by mobility type for more accurate results:
+    - Racing Chair: 35 (generally more challenging on varied terrain)
+    - Day Chair: 40 (moderate base accessibility)
+    - Frame Runner: 40 (moderate base accessibility)
+    - Others: 50 (neutral baseline)
+    
     Perfect course: 100/100
     Impossible course: 0/100
     """
     
+    # Define base scores for each mobility type
+    base_scores = {
+        'racing_chair': 35,
+        'day_chair': 40,
+        'frame_runner': 40,
+        'off_road_chair': 50,
+        'handbike': 50,
+        'walking_frame': 50,
+        'crutches': 50,
+        'walking_stick': 50
+    }
+    
     scores = {}
     
     for mobility_type in mobility_types:
-        # Start at 50 (neutral)
-        score = 50
+        # Start at the appropriate base score for this mobility type
+        score = base_scores.get(mobility_type, 50)
         impacts_applied = []
         
         # Apply each keyword impact

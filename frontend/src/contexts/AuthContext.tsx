@@ -49,7 +49,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Sign up function
   const signUp = async (email: string, password: string, username: string) => {
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -59,6 +59,53 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
       }
     })
+    
+    if (error) {
+      console.error('Sign up error:', error)
+      return { error }
+    }
+    
+    // Fallback: Create profile manually if trigger didn't work
+    if (data?.user) {
+      try {
+        // Wait a moment for trigger to fire
+        await new Promise(resolve => setTimeout(resolve, 500))
+        
+        // Check if profile exists
+        const { data: existingProfile } = await supabase
+          .from('profiles')
+          .select('id')
+          .eq('id', data.user.id)
+          .single()
+        
+        // If no profile, create it manually
+        if (!existingProfile) {
+          console.log('Profile not found, creating manually...')
+          const { error: profileError } = await supabase
+            .from('profiles')
+            .insert([
+              { 
+                id: data.user.id, 
+                username: username,
+                avatar_url: '',
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString()
+              }
+            ])
+          
+          if (profileError) {
+            console.warn('Manual profile creation failed:', profileError)
+            // Don't block signup - profile can be created later
+          } else {
+            console.log('Profile created manually')
+          }
+        }
+      } catch (err) {
+        console.warn('Profile check/creation error:', err)
+        // Don't block signup - profile can be created later
+      }
+    }
+    
     return { error }
   }
 
@@ -81,10 +128,24 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const updateProfile = async (updates: { username?: string, avatar_url?: string }) => {
     if (!user) return { error: new Error('No user logged in') }
 
-    const { error } = await supabase.auth.updateUser({
+    // Update auth.users metadata
+    const { error: authError } = await supabase.auth.updateUser({
       data: updates
     })
-    return { error }
+    
+    if (authError) return { error: authError }
+
+    // Update profiles table (this will trigger the display name sync)
+    const { error: profileError } = await supabase
+      .from('profiles')
+      .update({
+        username: updates.username,
+        avatar_url: updates.avatar_url,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', user.id)
+
+    return { error: profileError }
   }
 
   const value = {

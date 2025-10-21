@@ -227,6 +227,7 @@ const Profile: React.FC = () => {
                     style={{ border: '4px solid rgba(0,0,0,0.1)' }}
                     src={avatarUrl}
                     alt="Profile"
+                    loading="lazy"
                   />
                 ) : (
                   <div className="h-24 w-24 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(0,0,0,0.1)' }}>

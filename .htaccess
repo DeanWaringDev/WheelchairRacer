@@ -1,7 +1,120 @@
-# React SPA rewrite: serve index.html for any path that isn't a real file/dir
+# ========================================
+# WHEELCHAIR RACER - PRODUCTION .htaccess
+# ========================================
+
+# Enable Rewrite Engine
 RewriteEngine On
 RewriteBase /
 
+# ========================================
+# 1. FORCE HTTPS (redirect all HTTP to HTTPS)
+# ========================================
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Also handle www redirect if needed (optional - remove if not using www)
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# ========================================
+# 2. CORRECT MIME TYPES (fix CSS/JS loading)
+# ========================================
+<IfModule mod_mime.c>
+  # CSS
+  AddType text/css .css
+  
+  # JavaScript
+  AddType application/javascript .js
+  AddType application/javascript .mjs
+  
+  # JSON
+  AddType application/json .json
+  
+  # Fonts
+  AddType font/woff .woff
+  AddType font/woff2 .woff2
+  AddType application/vnd.ms-fontobject .eot
+  AddType font/ttf .ttf
+  AddType font/otf .otf
+  
+  # Images
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  
+  # Source maps
+  AddType application/json .map
+</IfModule>
+
+# ========================================
+# 3. COMPRESSION (speed up loading)
+# ========================================
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# ========================================
+# 4. BROWSER CACHING
+# ========================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  
+  # CSS and JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # Fonts
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  
+  # HTML (don't cache - always get fresh version)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ========================================
+# 5. SECURITY HEADERS
+# ========================================
+<IfModule mod_headers.c>
+  # Prevent MIME sniffing
+  Header set X-Content-Type-Options "nosniff"
+  
+  # XSS Protection
+  Header set X-XSS-Protection "1; mode=block"
+  
+  # Prevent clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+  
+  # Referrer Policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Content Security Policy (adjust as needed)
+  # Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://uezmndcoqfpfccmrksvt.supabase.co;"
+</IfModule>
+
+# ========================================
+# 6. REACT SPA ROUTING (must be last!)
+# ========================================
 # Skip rewrites for the actual index file
 RewriteRule ^index\.html$ - [L]
 

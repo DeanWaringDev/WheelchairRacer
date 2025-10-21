@@ -661,8 +661,57 @@ const Forum: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Sign Up CTA - Only show if user is not logged in */}
+      {!user && (
+        <div className="max-w-7xl mx-auto px-4 pb-8">
+          <div className="card p-8 text-center" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+            <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: 'var(--color-secondary)' }}>
+              Join Our Growing Community! 🌟
+            </h3>
+            <p className="text-lg mb-6" style={{ color: 'var(--color-text-body)' }}>
+              Connect with {totalMembers > 0 ? `${totalMembers}+` : 'fellow'} wheelchair athletes, ask questions, 
+              share experiences, and learn from the community!
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="p-4 rounded-lg" style={{ backgroundColor: 'var(--color-light-bg)' }}>
+                <span className="text-2xl mb-2 block">🗣️</span>
+                <p className="text-sm font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                  Start discussions & get advice
+                </p>
+              </div>
+              <div className="p-4 rounded-lg" style={{ backgroundColor: 'var(--color-light-bg)' }}>
+                <span className="text-2xl mb-2 block">🤝</span>
+                <p className="text-sm font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                  Find training partners & local groups
+                </p>
+              </div>
+              <div className="p-4 rounded-lg" style={{ backgroundColor: 'var(--color-light-bg)' }}>
+                <span className="text-2xl mb-2 block">📚</span>
+                <p className="text-sm font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                  Access exclusive tips from experienced racers
+                </p>
+              </div>
+            </div>
+            <Link 
+              to="/signin" 
+              className="inline-block px-8 py-3 rounded-lg font-semibold text-lg transition-all hover:shadow-lg"
+              style={{ 
+                backgroundColor: 'var(--color-primary)', 
+                color: 'var(--color-white)'
+              }}
+            >
+              Create Free Account
+            </Link>
+            <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
+              Already a member? <Link to="/signin" className="underline font-semibold" style={{ color: 'var(--color-primary)' }}>Sign in here</Link>
+            </p>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
 
-export default Forum;
+// Wrap in React.memo to prevent unnecessary re-renders
+export default React.memo(Forum);

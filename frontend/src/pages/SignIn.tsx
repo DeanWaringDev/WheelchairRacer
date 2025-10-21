@@ -10,6 +10,8 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import { useAuth } from '../contexts/AuthContext'
 import { supabase } from '../lib/supabase'
+import { sanitizeEmail, sanitizeUsername } from '../lib/sanitize'
+import { rateLimiter, RateLimits, formatTimeRemaining } from '../lib/rateLimit'
 
 const SignIn: React.FC = () => {
   const [isSignUp, setIsSignUp] = useState(false)
@@ -18,7 +20,6 @@ const SignIn: React.FC = () => {
   const [username, setUsername] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const [showVerifyModal, setShowVerifyModal] = useState(false)
   
   const { signIn, signUp } = useAuth()
   const navigate = useNavigate()
@@ -29,31 +30,61 @@ const SignIn: React.FC = () => {
     setError('')
 
     try {
+      // Sanitize inputs
+      const cleanEmail = sanitizeEmail(email)
+      const cleanUsername = sanitizeUsername(username)
+
+      // Validate email
+      if (!cleanEmail) {
+        setError('Please enter a valid email address')
+        setLoading(false)
+        return
+      }
+
+      // Rate limiting
+      const rateLimitKey = isSignUp ? `signup:${cleanEmail}` : `login:${cleanEmail}`
+      const rateLimit = isSignUp ? RateLimits.SIGNUP : RateLimits.LOGIN
+      
+      if (!rateLimiter.check(rateLimitKey, rateLimit)) {
+        const resetTime = rateLimiter.resetIn(rateLimitKey)
+        setError(`Too many attempts. Please try again in ${formatTimeRemaining(resetTime)}.`)
+        setLoading(false)
+        return
+      }
+
       let result
       if (isSignUp) {
-        if (!username.trim()) {
+        if (!cleanUsername.trim()) {
           setError('Username is required')
           setLoading(false)
           return
         }
-        result = await signUp(email, password, username)
+        result = await signUp(cleanEmail, password, cleanUsername)
         if (!result.error) {
-          setShowVerifyModal(true)
-          setLoading(false)
+          // Clear rate limit on success
+          rateLimiter.clear(rateLimitKey)
+          // Email confirmation is disabled, redirect to home
+          window.location.href = '/'
           return
         }
       } else {
-        result = await signIn(email, password)
+        result = await signIn(cleanEmail, password)
+        if (!result.error) {
+          // Clear rate limit on success
+          rateLimiter.clear(rateLimitKey)
+        }
       }
 
       if (result.error) {
-        setError(result.error.message)
+        console.error('Auth error details:', result.error)
+        setError(result.error.message || 'An error occurred during authentication')
       } else {
         // Success! Navigate to profile or home
         navigate(isSignUp ? '/profile' : '/')
       }
     } catch (err) {
-      setError('An unexpected error occurred')
+      console.error('Unexpected error:', err)
+      setError('An unexpected error occurred: ' + (err instanceof Error ? err.message : String(err)))
     } finally {
       setLoading(false)
     }
@@ -74,37 +105,21 @@ const SignIn: React.FC = () => {
   }
 
   return (
-    <main className="page-container flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      {/* Email Verification Modal */}
-      {showVerifyModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
-          <div className="card p-8 max-w-sm w-full text-center">
-            <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>Verify your email address</h3>
-            <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>
-              Please check your email and click the verification link before signing in.<br />
-              Once verified, you can log in with your email and password.
-            </p>
-            <button
-              className="btn-primary"
-              onClick={() => setShowVerifyModal(false)}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-      <div className="max-w-md w-full space-y-8">
+    <main className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'var(--color-background)' }}>
+      <div style={{ width: '100%', maxWidth: '28rem', minWidth: '320px', margin: '0 auto', padding: '0 1rem' }}>
+        {/* Card wrapper for better structure */}
+        <div className="card" style={{ width: '100%', padding: '2.5rem' }}>
         {/* Header */}
-        <div className="text-center">
+        <div className="text-center mb-8">
           <img
             className="mx-auto h-20 w-20"
             src="/logo.svg"
             alt="Wheelchair Racer Logo"
           />
-          <h2 className="mt-6 text-3xl font-extrabold" style={{ color: 'var(--color-secondary)' }}>
+          <h2 className="mt-6 text-3xl font-extrabold" style={{ color: 'var(--color-secondary)', width: '100%' }}>
             {isSignUp ? 'Create your account' : 'Sign in to your account'}
           </h2>
-          <p className="mt-2 text-sm" style={{ color: 'var(--color-text-body)' }}>
+          <p className="mt-3 text-sm" style={{ color: 'var(--color-text-body)', width: '100%' }}>
             {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
             <button
               type="button"
@@ -123,12 +138,12 @@ const SignIn: React.FC = () => {
         </div>
 
         {/* Google Sign-In Button */}
-        <div className="flex flex-col gap-4 mt-6">
+        <div className="mb-6">
           <button
             type="button"
             onClick={handleGoogleSignIn}
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-md font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-md font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             style={{ 
               border: '1px solid rgba(0, 0, 0, 0.2)', 
               backgroundColor: 'var(--color-white)', 
@@ -152,8 +167,8 @@ const SignIn: React.FC = () => {
         </div>
 
         {/* Form */}
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="space-y-4">
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          <div className="space-y-5">
             {/* Username field (only for sign up) */}
             {isSignUp && (
               <div>
@@ -212,7 +227,7 @@ const SignIn: React.FC = () => {
 
           {/* Error message */}
           {error && (
-            <div className="rounded-md p-3" style={{ backgroundColor: '#FEE', border: '1px solid #FCC' }}>
+            <div className="rounded-md p-4" style={{ backgroundColor: '#FEE', border: '1px solid #FCC' }}>
               <p className="text-sm" style={{ color: '#C33' }}>{error}</p>
             </div>
           )}
@@ -221,14 +236,14 @@ const SignIn: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed py-3"
           >
             {loading ? 'Processing...' : isSignUp ? 'Create Account' : 'Sign In'}
           </button>
 
           {/* Additional links */}
           {!isSignUp && (
-            <div className="text-center">
+            <div className="text-center mt-4">
               <Link
                 to="/forgot-password"
                 className="text-sm"
@@ -243,7 +258,7 @@ const SignIn: React.FC = () => {
         </form>
 
         {/* Back to home link */}
-        <div className="text-center">
+        <div className="text-center mt-6">
           <Link
             to="/"
             className="text-sm"
@@ -253,6 +268,7 @@ const SignIn: React.FC = () => {
           >
             ← Back to home
           </Link>
+        </div>
         </div>
       </div>
     </main>

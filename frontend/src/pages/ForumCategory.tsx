@@ -3,6 +3,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
+import { sanitizeHTML, stripHTML } from '../lib/sanitize';
+import { rateLimiter, RateLimits, formatTimeRemaining } from '../lib/rateLimit';
 
 type Category = {
   id: string;
@@ -93,14 +95,31 @@ const ForumCategory: React.FC = () => {
     e.preventDefault();
     if (!user || !categoryId) return;
 
+    // Rate limiting
+    const rateLimitKey = `forum:topic:${user.id}`;
+    if (!rateLimiter.check(rateLimitKey, RateLimits.FORUM_TOPIC)) {
+      const resetTime = rateLimiter.resetIn(rateLimitKey);
+      setTopicError(`You're creating topics too quickly. Please try again in ${formatTimeRemaining(resetTime)}.`);
+      return;
+    }
+
+    // Sanitize inputs
+    const cleanTitle = stripHTML(topicForm.title.trim());
+    const cleanContent = sanitizeHTML(topicForm.content.trim());
+
+    if (!cleanTitle || !cleanContent) {
+      setTopicError('Please enter valid title and content.');
+      return;
+    }
+
     setTopicLoading(true);
     setTopicError('');
 
     const { error } = await supabase.from('forum_topics').insert([
       {
         category_id: categoryId,
-        title: topicForm.title.trim(),
-        content: topicForm.content.trim(),
+        title: cleanTitle,
+        content: cleanContent,
         author_id: user.id,
         author_name: user.user_metadata?.username || 'Anonymous',
       },
@@ -109,6 +128,7 @@ const ForumCategory: React.FC = () => {
     if (error) {
       setTopicError(error.message);
     } else {
+      rateLimiter.clear(rateLimitKey); // Clear on success
       setShowTopicModal(false);
       setTopicForm({ title: '', content: '' });
       await fetchCategoryAndTopics();
@@ -360,4 +380,5 @@ const ForumCategory: React.FC = () => {
   );
 };
 
-export default ForumCategory;
+// Wrap in React.memo to prevent unnecessary re-renders
+export default React.memo(ForumCategory);

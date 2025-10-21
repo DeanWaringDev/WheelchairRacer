@@ -1,32 +1,44 @@
 import React from 'react';
+import profilePic from '../assets/images/ProfilePic.jpg';
 
 const About: React.FC = () => {
   const teamMembers = [
     {
-      name: "Sarah Thompson",
-      role: "Founder & CEO",
-      bio: "Paralympic medalist and advocate for accessible sports. 10+ years in wheelchair racing.",
-      image: "👩‍💼"
+      name: "Dean Waring",
+      role: "Founder",
+      bio: "Wheelchair racer and developer who turned frustration with limited accessibility information into action. Built this platform to help every athlete find their perfect race course, because everyone deserves to race with confidence.",
+      image: profilePic,
+      isPhoto: true
     },
     {
-      name: "Marcus Chen",
-      role: "Head of Technology",
-      bio: "Former software engineer at major tech companies. Passionate about accessibility tech.",
-      image: "👨‍💻"
+      name: "Event Organisers",
+      role: "Partner With Us",
+      bio: "Run a race or parkrun? Let's get your route accessibility-mapped! We'll analyze your course and add it to our platform, helping wheelchair racers discover your event.",
+      image: "🏁",
+      isPhoto: false,
+      cta: true,
+      ctaText: "Get Your Event Mapped",
+      ctaLink: "/contact"
     },
     {
-      name: "Dr. Emma Rodriguez",
-      role: "Sports Scientist",
-      bio: "PhD in Sports Medicine. Specializes in wheelchair racing performance optimization.",
-      image: "👩‍🔬"
+      name: "Join the Team",
+      role: "Community Contributors",
+      bio: "Passionate wheelchair racer or parkrunner? Help us build the world's best accessibility database! Share your course experiences and help fellow athletes find their next race.",
+      image: "🤝",
+      isPhoto: false,
+      cta: true,
+      ctaText: "Become a Contributor",
+      ctaLink: "/contact"
     }
   ];
 
   const milestones = [
-    { year: "2023", event: "Platform concept developed" },
-    { year: "2024", event: "Beta testing with 50 athletes" },
-    { year: "2025", event: "Public launch and community growth" },
-    { year: "2026", event: "Mobile app and AI coaching planned" }
+    { year: "Oct 2025", event: "Platform launch with core parkrun accessibility data" },
+    { year: "Late Oct", event: "Enhanced analysis: elevation, corners, and path width data" },
+    { year: "Nov 2025", event: "2026 race events database expansion" },
+    { year: "Dec 2025", event: "Custom workout generator development begins" },
+    { year: "2026", event: "Community growth and platform refinement" },
+    { year: "Summer 2026", event: "Native mobile apps exploration" }
   ];
 
   return (
@@ -62,18 +74,20 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>
-              Wheelchair Racer was born from a simple observation: wheelchair racing 
-              was growing rapidly, but athletes lacked centralized resources for 
-              training, event discovery, and community connection.
+              Wheelchair Racer started in October 2025, born from personal frustration 
+              with the lack of accessible parkrun course information. As a wheelchair racer, 
+              finding suitable courses meant endless research and uncertainty.
             </p>
             <p className="mb-4" style={{ color: 'var(--color-text-body)' }}>
-              Founded by Paralympic athletes and technology professionals, our platform 
-              combines deep sport expertise with cutting-edge technology to serve 
-              the wheelchair racing community.
+              So I built the platform I wished existed - starting with comprehensive 
+              accessibility analysis of all 2,747 parkrun events worldwide. What began 
+              as a personal project is now growing into a complete resource for the 
+              wheelchair racing community.
             </p>
             <p style={{ color: 'var(--color-text-body)' }}>
-              From accessibility mapping to AI-powered training plans, we're building 
-              the future of wheelchair racing support, one feature at a time.
+              We're just getting started. Each month brings new features, deeper analysis, 
+              and more tools to help every athlete find their perfect race and reach 
+              their potential.
             </p>
           </div>
           <div className="card p-8">
@@ -106,10 +120,27 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="card text-center p-6">
-              <div className="text-4xl mb-4">{member.image}</div>
+              {member.isPhoto ? (
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                  style={{ border: '3px solid var(--color-primary)' }}
+                />
+              ) : (
+                <div className="text-4xl mb-4">{member.image}</div>
+              )}
               <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-secondary)' }}>{member.name}</h3>
               <p className="font-medium mb-3" style={{ color: 'var(--color-primary)' }}>{member.role}</p>
-              <p className="text-sm" style={{ color: 'var(--color-text-body)' }}>{member.bio}</p>
+              <p className="text-sm mb-4" style={{ color: 'var(--color-text-body)' }}>{member.bio}</p>
+              {member.cta && (
+                <a 
+                  href={member.ctaLink}
+                  className="btn-primary inline-block px-4 py-2 mt-2 text-sm"
+                >
+                  {member.ctaText}
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -122,8 +153,14 @@ const About: React.FC = () => {
           {milestones.map((milestone, index) => (
             <div key={index} className="flex items-center mb-6">
               <div 
-                className="w-16 h-16 rounded-full flex items-center justify-center font-bold mr-6"
-                style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-white)' }}
+                className="w-20 h-20 rounded-full flex items-center justify-center font-bold mr-6 text-center flex-shrink-0"
+                style={{ 
+                  backgroundColor: 'var(--color-primary)', 
+                  color: 'var(--color-white)',
+                  fontSize: '0.75rem',
+                  lineHeight: '1.2',
+                  padding: '0.5rem'
+                }}
               >
                 {milestone.year}
               </div>
