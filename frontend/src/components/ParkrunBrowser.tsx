@@ -167,22 +167,6 @@ const ParkrunBrowser: React.FC = () => {
     setDisplayLimit(prev => prev + 50);
   }, []);
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <div className="text-lg text-gray-600">Loading parkrun events...</div>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <div className="text-lg text-red-600">Error loading data</div>
-      </div>
-    );
-  }
-
   // Memoized helper function to get score color
   const getScoreColor = useCallback((score: number): string => {
     if (score >= 80) return '#10b981'; // Green
@@ -200,7 +184,7 @@ const ParkrunBrowser: React.FC = () => {
 
   // Memoized client-side filter for mobility scores (server handles country/search)
   const filteredEvents = useMemo(() => {
-    if (!data) return [];
+    if (!data || !data.events) return [];
     
     return data.events.filter(event => {
       // Mobility filter logic
@@ -211,6 +195,23 @@ const ParkrunBrowser: React.FC = () => {
       return true;
     });
   }, [data, mobilityFilter, minScore]);
+
+  // Early returns AFTER all hooks
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center p-8">
+        <div className="text-lg text-gray-600">Loading parkrun events...</div>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="flex items-center justify-center p-8">
+        <div className="text-lg text-red-600">Error loading data</div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 bg-white rounded-lg shadow-md">

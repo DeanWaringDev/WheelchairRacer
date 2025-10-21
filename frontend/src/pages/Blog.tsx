@@ -73,6 +73,14 @@ const Blog: React.FC = () => {
   // Likes state
   const [userLikes, setUserLikes] = useState<Set<string>>(new Set());
   const [likingPosts, setLikingPosts] = useState<Set<string>>(new Set());
+  
+  // Edit post state
+  const [editingPostId, setEditingPostId] = useState<string | null>(null);
+  const [editForm, setEditForm] = useState({
+    title: "",
+    content: "",
+    category: "",
+  });
 
   const fetchPosts = useCallback(async () => {
     setLoading(true);
@@ -271,6 +279,53 @@ const Blog: React.FC = () => {
     }
   };
 
+  // Edit post handlers (admin only)
+  const handleStartEdit = (post: Post) => {
+    if (user?.id !== ADMIN_USER_ID) return;
+    
+    setEditingPostId(post.id);
+    setEditForm({
+      title: post.title,
+      content: post.content,
+      category: post.category,
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCancelEdit = () => {
+    setEditingPostId(null);
+    setEditForm({ title: '', content: '', category: '' });
+  };
+
+  const handleEditPost = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (user?.id !== ADMIN_USER_ID || !editingPostId) return;
+    
+    const cleanTitle = stripHTML(editForm.title);
+    const cleanContent = sanitizeRichText(editForm.content);
+    
+    const { error } = await supabase
+      .from('posts')
+      .update({
+        title: cleanTitle,
+        content: cleanContent,
+        category: editForm.category,
+      })
+      .eq('id', editingPostId)
+      .select();
+    
+    if (error) {
+      console.error('Error updating post:', error);
+      alert('Failed to update post: ' + error.message);
+      return;
+    }
+    
+    setEditingPostId(null);
+    setEditForm({ title: '', content: '', category: '' });
+    await fetchPosts();
+  };
+
   // Toggle comments visibility
   const toggleComments = async (postId: string) => {
     const isCurrentlyShown = showComments[postId];
@@ -418,6 +473,93 @@ const Blog: React.FC = () => {
             Training notes, race reports, and stories from the community.
           </p>
         </header>
+
+        {/* Edit Post Form */}
+        {user?.id === ADMIN_USER_ID && editingPostId && (
+          <section className="card p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold" style={{ color: 'var(--color-secondary)' }}>
+                Edit Post
+              </h2>
+              <button
+                onClick={handleCancelEdit}
+                className="text-sm font-medium transition-colors"
+                style={{ color: 'var(--color-text-body)' }}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+              >
+                Cancel
+              </button>
+            </div>
+            <form className="space-y-4" onSubmit={handleEditPost}>
+              <div>
+                <label className="label">
+                  Title
+                </label>
+                <input
+                  className="input-field"
+                  name="title"
+                  onChange={(e) => setEditForm({ ...editForm, title: e.target.value })}
+                  type="text"
+                  value={editForm.title}
+                  required
+                />
+              </div>
+              <div>
+                <label className="label">
+                  Content
+                </label>
+                <textarea
+                  className="input-field"
+                  name="content"
+                  onChange={(e) => setEditForm({ ...editForm, content: e.target.value })}
+                  rows={5}
+                  value={editForm.content}
+                  required
+                />
+              </div>
+              <div>
+                <label className="label">
+                  Category
+                </label>
+                <select
+                  className="input-field"
+                  name="category"
+                  onChange={(e) => setEditForm({ ...editForm, category: e.target.value })}
+                  value={editForm.category}
+                  required
+                >
+                  <option value="">Select category</option>
+                  {categories
+                    .filter((category) => category !== "All")
+                    .map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                </select>
+              </div>
+              <div className="flex justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={handleCancelEdit}
+                  className="px-4 py-2 text-sm font-medium rounded-md transition-colors"
+                  style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)', color: 'var(--color-text-body)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)'}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="btn-primary"
+                  type="submit"
+                >
+                  Update Post
+                </button>
+              </div>
+            </form>
+          </section>
+        )}
 
         {user?.id === ADMIN_USER_ID && (
           <section className="card p-6">
@@ -580,16 +722,28 @@ const Blog: React.FC = () => {
                         <div className="flex items-center gap-3" style={{ color: 'var(--color-text-body)' }}>
                           <span>{formatDate(post.created_at)}</span>
                           {user?.id === ADMIN_USER_ID && (
-                            <button
-                              onClick={() => handleDeletePost(post.id)}
-                              className="font-medium transition-colors"
-                              style={{ color: '#C33' }}
-                              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-                              aria-label="Delete post"
-                            >
-                              Delete
-                            </button>
+                            <>
+                              <button
+                                onClick={() => handleStartEdit(post)}
+                                className="font-medium transition-colors"
+                                style={{ color: 'var(--color-primary)' }}
+                                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                                aria-label="Edit post"
+                              >
+                                Edit
+                              </button>
+                              <button
+                                onClick={() => handleDeletePost(post.id)}
+                                className="font-medium transition-colors"
+                                style={{ color: '#C33' }}
+                                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                                aria-label="Delete post"
+                              >
+                                Delete
+                              </button>
+                            </>
                           )}
                         </div>
                       </div>

@@ -80,7 +80,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         
         // If no profile, create it manually
         if (!existingProfile) {
-          console.log('Profile not found, creating manually...')
           const { error: profileError } = await supabase
             .from('profiles')
             .insert([
@@ -94,14 +93,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             ])
           
           if (profileError) {
-            console.warn('Manual profile creation failed:', profileError)
+            console.error('Manual profile creation failed:', profileError)
             // Don't block signup - profile can be created later
-          } else {
-            console.log('Profile created manually')
           }
         }
       } catch (err) {
-        console.warn('Profile check/creation error:', err)
+        console.error('Profile check/creation error:', err)
         // Don't block signup - profile can be created later
       }
     }

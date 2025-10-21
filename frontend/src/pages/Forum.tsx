@@ -484,7 +484,7 @@ const Forum: React.FC = () => {
       {/* Create Category Modal (Admin Only) */}
       {showCategoryModal && isAdmin && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6">
             <h3 className="text-xl font-bold mb-4">Create New Category</h3>
             <form onSubmit={handleCreateCategory} className="space-y-4">
               <div>
