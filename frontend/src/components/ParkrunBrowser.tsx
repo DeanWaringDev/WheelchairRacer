@@ -41,7 +41,7 @@ interface BronzeData {
 }
 
 const ParkrunBrowser: React.FC = () => {
-  const [data, setData] = useState<BronzeData | null>(null);
+  const [data, setData] = useState<BronzeData>({ metadata: { total_events: 0 }, events: [] });
   const [loading, setLoading] = useState(true);
   const [selectedCountry, setSelectedCountry] = useState<string>('United Kingdom');
   const [searchTerm, setSearchTerm] = useState('');
@@ -50,17 +50,28 @@ const ParkrunBrowser: React.FC = () => {
   const [countries, setCountries] = useState<string[]>([]);
   const [mobilityFilter, setMobilityFilter] = useState<string>('all');
   const [minScore, setMinScore] = useState<number>(0);
+  const [debouncedMinScore, setDebouncedMinScore] = useState<number>(0);
   const [totalCount, setTotalCount] = useState<number>(0);
   const [displayLimit, setDisplayLimit] = useState<number>(50);
+  const [error, setError] = useState<string | null>(null);
 
   // Debounce search term to avoid excessive queries
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
-    }, 500); // Wait 500ms after user stops typing
+    }, 300); // Wait 300ms after user stops typing (reduced from 500ms for better UX)
     
     return () => clearTimeout(timer);
   }, [searchTerm]);
+
+  // Debounce minScore slider to avoid excessive queries while dragging
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedMinScore(minScore);
+    }, 150); // Wait 150ms after user stops moving slider
+    
+    return () => clearTimeout(timer);
+  }, [minScore]);
 
   // Load countries list on mount
   useEffect(() => {
@@ -77,38 +88,43 @@ const ParkrunBrowser: React.FC = () => {
     loadCountries();
   }, []);
 
-  // Load parkruns based on filters (smart lazy loading)
+  // Load parkruns based on filters - smart loading strategy
   useEffect(() => {
     const loadData = async () => {
       setLoading(true);
+      setError(null);
       try {
-        let query = supabase.from('parkruns').select('*', { count: 'exact' });
+        let query = supabase
+          .from('parkruns')
+          .select('*', { count: 'exact' });
 
         // Apply country filter
         if (selectedCountry !== 'All') {
           query = query.eq('country', selectedCountry);
         }
 
-        // Apply search filter (search in name and location)
+        // If user is searching or filtering, search all parkruns
         if (debouncedSearchTerm.trim()) {
-          query = query.or(`long_name.ilike.%${debouncedSearchTerm}%,location.ilike.%${debouncedSearchTerm}%`);
-        }
-
-        // If no filters applied, load top 25 most accessible for racing chairs
-        if (!debouncedSearchTerm.trim() && selectedCountry === 'United Kingdom' && mobilityFilter === 'all' && minScore === 0) {
-          // Initial load: top 25 most accessible
+          // Search in name and location
+          query = query
+            .or(`long_name.ilike.%${debouncedSearchTerm}%,location.ilike.%${debouncedSearchTerm}%`)
+            .order('long_name')
+            .limit(50); // Return top 50 matching results
+        } else if (mobilityFilter !== 'all' || debouncedMinScore > 0) {
+          // User has selected filters - need to load more to filter client-side
+          query = query.order('long_name').limit(200);
+        } else {
+          // Default: show top 50 most accessible parkruns for racing chairs
           query = query
             .order('accessibility->racing_chair->final_score', { ascending: false })
-            .limit(25);
-        } else {
-          // User is filtering: load up to 1000 matching results
-          query = query.order('long_name').limit(1000);
+            .limit(50);
         }
         
-        const { data: parkruns, error, count } = await query;
+        const { data: parkruns, error: queryError, count } = await query;
         
-        if (error) {
-          console.error('Error loading parkruns from Supabase:', error);
+        if (queryError) {
+          console.error('Error loading parkruns from Supabase:', queryError);
+          setError('Failed to load parkrun data. Please refresh the page.');
           setLoading(false);
           return;
         }
@@ -154,13 +170,14 @@ const ParkrunBrowser: React.FC = () => {
         
       } catch (error) {
         console.error('Error loading data:', error);
+        setError('An unexpected error occurred. Please refresh the page.');
       } finally {
         setLoading(false);
       }
     };
 
     loadData();
-  }, [selectedCountry, debouncedSearchTerm, mobilityFilter, minScore]); // Reload when filters change
+  }, [selectedCountry, debouncedSearchTerm, mobilityFilter, debouncedMinScore]); // Reload when filters change
 
   // Handle loading more events
   const handleLoadMore = useCallback(() => {
@@ -182,33 +199,34 @@ const ParkrunBrowser: React.FC = () => {
     ).join(' ');
   }, []);
 
-  // Memoized client-side filter for mobility scores (server handles country/search)
+  // Memoized client-side filter (now handles all filtering for instant results)
   const filteredEvents = useMemo(() => {
     if (!data || !data.events) return [];
     
     return data.events.filter(event => {
-      // Mobility filter logic
+      // Search filter (name or location)
+      if (debouncedSearchTerm.trim()) {
+        const searchLower = debouncedSearchTerm.toLowerCase();
+        const matchesName = event.name.toLowerCase().includes(searchLower);
+        const matchesLocation = event.location.toLowerCase().includes(searchLower);
+        if (!matchesName && !matchesLocation) return false;
+      }
+      
+      // Mobility filter with minimum score
       if (mobilityFilter !== 'all' && event.accessibility?.analyzed) {
         const score = event.accessibility.scores[mobilityFilter as keyof AccessibilityScores];
-        return score >= minScore;
+        return score >= debouncedMinScore;
       }
+      
       return true;
     });
-  }, [data, mobilityFilter, minScore]);
+  }, [data, debouncedSearchTerm, mobilityFilter, debouncedMinScore]);
 
-  // Early returns AFTER all hooks
-  if (loading) {
+  // Show error message if loading failed
+  if (error) {
     return (
       <div className="flex items-center justify-center p-8">
-        <div className="text-lg text-gray-600">Loading parkrun events...</div>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <div className="text-lg text-red-600">Error loading data</div>
+        <div className="text-lg text-red-600">{error}</div>
       </div>
     );
   }
@@ -344,13 +362,14 @@ const ParkrunBrowser: React.FC = () => {
       {/* Results summary */}
       <div className="mb-4 text-gray-600">
         Showing {filteredEvents.length} of {totalCount} events
+        {loading && <span className="ml-2 text-blue-600">⟳ Loading...</span>}
       </div>
 
       {/* Conditional rendering: List or Map view */}
       {viewMode === 'list' ? (
         <>
           {/* Events grid with pagination */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" style={{ opacity: loading ? 0.5 : 1 }}>
             {filteredEvents.slice(0, displayLimit).map(event => {
                       // Get top 3 scores for display
                       const topScores = event.accessibility?.analyzed 
