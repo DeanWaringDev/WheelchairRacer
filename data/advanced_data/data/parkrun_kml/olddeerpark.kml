@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Old Deer Park parkrun</name>
+    <description>Old Deer Park parkrun</description>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-33-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-33-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-33">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-33-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-33-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-67-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/67-hiker.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-67-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/67-hiker.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-67">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-67-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-67-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Old Deer Park parkrun Course</name>
+        <description>Old Deer Park parkrun Course - 3 clockwise laps</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.30703,51.46442,0
+            -0.30753,51.46476,0
+            -0.30862,51.46508,0
+            -0.30922,51.46632,0
+            -0.315782,51.465084,0
+            -0.31532,51.464175,0
+            -0.313883,51.464435,0
+            -0.313014,51.462557,0
+            -0.310857,51.463078,0
+            -0.30911,51.46364,0
+            -0.30703,51.46441,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Old Deer Park parkrun Start & Finish]]></name>
+        <description><![CDATA[Old Deer Park parkrun Start & Finish]]></description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            -0.306973,51.464415,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Park</name>
+        <description><![CDATA[Old Deer Park Car Park - Pay & Display]]></description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -0.307317,51.46358,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Very Busy Road - Cross at footbridge</name>
+        <description><![CDATA[The A316 (Twickenham Rd) is an extremely busy dual carriageway - Please cross at the footbridge (marked with the walker symbol).<br><br>If travelling to the event by car, please leave enough time to park up, and walk to the start. DO NOT DROP RUNNERS OFF AT THE SIDE OF THE A316]]></description>
+        <styleUrl>#icon-33</styleUrl>
+        <Point>
+          <coordinates>
+            -0.306748,51.464282,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cross A316 Here</name>
+        <description>When arriving or leaving by foot - please cross at the footbridge here.</description>
+        <styleUrl>#icon-67</styleUrl>
+        <Point>
+          <coordinates>
+            -0.305707,51.464549,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

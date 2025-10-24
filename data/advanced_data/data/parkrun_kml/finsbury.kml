@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Finsbury parkrun</name>
+    <description>Finsbury parkrun - a free 5km timed run every Saturday at 9am</description>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FF5252-nodesc-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FF5252-nodesc-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FF5252-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FF5252-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FF5252-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-4186F0-5263-nodesc-normal">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>5.263</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-4186F0-5263-nodesc-highlight">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>7.8945</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-4186F0-5263-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-4186F0-5263-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-4186F0-5263-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Finsbury parkrun Course</name>
+        <styleUrl>#line-4186F0-5263-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.104134,51.569615,0
+            -0.104198,51.569141,0
+            -0.104134,51.568774,0
+            -0.103866,51.568161,0
+            -0.103791,51.567721,0
+            -0.103866,51.56714,0
+            -0.104113,51.566634,0
+            -0.104467,51.56618,0
+            -0.104402,51.566013,0
+            -0.104263,51.565893,0
+            -0.104091,51.565927,0
+            -0.097525,51.570648,0
+            -0.097332,51.570935,0
+            -0.097321,51.571468,0
+            -0.097418,51.571762,0
+            -0.097665,51.572029,0
+            -0.098233,51.572575,0
+            -0.098952,51.573069,0
+            -0.09981,51.573562,0
+            -0.100604,51.573796,0
+            -0.101409,51.573949,0
+            -0.101602,51.573742,0
+            -0.101699,51.573542,0
+            -0.101838,51.573209,0
+            -0.102042,51.572882,0
+            -0.102246,51.572662,0
+            -0.102514,51.572449,0
+            -0.103147,51.572155,0
+            -0.103952,51.571902,0
+            -0.103544,51.571302,0
+            -0.102954,51.571175,0
+            -0.101849,51.570895,0
+            -0.101742,51.570802,0
+            -0.101323,51.570788,0
+            -0.10098,51.570855,0
+            -0.100712,51.570842,0
+            -0.100701,51.570695,0
+            -0.100819,51.570568,0
+            -0.100529,51.570375,0
+            -0.101495,51.569875,0
+            -0.1018163,51.5694947,0
+            -0.101618,51.5692076,0
+            -0.1018163,51.5694947,0
+            -0.10245,51.569635,0
+            -0.102997,51.569615,0
+            -0.103287,51.569681,0
+            -0.104134,51.569615,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.104145,51.569595,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <styleUrl>#icon-1899-FF5252-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.1016184,51.5692009,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

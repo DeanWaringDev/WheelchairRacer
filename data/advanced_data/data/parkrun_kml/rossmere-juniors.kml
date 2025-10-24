@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Rossmere junior parkrun (from Apr 2025)</name>
+    <description/>
+    <Style id="icon-1899-FFD600-nodesc-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FFD600-nodesc-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFD600-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFD600-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFD600-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0288D1-5456-nodesc-normal">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>5.456</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0288D1-5456-nodesc-highlight">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>8.184</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0288D1-5456-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0288D1-5456-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0288D1-5456-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-0288D1-5456-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.226467,54.661459,0
+            -1.224573,54.661229,0
+            -1.223533,54.661108,0
+            -1.222894,54.661043,0
+            -1.22232,54.661251,0
+            -1.22224,54.661363,0
+            -1.222057,54.661496,0
+            -1.221736,54.661648,0
+            -1.221671,54.661847,0
+            -1.221746,54.662039,0
+            -1.22202,54.662092,0
+            -1.22327,54.662061,0
+            -1.224171,54.662024,0
+            -1.224514,54.661595,0
+            -1.224525,54.661366,0
+            -1.224321,54.661254,0
+            -1.223624,54.661142,0
+            -1.222905,54.661068,0
+            -1.222368,54.66126,0
+            -1.221832,54.661602,0
+            -1.221703,54.661682,0
+            -1.221682,54.661887,0
+            -1.221746,54.662042,0
+            -1.222047,54.662086,0
+            -1.224804,54.662036,0
+            -1.225169,54.662024,0
+            -1.225705,54.662185,0
+            -1.226252,54.66211,0
+            -1.226456,54.661992,0
+            -1.226531,54.661521,0
+            -1.226467,54.661459,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -1.224514,54.661595,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

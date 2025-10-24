@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Newport parkrun</name>
+    <description>Newport parkrun</description>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Newport parkrun Course</name>
+        <description>Newport parkrun Course</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -3.032849,51.5664,0
+            -3.032345,51.566093,0
+            -3.031926,51.56642,0
+            -3.032355,51.566087,0
+            -3.031647,51.565627,0
+            -3.030703,51.565026,0
+            -3.030016,51.564466,0
+            -3.02963,51.564079,0
+            -3.029115,51.563506,0
+            -3.028772,51.562779,0
+            -3.02948,51.562479,0
+            -3.028772,51.562779,0
+            -3.028665,51.562505,0
+            -3.027828,51.562012,0
+            -3.02696,51.56242,0
+            -3.02512,51.56235,0
+            -3.02499,51.56261,0
+            -3.02587,51.56306,0
+            -3.02729,51.56433,0
+            -3.027946,51.56498,0
+            -3.029062,51.565593,0
+            -3.03081,51.566133,0
+            -3.031712,51.566374,0
+            -3.032151,51.566487,0
+            -3.032323,51.566527,0
+            -3.032506,51.5665,0
+            -3.03317,51.56633,0
+            -3.033729,51.56574,0
+            -3.0339,51.56538,0
+            -3.034362,51.565106,0
+            -3.03452,51.56485,0
+            -3.03454,51.5643,0
+            -3.03428,51.56393,0
+            -3.03383,51.56361,0
+            -3.03465,51.56313,0
+            -3.03422,51.56275,0
+            -3.03347,51.56331,0
+            -3.03229,51.56253,0
+            -3.03154,51.56214,0
+            -3.03061,51.56195,0
+            -3.030467,51.561852,0
+            -3.029909,51.562105,0
+            -3.029523,51.562452,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Newport parkrun Start/Finish</name>
+        <description>Newport parkrun Start/Finish</description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            -3.028429,51.562305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

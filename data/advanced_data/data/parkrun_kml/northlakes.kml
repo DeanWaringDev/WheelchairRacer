@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>North Lakes parkrun (from Jan 2024)</name>
+    <description/>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0288D1-6425-nodesc-normal">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>6.425</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0288D1-6425-nodesc-highlight">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>9.6375</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0288D1-6425-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0288D1-6425-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0288D1-6425-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-0288D1-6425-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            153.02108,-27.236591,0
+            153.0212109,-27.2363372,0
+            153.021334,-27.2362603,0
+            153.021649,-27.2361834,0
+            153.021734,-27.236097,0
+            153.0216905,-27.2359581,0
+            153.021273,-27.235447,0
+            153.0210535,-27.2353177,0
+            153.0208429,-27.2352581,0
+            153.0205763,-27.2352557,0
+            153.0203441,-27.2352975,0
+            153.0201804,-27.2353845,0
+            153.0199605,-27.235406,0
+            153.0196279,-27.2353201,0
+            153.0193543,-27.2352939,0
+            153.0191075,-27.2353273,0
+            153.0187106,-27.2353416,0
+            153.0185282,-27.2353296,0
+            153.0183471,-27.2352831,0
+            153.018146,-27.235047,0
+            153.0178965,-27.234954,0
+            153.0177007,-27.2349731,0
+            153.0172966,-27.2349378,0
+            153.0171312,-27.2347355,0
+            153.0169661,-27.2346642,0
+            153.0167902,-27.2346168,0
+            153.0163552,-27.234591,0
+            153.0161199,-27.2345468,0
+            153.0157827,-27.2344073,0
+            153.0156399,-27.2342141,0
+            153.0153952,-27.2340662,0
+            153.0152787,-27.2340602,0
+            153.0152077,-27.2341209,0
+            153.0150457,-27.2346514,0
+            153.0151001,-27.234795,0
+            153.0151801,-27.2348899,0
+            153.0152923,-27.2349419,0
+            153.0156105,-27.23491,0
+            153.0158565,-27.2350329,0
+            153.0160824,-27.2352798,0
+            153.0168055,-27.2359851,0
+            153.01696,-27.236037,0
+            153.0172528,-27.2358841,0
+            153.0175505,-27.2356719,0
+            153.0177758,-27.2356266,0
+            153.0179582,-27.2356957,0
+            153.018115,-27.235855,0
+            153.0183042,-27.2361321,0
+            153.0184812,-27.2363301,0
+            153.0188138,-27.2364136,0
+            153.0192349,-27.2364016,0
+            153.019491,-27.236242,0
+            153.0200664,-27.2362538,0
+            153.0203481,-27.2364732,0
+            153.0205814,-27.2366878,0
+            153.0207692,-27.2367319,0
+            153.0209972,-27.2366747,0
+            153.02108,-27.236591,0
+            153.0210857,-27.236881,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <description><![CDATA[Monday, 15 January 2024, 17:10 AEST<br>Elevation: 28 m]]></description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            153.020917,-27.236757,27.6
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Start</name>
+        <description><![CDATA[Monday, 15 January 2024, 16:40 AEST<br>Elevation: 28 m]]></description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            153.021106,-27.236901,28
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

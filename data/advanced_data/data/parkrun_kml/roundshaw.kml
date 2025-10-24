@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Roundshaw Downs parkrun</name>
+    <description>Roundshaw Downs parkrun - 5km free timed run - every Saturday at 9am.</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-25-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/25-bus.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-25-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/25-bus.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-25">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-25-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-25-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-93-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-93-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Roundshaw parkrun Start</name>
+        <description>Roundshaw Downs parkrun (http://www.parkrun.org.uk/roundshaw/Home.aspx) starts at 9.00am every Saturday.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.11872,51.352253,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Roundshaw parkrun Finish</name>
+        <description>Roundshaw Downs parkrun (http://www.parkrun.org.uk/roundshaw/Home.aspx) finish line.</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -0.117862,51.352638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Roundshaw parkrun</name>
+        <description>The Roundshaw Downs parkrun (http://www.parkrun.org.uk/roundshaw/Home.aspx) Course consists of two laps run in an anti-clockwise direction.</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.117867,51.352648,0
+            -0.117631,51.352434,0
+            -0.122266,51.35171,0
+            -0.12454,51.351536,0
+            -0.126557,51.351643,0
+            -0.126858,51.351455,0
+            -0.12718,51.35112,0
+            -0.127544,51.349847,0
+            -0.127137,51.349673,0
+            -0.126643,51.348842,0
+            -0.125828,51.348373,0
+            -0.120378,51.348842,0
+            -0.119648,51.349445,0
+            -0.119348,51.349994,0
+            -0.119047,51.350169,0
+            -0.118747,51.349981,0
+            -0.117459,51.347756,0
+            -0.115442,51.348199,0
+            -0.116279,51.351134,0
+            -0.117631,51.352434,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Parking</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.11894,51.354738,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>289 Bus Stop (War Memorial)</name>
+        <description>Route 289 Bus Stop at the War Memorial</description>
+        <styleUrl>#icon-25</styleUrl>
+        <Point>
+          <coordinates>
+            -0.116,51.352876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>119 Bus Stop</name>
+        <description>Route 119 Bus Stop</description>
+        <styleUrl>#icon-25</styleUrl>
+        <Point>
+          <coordinates>
+            -0.115485,51.356065,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

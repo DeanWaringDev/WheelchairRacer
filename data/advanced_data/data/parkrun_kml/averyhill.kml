@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Greenwich parkrun</name>
+    <description>Greenwich parkrun</description>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FF5252-nodesc-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FF5252-nodesc-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FF5252-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FF5252-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FF5252-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-4186F0-5069-nodesc-normal">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>5.069</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-4186F0-5069-nodesc-highlight">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>7.6035</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-4186F0-5069-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-4186F0-5069-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-4186F0-5069-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Greenwich parkrun course</name>
+      <Placemark>
+        <name>Greenwich parkrun course</name>
+        <styleUrl>#line-4186F0-5069-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            0.075583,51.449318,0
+            0.075712,51.449649,0
+            0.076876,51.449957,0
+            0.077997,51.450228,0
+            0.078544,51.45006,0
+            0.079446,51.449873,0
+            0.08062,51.449572,0
+            0.080824,51.448817,0
+            0.080958,51.448238,0
+            0.08077,51.448004,0
+            0.080449,51.44778,0
+            0.080304,51.447713,0
+            0.079864,51.447677,0
+            0.078389,51.447426,0
+            0.07804,51.447429,0
+            0.077949,51.447402,0
+            0.077724,51.447249,0
+            0.077589,51.447189,0
+            0.076554,51.446861,0
+            0.076313,51.446821,0
+            0.076039,51.44671,0
+            0.075642,51.446597,0
+            0.074886,51.44639,0
+            0.074618,51.446356,0
+            0.074424,51.4464,0
+            0.074247,51.44648,0
+            0.07407,51.446483,0
+            0.073915,51.446416,0
+            0.073824,51.446343,0
+            0.073528,51.446162,0
+            0.073384,51.446186,0
+            0.073207,51.446249,0
+            0.072649,51.44666,0
+            0.071533,51.447764,0
+            0.07149,51.447837,0
+            0.071533,51.447924,0
+            0.071614,51.448048,0
+            0.071672,51.448108,0
+            0.072086,51.448345,0
+            0.073282,51.448904,0
+            0.074038,51.449174,0
+            0.074542,51.449231,0
+            0.075057,51.449295,0
+            0.075304,51.449365,0
+            0.075717,51.449642,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            0.073319,51.448916,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <styleUrl>#icon-1899-FF5252-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            0.075583,51.449318,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafe</name>
+        <description>Join us for Coffee after the run at Avery Hill Park Cafe</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            0.075274,51.448992,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toilets</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            0.075241,51.449715,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Park</name>
+        <description>Car Park</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            0.073986,51.450517,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

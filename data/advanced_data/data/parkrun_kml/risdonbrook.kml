@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Risdon Brook parkrun</name>
+    <description/>
+    <Style id="icon-1899-FFEA00-nodesc-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FFEA00-nodesc-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFEA00-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3333FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3333FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            147.337089,-42.804749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-3333FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            147.337099,-42.804749,0
+            147.33733,-42.804627,0
+            147.33743,-42.80445,0
+            147.33749,-42.80413,0
+            147.336895,-42.803552,0
+            147.33635,-42.8028,0
+            147.3361,-42.80184,0
+            147.33537,-42.80099,0
+            147.335,-42.80036,0
+            147.33522,-42.79993,0
+            147.33599,-42.79955,0
+            147.33711,-42.79935,0
+            147.33803,-42.79924,0
+            147.33837,-42.79889,0
+            147.33756,-42.79851,0
+            147.33681,-42.79845,0
+            147.33588,-42.79861,0
+            147.33477,-42.79872,0
+            147.33438,-42.79881,0
+            147.33397,-42.79869,0
+            147.33316,-42.79766,0
+            147.3332,-42.79729,0
+            147.33262,-42.7968,0
+            147.33232,-42.79642,0
+            147.33172,-42.79606,0
+            147.3312,-42.79535,0
+            147.330952,-42.79492,0
+            147.329927,-42.794243,0
+            147.329139,-42.793984,0
+            147.328114,-42.793877,0
+            147.327797,-42.793488,0
+            147.327594,-42.793515,0
+            147.32747,-42.79361,0
+            147.327406,-42.793897,0
+            147.327738,-42.794641,0
+            147.328023,-42.794983,0
+            147.328227,-42.795483,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

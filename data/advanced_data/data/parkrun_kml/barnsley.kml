@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Barnsley parkrun</name>
+    <description/>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Barnsley parkrun Course</name>
+        <description>The Barnsley parkrun Course consists of just over three and a half anti-clockwise laps around Locke Park.</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.486126,53.544375,0
+            -1.486931,53.544324,0
+            -1.48774,53.54424,0
+            -1.488057,53.544171,0
+            -1.488358,53.54405,0
+            -1.488862,53.543323,0
+            -1.489055,53.543087,0
+            -1.489227,53.543011,0
+            -1.489516,53.543106,0
+            -1.489345,53.543801,0
+            -1.489474,53.544005,0
+            -1.489592,53.544094,0
+            -1.490697,53.544088,0
+            -1.491104,53.544012,0
+            -1.491255,53.543846,0
+            -1.491308,53.543521,0
+            -1.491308,53.543151,0
+            -1.49178,53.542654,0
+            -1.491855,53.542469,0
+            -1.491383,53.542367,0
+            -1.490418,53.541984,0
+            -1.488744,53.541787,0
+            -1.488315,53.54185,0
+            -1.487886,53.541984,0
+            -1.48741,53.54203,0
+            -1.487167,53.541971,0
+            -1.486931,53.541863,0
+            -1.486512,53.541576,0
+            -1.48592,53.54146,0
+            -1.485397,53.541576,0
+            -1.484882,53.541799,0
+            -1.484731,53.541971,0
+            -1.484796,53.542214,0
+            -1.48486,53.542507,0
+            -1.484828,53.542819,0
+            -1.484656,53.543017,0
+            -1.48458,53.54333,0
+            -1.48471,53.543591,0
+            -1.48504,53.54392,0
+            -1.485257,53.544005,0
+            -1.485472,53.544031,0
+            -1.48585,53.54399,0
+            -1.485794,53.544165,0
+            -1.486083,53.544369,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Barnsley parkrun Finish</name>
+        <description>Barnsley parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -1.48707,53.544305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Barnsley parkrun Start</name>
+        <description>Barnsley parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.486115,53.544369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

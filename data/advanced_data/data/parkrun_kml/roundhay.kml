@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Roundhay parkrun</name>
+    <description>Roundhay parkrun course</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Roundhay parkrun Course</name>
+        <description>Roundhay parkrun Course</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.495348,53.83743,0
+            -1.495723,53.837972,0
+            -1.496785,53.839178,0
+            -1.497155,53.839405,0
+            -1.497236,53.839431,0
+            -1.49737,53.839478,0
+            -1.498395,53.839295,0
+            -1.499135,53.839143,0
+            -1.500154,53.838921,0
+            -1.50127,53.838617,0
+            -1.50186,53.838497,0
+            -1.502509,53.838393,0
+            -1.50326,53.83832,0
+            -1.503603,53.83831,0
+            -1.503662,53.838247,0
+            -1.503282,53.838117,0
+            -1.502541,53.837946,0
+            -1.502048,53.837832,0
+            -1.501662,53.837782,0
+            -1.5012,53.83762,0
+            -1.500852,53.837452,0
+            -1.500444,53.837642,0
+            -1.500133,53.837763,0
+            -1.499784,53.837864,0
+            -1.499516,53.837886,0
+            -1.49928,53.837854,0
+            -1.498936,53.837769,0
+            -1.498727,53.837604,0
+            -1.49847,53.837152,0
+            -1.498298,53.836807,0
+            -1.498148,53.836696,0
+            -1.497955,53.836648,0
+            -1.497509,53.836604,0
+            -1.497359,53.83655,0
+            -1.497214,53.836253,0
+            -1.497198,53.835556,0
+            -1.497043,53.835499,0
+            -1.496893,53.835597,0
+            -1.496699,53.835825,0
+            -1.496496,53.83598,0
+            -1.495863,53.836243,0
+            -1.495535,53.836443,0
+            -1.49531,53.836683,0
+            -1.495208,53.837003,0
+            -1.495208,53.837256,0
+            -1.495348,53.837402,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Roundhay parkrun Start</name>
+        <description>Roundhay parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.495956,53.838237,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Roundhay parkrun Finish</name>
+        <description>Roundhay parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -1.496791,53.839162,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1K point (on lap 1)</name>
+        <description>1K point (on lap 1)</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.49858,53.837334,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2K point (on lap 2)</name>
+        <description>2K point (on lap 2)</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.50054,53.83881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3K point (on lap 2)</name>
+        <description>3K point (on lap 2)</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.495728,53.836319,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4K point (on lap 3)</name>
+        <description>4K point (on lap 3)</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.501662,53.837769,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

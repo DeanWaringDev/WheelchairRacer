@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Rostrevor parkrun (from Dec 2023)</name>
+    <description/>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0288D1-5069-nodesc-normal">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>5.069</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0288D1-5069-nodesc-highlight">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>7.6035</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0288D1-5069-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0288D1-5069-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0288D1-5069-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Start and finish</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -6.192524,54.098043,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-0288D1-5069-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -6.1926202,54.0980603,0
+            -6.1934209,54.0994693,0
+            -6.19405,54.10018,0
+            -6.19452,54.10029,0
+            -6.1952429,54.1002931,0
+            -6.19618,54.10032,0
+            -6.1961551,54.1004313,0
+            -6.19415,54.10095,0
+            -6.1936053,54.1010216,0
+            -6.19127,54.1017,0
+            -6.190481,54.1017291,0
+            -6.1895276,54.101916,0
+            -6.1886601,54.102254,0
+            -6.186528,54.102716,0
+            -6.185004,54.102175,0
+            -6.1842637,54.1019706,0
+            -6.183695,54.101697,0
+            -6.18273,54.101622,0
+            -6.183695,54.101697,0
+            -6.1842637,54.1019706,0
+            -6.185004,54.102175,0
+            -6.188351,54.099608,0
+            -6.18798,54.09919,0
+            -6.1875,54.09901,0
+            -6.187219,54.09871,0
+            -6.1868923,54.0987213,0
+            -6.1863866,54.0984991,0
+            -6.1859782,54.0981836,0
+            -6.1858,54.09794,0
+            -6.18585,54.0977,0
+            -6.18572,54.09778,0
+            -6.1840319,54.0995592,0
+            -6.182923,54.1004544,0
+            -6.1828211,54.1005664,0
+            -6.1828453,54.1011697,0
+            -6.18273,54.101622,0
+            -6.1823436,54.1024426,0
+            -6.1814045,54.1038483,0
+            -6.1810909,54.1041157,0
+            -6.1804018,54.1043391,0
+            -6.17979,54.105144,0
+            -6.179066,54.105566,0
+            -6.1788351,54.1057028,0
+            -6.178685,54.106038,0
+            -6.1786042,54.1063743,0
+            -6.1787408,54.1066716,0
+            -6.178695,54.106906,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

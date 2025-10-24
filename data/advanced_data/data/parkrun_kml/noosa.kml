@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Noosa parkrun</name>
+    <description/>
+    <Style id="icon-157-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-157-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-157-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3333FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3333FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-3333FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            153.03038,-26.40876,0
+            153.03081,-26.40886,0
+            153.031011,-26.408995,0
+            153.031649,-26.408279,0
+            153.031729,-26.408,0
+            153.032341,-26.406626,0
+            153.03118,-26.40653,0
+            153.03053,-26.40632,0
+            153.03004,-26.40601,0
+            153.02948,-26.4053,0
+            153.0294,-26.40463,0
+            153.03019,-26.4034,0
+            153.03066,-26.4028,0
+            153.03165,-26.40219,0
+            153.03229,-26.4013,0
+            153.03317,-26.39986,0
+            153.0342,-26.39859,0
+            153.03474,-26.39857,0
+            153.03536,-26.39917,0
+            153.03603,-26.39996,0
+            153.03616,-26.40048,0
+            153.03635,-26.40094,0
+            153.03766,-26.40149,0
+            153.03847,-26.40219,0
+            153.0392,-26.40259,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-157-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            153.030356,-26.408764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Wynnum parkrun</name>
+    <description>Wynnum parkrun route - this is a FREE weekly 5km timed walk or run to be held each Saturday morning,   STARTING at 7am.</description>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Start / Finish</name>
+        <description><![CDATA[Start on grass area beside MBC just beyond the two pergolas SE of the Wynnum Wading Pool. Head South East towards Bayside Park at Manly. <br>Finish on the grass near the start point, and collect a token.]]></description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            153.177948,-27.443083,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>parkrun 5km</name>
+        <description><![CDATA[Starting near Wynnum Wading Pool and following the Wynnum Foreshore Walk / Morton Bay Cycleway MBC out to Bayside Park in Manly, turning and back to Breakwater Park, turning and back to finish just before the start area. <br><br>The paths are shared use path for pedestrians and cyclists, so please be considerate to all other path users at all times, thank you.]]></description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            153.177948,-27.44305,0
+            153.177856,-27.44289,0
+            153.17662,-27.4417,0
+            153.176575,-27.441601,0
+            153.176285,-27.441299,0
+            153.176132,-27.441156,0
+            153.175934,-27.440973,0
+            153.17572,-27.440739,0
+            153.175552,-27.440584,0
+            153.175461,-27.440437,0
+            153.175293,-27.440201,0
+            153.175079,-27.439121,0
+            153.174911,-27.43812,0
+            153.174683,-27.43689,0
+            153.174515,-27.43651,0
+            153.174362,-27.43635,0
+            153.174561,-27.43652,0
+            153.174728,-27.436991,0
+            153.174942,-27.43816,0
+            153.175125,-27.439175,0
+            153.175323,-27.440182,0
+            153.175552,-27.440529,0
+            153.175797,-27.440796,0
+            153.176056,-27.441036,0
+            153.176315,-27.44129,0
+            153.176605,-27.441589,0
+            153.176636,-27.441681,0
+            153.179001,-27.443951,0
+            153.180191,-27.444691,0
+            153.180191,-27.444771,0
+            153.181473,-27.44541,0
+            153.182892,-27.44557,0
+            153.184631,-27.446011,0
+            153.186691,-27.446262,0
+            153.186844,-27.446281,0
+            153.186996,-27.446312,0
+            153.187103,-27.446377,0
+            153.187119,-27.446484,0
+            153.18721,-27.446602,0
+            153.187302,-27.446627,0
+            153.187851,-27.447418,0
+            153.187958,-27.447609,0
+            153.187988,-27.447718,0
+            153.187943,-27.447811,0
+            153.187805,-27.447929,0
+            153.187241,-27.448278,0
+            153.187149,-27.448261,0
+            153.187042,-27.448339,0
+            153.187027,-27.448429,0
+            153.186646,-27.44902,0
+            153.186401,-27.449869,0
+            153.18634,-27.450529,0
+            153.186386,-27.450741,0
+            153.186508,-27.450939,0
+            153.186569,-27.45126,0
+            153.186508,-27.45125,0
+            153.186493,-27.45092,0
+            153.186371,-27.450769,0
+            153.186325,-27.45056,0
+            153.186371,-27.44986,0
+            153.186646,-27.44898,0
+            153.186996,-27.448441,0
+            153.187027,-27.448309,0
+            153.187714,-27.447861,0
+            153.187805,-27.447762,0
+            153.187851,-27.447651,0
+            153.187836,-27.447542,0
+            153.187775,-27.44743,0
+            153.18718,-27.4466,0
+            153.187012,-27.44643,0
+            153.186722,-27.446289,0
+            153.184326,-27.445999,0
+            153.182922,-27.44562,0
+            153.18161,-27.445511,0
+            153.180496,-27.444929,0
+            153.179947,-27.4447,0
+            153.17981,-27.444559,0
+            153.178802,-27.443859,0
+            153.178116,-27.443171,0
+            153.177994,-27.44311,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Pelicans Nest</name>
+        <description>After run coffees at the Pelicans Nest</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            153.17601,-27.442434,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toilets at Pandanus Beach, Wynnum</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            153.176559,-27.441957,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toilets at Manly, Bayside Park</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            153.186691,-27.452223,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

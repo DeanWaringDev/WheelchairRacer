@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Cardiff parkrun</name>
+    <description>Free 5km timed run - every Saturday at 9am</description>
+    <Style id="icon-157-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-157-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-157-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-35-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-35-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-93-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-93-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Cardiff parkrun route</name>
+        <description>Cardiff parkrun (http://www.parkrun.org.uk/cardiff/Home.aspx) happens every Saturday at 9am.  It starts and finishes at the same spot and is just a single lap.</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -3.207107,51.497282,0
+            -3.20363,51.497469,0
+            -3.201227,51.497683,0
+            -3.200541,51.49775,0
+            -3.199983,51.497763,0
+            -3.198738,51.497576,0
+            -3.198073,51.497456,0
+            -3.197536,51.497242,0
+            -3.196163,51.496361,0
+            -3.195348,51.495359,0
+            -3.195004,51.494784,0
+            -3.194511,51.494277,0
+            -3.193588,51.493475,0
+            -3.193395,51.493234,0
+            -3.193545,51.492807,0
+            -3.194232,51.491885,0
+            -3.194082,51.491511,0
+            -3.192408,51.490669,0
+            -3.191679,51.490041,0
+            -3.191271,51.489707,0
+            -3.190734,51.489534,0
+            -3.190134,51.489454,0
+            -3.189619,51.489427,0
+            -3.188782,51.489534,0
+            -3.188674,51.488839,0
+            -3.189039,51.487823,0
+            -3.188524,51.486955,0
+            -3.188267,51.48622,0
+            -3.188202,51.485285,0
+            -3.188074,51.484924,0
+            -3.187838,51.484603,0
+            -3.187516,51.484871,0
+            -3.1864,51.485205,0
+            -3.185713,51.485592,0
+            -3.185456,51.4861,0
+            -3.185434,51.486568,0
+            -3.185821,51.487556,0
+            -3.1864,51.487957,0
+            -3.187022,51.488304,0
+            -3.187966,51.488812,0
+            -3.188417,51.489146,0
+            -3.188803,51.489534,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Cardiff parkrun Start/Finish</name>
+        <styleUrl>#icon-157-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -3.207107,51.497362,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafe at Tesco Extra</name>
+        <styleUrl>#icon-35-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -3.205905,51.498298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>UWIC</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -3.211956,51.495706,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Llandaff Rugby Club</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -3.213072,51.494691,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tesco Extra</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -3.207064,51.498832,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

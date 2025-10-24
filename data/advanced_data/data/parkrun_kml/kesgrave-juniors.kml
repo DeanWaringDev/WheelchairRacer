@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Kesgrave junior parkrun</name>
+    <description/>
+    <Style id="icon-503-009D57-nodesc-normal">
+      <IconStyle>
+        <color>ff579d00</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-009D57-nodesc-highlight">
+      <IconStyle>
+        <color>ff579d00</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-009D57-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-009D57-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-009D57-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-3F5BA9-nodesc-normal">
+      <IconStyle>
+        <color>ffa95b3f</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-3F5BA9-nodesc-highlight">
+      <IconStyle>
+        <color>ffa95b3f</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-3F5BA9-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-3F5BA9-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-3F5BA9-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3949AB-5263-nodesc-normal">
+      <LineStyle>
+        <color>ffab4939</color>
+        <width>5.263</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3949AB-5263-nodesc-highlight">
+      <LineStyle>
+        <color>ffab4939</color>
+        <width>7.8945</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3949AB-5263-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3949AB-5263-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3949AB-5263-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-3949AB-5263-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            1.25658,52.058173,0
+            1.254835,52.058118,0
+            1.254798,52.058104,0
+            1.25478,52.058073,0
+            1.254684,52.057874,0
+            1.254224,52.057802,0
+            1.253811,52.0579,0
+            1.253695,52.057925,0
+            1.253477,52.057917,0
+            1.25336,52.057907,0
+            1.252871,52.05781,0
+            1.25223,52.057713,0
+            1.251663,52.05765,0
+            1.25132,52.057618,0
+            1.250996,52.057605,0
+            1.250761,52.057592,0
+            1.250425,52.05755,0
+            1.24989,52.057487,0
+            1.249844,52.057464,0
+            1.249808,52.057432,0
+            1.249824,52.057405,0
+            1.249866,52.057398,0
+            1.249969,52.057394,0
+            1.250168,52.057429,0
+            1.250325,52.057453,0
+            1.250516,52.057479,0
+            1.250685,52.05749,0
+            1.251095,52.057493,0
+            1.251316,52.057497,0
+            1.251455,52.057499,0
+            1.252737,52.057529,0
+            1.253611,52.05755,0
+            1.254419,52.057556,0
+            1.254832,52.057574,0
+            1.255318,52.057582,0
+            1.256226,52.05759,0
+            1.256228,52.058142,0
+            1.256185,52.058158,0
+            1.256228,52.058142,0
+            1.256226,52.05759,0
+            1.257334,52.057615,0
+            1.257437,52.057664,0
+            1.257469,52.057727,0
+            1.257429,52.058191,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start</name>
+        <styleUrl>#icon-503-009D57-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            1.25658,52.058173,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            1.257429,52.058191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1st LAP</name>
+        <styleUrl>#icon-503-3F5BA9-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            1.256236,52.057887,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2nd LAP</name>
+        <styleUrl>#icon-503-3F5BA9-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            1.256793,52.057599,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

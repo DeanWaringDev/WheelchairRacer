@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Pennington Flash parkrun</name>
+    <description>Pennington Flash parkrun</description>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Pennington Flash parkrun Course</name>
+        <description>Pennington Flash parkrun Course</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -2.542777,53.491607,0
+            -2.543324,53.491818,0
+            -2.543571,53.491952,0
+            -2.543753,53.492048,0
+            -2.544097,53.49199,0
+            -2.544419,53.491888,0
+            -2.545148,53.49162,0
+            -2.545878,53.49148,0
+            -2.546511,53.491327,0
+            -2.546854,53.491193,0
+            -2.547036,53.491007,0
+            -2.547133,53.490707,0
+            -2.547283,53.490395,0
+            -2.547476,53.490235,0
+            -2.547745,53.490069,0
+            -2.548356,53.489814,0
+            -2.548807,53.489552,0
+            -2.548667,53.489316,0
+            -2.548399,53.489124,0
+            -2.54827,53.488914,0
+            -2.548528,53.488697,0
+            -2.548764,53.488512,0
+            -2.549032,53.488448,0
+            -2.549354,53.488409,0
+            -2.550277,53.488409,0
+            -2.550695,53.488403,0
+            -2.551124,53.488339,0
+            -2.551768,53.488148,0
+            -2.552766,53.48839,0
+            -2.553828,53.488614,0
+            -2.554643,53.488939,0
+            -2.555072,53.489252,0
+            -2.555394,53.489603,0
+            -2.554911,53.489641,0
+            -2.553924,53.489629,0
+            -2.553012,53.489654,0
+            -2.551907,53.489731,0
+            -2.550867,53.489846,0
+            -2.550534,53.490031,0
+            -2.550277,53.49021,0
+            -2.549751,53.49021,0
+            -2.5493,53.490241,0
+            -2.548678,53.490407,0
+            -2.547927,53.49072,0
+            -2.547476,53.490924,0
+            -2.546983,53.49111,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Pennington Flash parkrun Start/Finish</name>
+        <description>Pennington Flash parkrun Start/Finish</description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            -2.542745,53.491607,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Post run coffee</name>
+        <description><![CDATA[Post run coffee at the Hide Coffee House & Cafe]]></description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            -2.5389741,53.4872799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Main Car Park</name>
+        <description>Main Car Park</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.537477,53.486488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Free Parking</name>
+        <description>Free Parking</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.531136,53.490407,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

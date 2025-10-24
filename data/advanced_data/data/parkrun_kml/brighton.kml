@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name><![CDATA[Brighton & Hove parkrun]]></name>
+    <description>The Brighton and Hove parkrun is a free 5km run which takes place every Saturday at 9.00am. Further details at http://www.parkrun.org.uk/brighton</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-6633FF-5000-normal">
+      <LineStyle>
+        <color>ffff3366</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-6633FF-5000-highlight">
+      <LineStyle>
+        <color>ffff3366</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-6633FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-6633FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-6633FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FF0000-5000-normal">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FF0000-5000-highlight">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FF0000-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FF0000-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FF0000-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name><![CDATA[Brighton & Hove parkrun Course]]></name>
+        <description><![CDATA[The Brighton & Hove parkrun course consists of one inner lap followed by two outer laps run anti-clockwise.]]></description>
+        <styleUrl>#line-6633FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.17249,50.84213,0
+            -0.172614,50.841683,0
+            -0.172702,50.841229,0
+            -0.172809,50.841046,0
+            -0.172965,50.84087,0
+            -0.17333,50.84056,0
+            -0.173458,50.840422,0
+            -0.17355,50.84029,0
+            -0.17368,50.84001,0
+            -0.173721,50.839826,0
+            -0.17371,50.83965,0
+            -0.173694,50.839562,0
+            -0.17364,50.83948,0
+            -0.17351,50.83933,0
+            -0.17333,50.83922,0
+            -0.173185,50.839172,0
+            -0.173019,50.839145,0
+            -0.172788,50.839155,0
+            -0.17258,50.83918,0
+            -0.1723,50.83926,0
+            -0.17205,50.83939,0
+            -0.171903,50.839562,0
+            -0.171822,50.839752,0
+            -0.171795,50.83983,0
+            -0.171774,50.839924,0
+            -0.171753,50.840016,0
+            -0.171694,50.840101,0
+            -0.171533,50.84025,0
+            -0.171345,50.840392,0
+            -0.17102,50.84066,0
+            -0.170888,50.840818,0
+            -0.170782,50.841003,0
+            -0.170736,50.84119,0
+            -0.170717,50.841382,0
+            -0.170712,50.841759,0
+            -0.170672,50.841948,0
+            -0.17063,50.84214,0
+            -0.170601,50.842447,0
+            -0.170627,50.842599,0
+            -0.17067,50.84275,0
+            -0.170759,50.842889,0
+            -0.170925,50.843013,0
+            -0.171086,50.843139,0
+            -0.171199,50.843281,0
+            -0.171226,50.843359,0
+            -0.171221,50.843439,0
+            -0.171144,50.843632,0
+            -0.171101,50.843729,0
+            -0.171091,50.843776,0
+            -0.171095,50.843827,0
+            -0.17112,50.84391,0
+            -0.171168,50.84399,0
+            -0.171295,50.84413,0
+            -0.171435,50.84422,0
+            -0.171614,50.844298,0
+            -0.171924,50.844374,0
+            -0.17224,50.84443,0
+            -0.172479,50.844491,0
+            -0.1727,50.84457,0
+            -0.172993,50.844709,0
+            -0.17326,50.84486,0
+            -0.17351,50.84505,0
+            -0.173634,50.845193,0
+            -0.173735,50.845342,0
+            -0.173825,50.845493,0
+            -0.17393,50.84564,0
+            -0.173984,50.845695,0
+            -0.174046,50.845749,0
+            -0.174114,50.845802,0
+            -0.1742,50.84585,0
+            -0.174287,50.845885,0
+            -0.174382,50.845916,0
+            -0.174479,50.845935,0
+            -0.17459,50.84594,0
+            -0.174738,50.845929,0
+            -0.174873,50.845904,0
+            -0.174997,50.845862,0
+            -0.175108,50.845807,0
+            -0.175207,50.845741,0
+            -0.175292,50.845669,0
+            -0.175349,50.845581,0
+            -0.175388,50.845492,0
+            -0.17542,50.84532,0
+            -0.17536,50.84512,0
+            -0.17529,50.84501,0
+            -0.175218,50.844965,0
+            -0.175138,50.844923,0
+            -0.174915,50.844821,0
+            -0.174794,50.844776,0
+            -0.174676,50.844729,0
+            -0.174446,50.844625,0
+            -0.174333,50.844575,0
+            -0.17424,50.84452,0
+            -0.174058,50.844372,0
+            -0.173893,50.844221,0
+            -0.173736,50.844069,0
+            -0.17356,50.84392,0
+            -0.173402,50.843801,0
+            -0.173233,50.843692,0
+            -0.173053,50.843588,0
+            -0.17289,50.84347,0
+            -0.172821,50.843401,0
+            -0.17277,50.84333,0
+            -0.172746,50.843215,0
+            -0.172754,50.843098,0
+            -0.172772,50.842986,0
+            -0.172764,50.842869,0
+            -0.17272,50.842757,0
+            -0.172663,50.842648,0
+            -0.172597,50.84254,0
+            -0.17254,50.84243,0
+            -0.172487,50.842275,0
+            -0.17249,50.84213,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Brighton & Hove parkrun Course]]></name>
+        <description><![CDATA[The Brighton & Hove parkrun course consists of one inner lap followed by two outer laps run anti-clockwise.]]></description>
+        <styleUrl>#line-6633FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.172749,50.84324,0
+            -0.172734,50.843296,0
+            -0.172711,50.843352,0
+            -0.172678,50.8434,0
+            -0.172632,50.843444,0
+            -0.172514,50.843474,0
+            -0.172451,50.843481,0
+            -0.172386,50.843481,0
+            -0.172306,50.843468,0
+            -0.17223,50.84345,0
+            -0.172058,50.843382,0
+            -0.171971,50.843339,0
+            -0.171881,50.843305,0
+            -0.171825,50.843292,0
+            -0.171769,50.843285,0
+            -0.171651,50.843284,0
+            -0.171593,50.843289,0
+            -0.171538,50.843298,0
+            -0.171441,50.843322,0
+            -0.171373,50.843352,0
+            -0.171314,50.843365,0
+            -0.171287,50.843364,0
+            -0.171262,50.843358,0
+            -0.171213,50.843322,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>last run off</name>
+        <description>Last run off to the Finish line</description>
+        <styleUrl>#line-FF0000-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.17263,50.841499,0
+            -0.172471,50.841064,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Brighton & Hove parkrun Start]]></name>
+        <description>Start of 1 small lap and 2 full laps</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.172477,50.842293,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Brighton & Hove parkrun Finish]]></name>
+        <description>1 small lap 2 full laps and now for the Cafe</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -0.17241,50.841045,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1K Point (approx)</name>
+        <description>1K Point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -0.172219,50.843452,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2K Point (approx)</name>
+        <description>2K Point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -0.170642,50.842342,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3K Point (approx)</name>
+        <description>3K Point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -0.172541,50.842335,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4K Point (approx)</name>
+        <description>4K Point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -0.171136,50.843811,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Open from 08:00</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -0.172702,50.840614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CAFE</name>
+        <description><![CDATA[Meeting point after the run.<br>Check out the "Big Beauty"]]></description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            -0.172638,50.840492,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Guildford parkrun</name>
+    <description><![CDATA[Free weekly 5K run in Stoke Park, Guildford www.parkrun.org.uk.<br>Course consists of 2 anti-clockwise laps of the park.]]></description>
+    <Style id="icon-157-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-157-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-157-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-93-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-93-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0000FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>parking for Guildford parkrun</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.559616,51.249668,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>parking for Guildford parkrun</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.570184,51.246876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>parking for Guildford parkrun</name>
+        <styleUrl>#icon-93-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.571235,51.244469,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-157-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.55732,51.248077,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Line 2</name>
+        <styleUrl>#line-0000FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.557334,51.248074,0
+            -0.557645,51.248104,0
+            -0.558085,51.248009,0
+            -0.55861,51.247944,0
+            -0.560029,51.247765,0
+            -0.561569,51.24754,0
+            -0.56207,51.247452,0
+            -0.56298,51.247192,0
+            -0.562982,51.247093,0
+            -0.563237,51.246883,0
+            -0.563816,51.246639,0
+            -0.564318,51.246593,0
+            -0.564487,51.246609,0
+            -0.565107,51.246059,0
+            -0.566501,51.245358,0
+            -0.567751,51.245144,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>course</name>
+        <styleUrl>#line-0000FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.567743,51.245144,0
+            -0.568674,51.245155,0
+            -0.568631,51.244663,0
+            -0.56862,51.244404,0
+            -0.568765,51.244015,0
+            -0.568795,51.243923,0
+            -0.568682,51.243748,0
+            -0.568438,51.243546,0
+            -0.568054,51.243301,0
+            -0.567698,51.243069,0
+            -0.56696,51.243061,0
+            -0.566649,51.243217,0
+            -0.5663,51.243488,0
+            -0.566091,51.243538,0
+            -0.565324,51.243614,0
+            -0.564334,51.244423,0
+            -0.56401,51.244778,0
+            -0.563444,51.245556,0
+            -0.562904,51.246281,0
+            -0.562741,51.246334,0
+            -0.562596,51.246326,0
+            -0.562419,51.246227,0
+            -0.562239,51.246025,0
+            -0.5621,51.245926,0
+            -0.561689,51.24572,0
+            -0.561547,51.245258,0
+            -0.561408,51.245033,0
+            -0.561083,51.244579,0
+            -0.56085,51.244297,0
+            -0.560657,51.244289,0
+            -0.560214,51.244564,0
+            -0.559356,51.244984,0
+            -0.55887,51.245243,0
+            -0.55871,51.245281,0
+            -0.557658,51.245777,0
+            -0.55658,51.246468,0
+            -0.556124,51.246796,0
+            -0.556156,51.246994,0
+            -0.556524,51.247238,0
+            -0.557285,51.248081,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

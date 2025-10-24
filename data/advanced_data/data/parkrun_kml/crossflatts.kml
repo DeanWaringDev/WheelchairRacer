@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Cross Flatts parkrun</name>
+    <description/>
+    <Style id="icon-157-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-157-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-157-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3333FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3333FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-33FF33-4000-nodesc-normal">
+      <LineStyle>
+        <color>ff33ff33</color>
+        <width>4</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-33FF33-4000-nodesc-highlight">
+      <LineStyle>
+        <color>ff33ff33</color>
+        <width>6</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-33FF33-4000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-33FF33-4000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-33FF33-4000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-CC0000-5000-nodesc-normal">
+      <LineStyle>
+        <color>ff0000cc</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-CC0000-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ff0000cc</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-CC0000-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-CC0000-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-CC0000-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-157-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -1.557757,53.776089,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Half lap to start</name>
+        <styleUrl>#line-33FF33-4000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.55776,53.77608,0
+            -1.55658,53.77483,0
+            -1.55699,53.7747,0
+            -1.557178,53.775003,0
+            -1.55804,53.77538,0
+            -1.559184,53.776513,0
+            -1.557462,53.776899,0
+            -1.555917,53.775077,0
+            -1.55696,53.7747,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-3333FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.55701,53.77468,0
+            -1.5572,53.77499,0
+            -1.55806,53.77537,0
+            -1.55922,53.77653,0
+            -1.55746,53.77692,0
+            -1.555901,53.775095,0
+            -1.55432,53.77329,0
+            -1.55364,53.77187,0
+            -1.55291,53.77121,0
+            -1.55248,53.77046,0
+            -1.55437,53.7701,0
+            -1.55566,53.77082,0
+            -1.55662,53.77334,0
+            -1.55722,53.77391,0
+            -1.55681,53.77439,0
+            -1.55701,53.77468,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Cut in after 2nd full lap to finish</name>
+        <styleUrl>#line-CC0000-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.55699,53.774668,0
+            -1.556534,53.774814,0
+            -1.557747,53.776095,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

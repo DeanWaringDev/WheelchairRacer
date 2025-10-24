@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Barrow parkrun</name>
+    <description>Barrow parkrun</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Barrow parkrun Course</name>
+        <description>Barrow parkrun Course</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -3.218914,54.11765,0
+            -3.218806,54.11781,0
+            -3.218844,54.11788,0
+            -3.219032,54.118059,0
+            -3.219152,54.118205,0
+            -3.219214,54.118301,0
+            -3.219198,54.118395,0
+            -3.219219,54.118501,0
+            -3.219356,54.11862,0
+            -3.219506,54.118674,0
+            -3.219638,54.1187,0
+            -3.21981,54.118752,0
+            -3.219936,54.118832,0
+            -3.220043,54.118963,0
+            -3.220276,54.119257,0
+            -3.220432,54.119371,0
+            -3.220652,54.119423,0
+            -3.220901,54.11942,0
+            -3.221135,54.119365,0
+            -3.221277,54.119282,0
+            -3.221373,54.119145,0
+            -3.221363,54.118994,0
+            -3.221282,54.118886,0
+            -3.221043,54.118746,0
+            -3.220901,54.118647,0
+            -3.220767,54.118515,0
+            -3.220692,54.118408,0
+            -3.220612,54.118218,0
+            -3.220587,54.118062,0
+            -3.220606,54.11792,0
+            -3.220882,54.117826,0
+            -3.22125,54.117872,0
+            -3.221792,54.118054,0
+            -3.222097,54.118227,0
+            -3.222215,54.11838,0
+            -3.222537,54.118519,0
+            -3.22254,54.118552,0
+            -3.222299,54.118653,0
+            -3.222197,54.118768,0
+            -3.222063,54.11901,0
+            -3.221851,54.119175,0
+            -3.221478,54.119332,0
+            -3.221317,54.119452,0
+            -3.221167,54.119618,0
+            -3.221102,54.119742,0
+            -3.220931,54.119831,0
+            -3.220767,54.1199,0
+            -3.220518,54.119948,0
+            -3.220276,54.120058,0
+            -3.220078,54.120323,0
+            -3.220003,54.120338,0
+            -3.219847,54.120291,0
+            -3.219458,54.120084,0
+            -3.219155,54.119804,0
+            -3.218814,54.11943,0
+            -3.218718,54.119239,0
+            -3.218651,54.119035,0
+            -3.218683,54.118585,0
+            -3.21871,54.118326,0
+            -3.218675,54.11818,0
+            -3.218535,54.118086,0
+            -3.218313,54.117996,0
+            -3.218122,54.117964,0
+            -3.217661,54.117976,0
+            -3.216953,54.117988,0
+            -3.216722,54.117976,0
+            -3.216398,54.117919,0
+            -3.216194,54.117831,0
+            -3.215947,54.117675,0
+            -3.21581,54.117523,0
+            -3.215751,54.117369,0
+            -3.215743,54.11718,0
+            -3.215834,54.116984,0
+            -3.216025,54.116811,0
+            -3.216344,54.116641,0
+            -3.216993,54.116517,0
+            -3.218168,54.116274,0
+            -3.2186,54.116226,0
+            -3.218946,54.116245,0
+            -3.219356,54.116331,0
+            -3.219673,54.116502,0
+            -3.219815,54.116669,0
+            -3.219799,54.11676,0
+            -3.219614,54.117254,0
+            -3.219378,54.117858,0
+            -3.219222,54.118293,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Barrow parkrun Finish Straight</name>
+        <description>Barrow parkrun Finish Straight</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -3.21827,54.117983,0
+            -3.21813,54.117905,0
+            -3.218039,54.117801,0
+            -3.218045,54.11766,0
+            -3.218055,54.117619,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Barrow parkrun Finish</name>
+        <description>Barrow parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -3.218066,54.117603,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Barrow parkrun Start</name>
+        <description>Barrow parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -3.218919,54.117628,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafe</name>
+        <description>Each week we grab a coffee and cake here after the event - please join us if you can</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            -3.216934,54.117389,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1K point (approx)</name>
+        <description>1K point (approx) on the first lap</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -3.218801,54.119389,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2K point (approx)</name>
+        <description>1K point (approx) at the start of the second lap</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -3.219898,54.118807,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3K point (approx)</name>
+        <description>3K point (approx) on the second lap</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -3.218688,54.118593,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4K point (approx)</name>
+        <description>4K point (approx) at the start of the final 1/2 lap after the two complete laps</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -3.220534,54.119401,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

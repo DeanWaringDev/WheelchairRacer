@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Falkirk parkrun</name>
+    <description>Falkirk parkrun</description>
+    <Style id="icon-115-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/115-rail.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-115-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/115-rail.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-115">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-115-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-115-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-25-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/25-bus.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-25-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/25-bus.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-25-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-25-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-25-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-33-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-33-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-33">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-33-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-33-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-4000-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-3333FF-4000-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-3333FF-4000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-4000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-4000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Falkirk parkrun Start</name>
+        <description>The start is directly in front of Callendar House on the gravel path.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -3.766661,55.995434,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Falkirk parkrun Finish</name>
+        <description><![CDATA[After a 1 lap loop around the woods & trail paths of Callendar Estate, the race finishes in front of the impressive Callendar House.]]></description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -3.767715,55.995279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Falkirk parkrun Course</name>
+        <description><![CDATA[Clock-wise route around the boating pond before entering Callendar woods. Follow the yellow trail path until the main path crossroads. Straight across continuing to follow the yellow trail until you apporach T-junction.  Turn right then onto footpath at Kemper Ave for 20 yards then back into the park.<br><br>Over the bridge and past the golf course on the right. As you approach the kids play park turn right where you'll meet a gradual climb.  Go past the barrier then at the cross roads turn left.<br><br> <br><br>A marshal will then direct you left at the crossroads and you return to Callendar House, repeating your outward 1.5k. The finish is within the loop in front of Callendar House.]]></description>
+        <styleUrl>#line-3333FF-4000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -3.767704,55.995288,0
+            -3.767501,55.995396,0
+            -3.767248,55.995447,0
+            -3.766948,55.995474,0
+            -3.766669,55.995435,0
+            -3.76638,55.9953,0
+            -3.76623,55.99513,0
+            -3.76615,55.99487,0
+            -3.76626,55.99457,0
+            -3.76647,55.99449,0
+            -3.76648,55.99443,0
+            -3.76379,55.99387,0
+            -3.76163,55.99393,0
+            -3.76025,55.9938,0
+            -3.75951,55.99354,0
+            -3.75854,55.99333,0
+            -3.75805,55.99285,0
+            -3.75763,55.99261,0
+            -3.75707,55.99242,0
+            -3.75816,55.99196,0
+            -3.7586,55.99182,0
+            -3.75964,55.99168,0
+            -3.76278,55.99144,0
+            -3.76433,55.99121,0
+            -3.7653,55.99121,0
+            -3.76635,55.99113,0
+            -3.76958,55.99151,0
+            -3.77216,55.99209,0
+            -3.77738,55.99219,0
+            -3.78024,55.99252,0
+            -3.78114,55.99248,0
+            -3.78207,55.99302,0
+            -3.77919,55.99328,0
+            -3.77804,55.99391,0
+            -3.77688,55.99402,0
+            -3.77579,55.9939,0
+            -3.77536,55.99416,0
+            -3.77392,55.99465,0
+            -3.77293,55.99455,0
+            -3.77229,55.99455,0
+            -3.77185,55.99459,0
+            -3.77069,55.99488,0
+            -3.77081,55.99393,0
+            -3.76942,55.99248,0
+            -3.76896,55.991442,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Car Park 1</name>
+        <description>Opens 08:30</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -3.76904,55.995663,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Park 2</name>
+        <description>Opens 08:30</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -3.775692,55.995632,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Stables</name>
+        <description><![CDATA[The Stables tea room opens at 10:00 serving tea, coffee, scones, home baking or if you're hungry a selection of sandwiches and salads.]]></description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            -3.769882,55.995804,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description><![CDATA[Council toilets don't open until 10:00 however there is a coin operated loo at the back of the kiosk.]]></description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -3.770521,55.995026,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Falkirk Grahamston</name>
+        <description><![CDATA[Trains arrive here from Stirling, Edinburgh & Glasgow Queen Street.]]></description>
+        <styleUrl>#icon-115</styleUrl>
+        <Point>
+          <coordinates>
+            -3.784275,56.00227,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Falkirk High</name>
+        <description>The main Edinburgh to Glasgow train line serves Falkirk with trains approx every 15-20 mins.</description>
+        <styleUrl>#icon-115</styleUrl>
+        <Point>
+          <coordinates>
+            -3.791399,55.991253,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Falkirk Bus Station</name>
+        <styleUrl>#icon-25-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -3.77964,55.998692,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>M9 Jct 5 westbound</name>
+        <description><![CDATA[Preferred exit for travellers from Linlithgow, Bathgate, South Queensferry & Edinburgh.]]></description>
+        <styleUrl>#icon-33</styleUrl>
+        <Point>
+          <coordinates>
+            -3.716083,55.996006,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>M9 Jct 6 eastbound</name>
+        <description><![CDATA[Preferred exit for travellers from Stirling, Alloa, Kincardine & Perth.]]></description>
+        <styleUrl>#icon-33</styleUrl>
+        <Point>
+          <coordinates>
+            -3.750286,56.017406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>M876 Jct 1 northbound</name>
+        <description><![CDATA[Preferred exit for travellers from Cumbernauld & Glasgow.]]></description>
+        <styleUrl>#icon-33</styleUrl>
+        <Point>
+          <coordinates>
+            -3.876843,56.013641,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Hanley parkrun</name>
+    <description/>
+    <Style id="icon-123-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-123-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-123-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-61-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-61-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3333FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3333FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Car Parking</name>
+        <description>Car Parking</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.174821,53.012176,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Parking</name>
+        <description>Car Parking</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.176419,53.016842,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hanley parkrun Finish</name>
+        <styleUrl>#icon-123-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -2.176065,53.014576,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hanley parkrun Start</name>
+        <styleUrl>#icon-61-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -2.175749,53.015013,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-3333FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -2.17606,53.01457,0
+            -2.17707,53.01488,0
+            -2.17712,53.01509,0
+            -2.176639,53.015204,0
+            -2.17464,53.01479,0
+            -2.17427,53.01466,0
+            -2.17403,53.0145,0
+            -2.17405,53.01445,0
+            -2.17375,53.01495,0
+            -2.17375,53.01513,0
+            -2.173898,53.015558,0
+            -2.17399,53.01599,0
+            -2.17399,53.01632,0
+            -2.17403,53.01647,0
+            -2.17412,53.01659,0
+            -2.17438,53.01647,0
+            -2.174596,53.016429,0
+            -2.17495,53.016448,0
+            -2.1755,53.01662,0
+            -2.17648,53.01667,0
+            -2.17709,53.01681,0
+            -2.17697,53.01664,0
+            -2.17699,53.01648,0
+            -2.17707,53.0163,0
+            -2.17729,53.01607,0
+            -2.17734,53.01587,0
+            -2.17732,53.01571,0
+            -2.17718,53.01545,0
+            -2.1769,53.01529,0
+            -2.17664,53.0152,0
+            -2.17464,53.01479,0
+            -2.17427,53.01466,0
+            -2.17403,53.0145,0
+            -2.17408,53.01393,0
+            -2.173917,53.013736,0
+            -2.17384,53.01353,0
+            -2.17392,53.01331,0
+            -2.17404,53.01316,0
+            -2.17402,53.01306,0
+            -2.17396,53.01293,0
+            -2.17382,53.01286,0
+            -2.173764,53.012799,0
+            -2.173745,53.012733,0
+            -2.173756,53.012653,0
+            -2.173794,53.012573,0
+            -2.174097,53.012282,0
+            -2.17434,53.01218,0
+            -2.17506,53.01224,0
+            -2.17549,53.01221,0
+            -2.17632,53.01227,0
+            -2.17791,53.01267,0
+            -2.178391,53.012694,0
+            -2.17909,53.01282,0
+            -2.17926,53.01303,0
+            -2.178898,53.013282,0
+            -2.17848,53.01347,0
+            -2.17795,53.01359,0
+            -2.17729,53.01366,0
+            -2.17685,53.01368,0
+            -2.17644,53.01361,0
+            -2.175969,53.013465,0
+            -2.175223,53.01316,0
+            -2.174751,53.013085,0
+            -2.17436,53.01311,0
+            -2.17413,53.01317,0
+            -2.173925,53.013308,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

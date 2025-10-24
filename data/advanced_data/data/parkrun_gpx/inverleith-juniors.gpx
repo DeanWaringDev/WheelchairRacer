@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="WheelchairRacer KML→GPX Converter" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Parkrun Course</name>
+    <trkseg>
+      <trkpt lat="55.961069" lon="-3.219423">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9613809" lon="-3.2188976">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9617052" lon="-3.2183719">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9618793" lon="-3.2180071">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962005" lon="-3.217739">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962174" lon="-3.217224">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962306" lon="-3.216569">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962438" lon="-3.216612">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962606" lon="-3.2168376">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962954" lon="-3.217106">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9631765" lon="-3.2173204">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.963405" lon="-3.21761">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.962744" lon="-3.220829">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.963405" lon="-3.21761">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.964396" lon="-3.213008">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.963405" lon="-3.21761">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9639211" lon="-3.2180178">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9642814" lon="-3.2183397">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.9645456" lon="-3.2186079">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.965272" lon="-3.219273">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.964396" lon="-3.213008">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.964179" lon="-3.213501">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Hull parkrun</name>
+    <description>Hull parkrun</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Hull parkrun Start</name>
+        <description>Hull parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.300708,53.764645,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hull parkrun Finish</name>
+        <description>Hull parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -0.304213,53.766262,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1km </name>
+        <description>1km mark on first lap.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.302717,53.767116,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Placemark 13</name>
+        <description>2km mark on first lap.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.29603,53.765694,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Placemark 14</name>
+        <description>3km mark on second lap.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.30788,53.766626,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4km</name>
+        <description>4km mark on second lap.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.293809,53.767872,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hull parkrun Course</name>
+        <description>Hull parkrun Course</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.300748,53.764689,0
+            -0.301593,53.765445,0
+            -0.301971,53.765761,0
+            -0.302269,53.765994,0
+            -0.302414,53.766073,0
+            -0.302583,53.766152,0
+            -0.302778,53.766219,0
+            -0.303009,53.766274,0
+            -0.303216,53.766316,0
+            -0.303452,53.766336,0
+            -0.303669,53.766317,0
+            -0.304259,53.766259,0
+            -0.304661,53.766222,0
+            -0.305058,53.766201,0
+            -0.306091,53.766243,0
+            -0.306729,53.766263,0
+            -0.306995,53.766247,0
+            -0.307209,53.766214,0
+            -0.307373,53.766181,0
+            -0.307521,53.766125,0
+            -0.307759,53.766,0
+            -0.308172,53.766377,0
+            -0.308044,53.766406,0
+            -0.307931,53.766461,0
+            -0.307904,53.766522,0
+            -0.307896,53.766587,0
+            -0.307902,53.76666,0
+            -0.307845,53.766756,0
+            -0.307759,53.766793,0
+            -0.307671,53.766805,0
+            -0.307113,53.766739,0
+            -0.306493,53.766718,0
+            -0.305868,53.766736,0
+            -0.305168,53.766783,0
+            -0.30468,53.766813,0
+            -0.304168,53.766832,0
+            -0.303723,53.766897,0
+            -0.30295,53.767037,0
+            -0.302663,53.767121,0
+            -0.302451,53.767203,0
+            -0.30236,53.76727,0
+            -0.302269,53.767384,0
+            -0.302162,53.767444,0
+            -0.30203,53.767478,0
+            -0.30125,53.767514,0
+            -0.3003,53.767424,0
+            -0.300131,53.767411,0
+            -0.29971,53.767408,0
+            -0.299482,53.767367,0
+            -0.29923,53.76733,0
+            -0.299069,53.767351,0
+            -0.298554,53.767476,0
+            -0.298181,53.767614,0
+            -0.297803,53.767711,0
+            -0.297342,53.767746,0
+            -0.29673,53.767825,0
+            -0.295933,53.76792,0
+            -0.295689,53.76792,0
+            -0.29537,53.767898,0
+            -0.295046,53.767918,0
+            -0.294657,53.767918,0
+            -0.294364,53.768001,0
+            -0.294161,53.768017,0
+            -0.293962,53.76801,0
+            -0.293857,53.767949,0
+            -0.293804,53.767871,0
+            -0.293729,53.767581,0
+            -0.29375,53.767303,0
+            -0.293823,53.767121,0
+            -0.293997,53.767018,0
+            -0.29412,53.766915,0
+            -0.294265,53.766813,0
+            -0.294568,53.766541,0
+            -0.294678,53.766427,0
+            -0.294753,53.766306,0
+            -0.294987,53.765861,0
+            -0.295164,53.765781,0
+            -0.295531,53.765712,0
+            -0.295773,53.765721,0
+            -0.296025,53.765689,0
+            -0.296301,53.765631,0
+            -0.296564,53.765539,0
+            -0.296757,53.76545,0
+            -0.297216,53.765448,0
+            -0.298168,53.765299,0
+            -0.298417,53.765529,0
+            -0.298691,53.765754,0
+            -0.299817,53.765303,0
+            -0.299841,53.765187,0
+            -0.300877,53.764808,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

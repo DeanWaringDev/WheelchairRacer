@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Lower Hutt parkrun</name>
+    <description>Lower Hutt parkrun</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Lower Hutt parkrun Route</name>
+        <description>Lower Hutt parkrun Route</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            174.899518,-41.210731,0
+            174.899132,-41.211441,0
+            174.898783,-41.212325,0
+            174.898794,-41.212736,0
+            174.898748,-41.213027,0
+            174.898775,-41.213337,0
+            174.898612,-41.214179,0
+            174.898805,-41.215817,0
+            174.898912,-41.216374,0
+            174.899277,-41.217528,0
+            174.899921,-41.218367,0
+            174.900478,-41.219053,0
+            174.901004,-41.219933,0
+            174.901026,-41.220458,0
+            174.900929,-41.221192,0
+            174.900908,-41.221708,0
+            174.901101,-41.222628,0
+            174.901219,-41.223282,0
+            174.901465,-41.223855,0
+            174.901401,-41.224154,0
+            174.901305,-41.224638,0
+            174.90139,-41.225227,0
+            174.901691,-41.225687,0
+            174.901895,-41.22578,0
+            174.902276,-41.226413,0
+            174.902571,-41.227155,0
+            174.902662,-41.227514,0
+            174.902683,-41.227805,0
+            174.902651,-41.228031,0
+            174.90249,-41.228217,0
+            174.902436,-41.228406,0
+            174.901659,-41.229314,0
+            174.901326,-41.229709,0
+            174.901283,-41.229883,0
+            174.901305,-41.230093,0
+            174.901337,-41.230278,0
+            174.901535,-41.230686,0
+            174.901626,-41.230968,0
+            174.901406,-41.232263,0
+            174.90161,-41.232287,0
+            174.902013,-41.23196,0
+            174.901868,-41.231355,0
+            174.901755,-41.231222,0
+            174.901621,-41.231077,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Finish Straight</name>
+        <description>Finish Straight</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            174.898797,-41.212312,0
+            174.899006,-41.212167,0
+            174.899199,-41.211647,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Lower Hutt parkrun Finish</name>
+        <description>Lower Hutt parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            174.899194,-41.211647,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lower Hutt parkrun Start</name>
+        <description>Lower Hutt parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            174.899521,-41.210714,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="WheelchairRacer KML→GPX Converter" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Parkrun Course</name>
+    <trkseg>
+      <trkpt lat="51.100612" lon="17.120562">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.099992" lon="17.11966">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.099345" lon="17.118416">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.098833" lon="17.116785">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.098779" lon="17.115626">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.098159" lon="17.114253">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.09789" lon="17.112708">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.097593" lon="17.11215">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.097108" lon="17.108588">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.09665" lon="17.107387">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.096434" lon="17.106013">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.096434" lon="17.10494">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.096353" lon="17.10331">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.096812" lon="17.099748">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.097108" lon="17.097344">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.097458" lon="17.095499">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.097755" lon="17.095199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.098375" lon="17.092323">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.098833" lon="17.089834">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.098914" lon="17.087517">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.100612" lon="17.120562">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.100544" lon="17.120347">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Richmond parkrun</name>
+    <description>The Richmond parkrun is a free timed 5km run which takes place every Saturday at 9.00am.</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3366FF-6000-normal">
+      <LineStyle>
+        <color>ffff6633</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-3366FF-6000-highlight">
+      <LineStyle>
+        <color>ffff6633</color>
+        <width>9</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-3366FF-6000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3366FF-6000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3366FF-6000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Richmond parkrun Start</name>
+        <description>The Richmond parkrun (http://www.parkrun.org.uk/richmond/Home.aspx) Start is next to the pond.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.292886,51.451961,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Richmond parkrun Finish</name>
+        <description>The Richmond parkrun (http://www.parkrun.org.uk/richmond/Home.aspx) Finish is just short of the road.</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -0.295043,51.450002,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Richmond parkrun Course</name>
+        <description><![CDATA[The Richmond parkrun (http://www.parkrun.org.uk/richmond/Home.aspx) course is just over one complete anti-clockwise lap bounded to the South by Sawyer's Hill, to the North by the park perimeter, and to the East by Sheen Lane.]]></description>
+        <styleUrl>#line-3366FF-6000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.295046,51.449863,0
+            -0.293664,51.449577,0
+            -0.29227,51.44932,0
+            -0.28906,51.44893,0
+            -0.28797,51.44888,0
+            -0.28637,51.44885,0
+            -0.28495,51.44894,0
+            -0.2842,51.44905,0
+            -0.28343,51.44926,0
+            -0.28156,51.44995,0
+            -0.28031,51.45029,0
+            -0.27837,51.45073,0
+            -0.27425,51.45149,0
+            -0.27317,51.45164,0
+            -0.27097,51.4519,0
+            -0.26986,51.45197,0
+            -0.26819,51.452,0
+            -0.26763,51.45205,0
+            -0.26716,51.4553,0
+            -0.26723,51.45577,0
+            -0.26839,51.45622,0
+            -0.27193,51.45577,0
+            -0.27267,51.45576,0
+            -0.27442,51.45576,0
+            -0.27472,51.45578,0
+            -0.2751,51.45589,0
+            -0.27553,51.45586,0
+            -0.27805,51.45598,0
+            -0.27893,51.45606,0
+            -0.27919,51.45603,0
+            -0.27949,51.45605,0
+            -0.28035,51.45603,0
+            -0.28093,51.45611,0
+            -0.28118,51.45611,0
+            -0.28199,51.45608,0
+            -0.28223,51.45601,0
+            -0.28236,51.45591,0
+            -0.28243,51.45571,0
+            -0.28324,51.45541,0
+            -0.28389,51.45542,0
+            -0.28443,51.45534,0
+            -0.28486,51.4554,0
+            -0.2854,51.45534,0
+            -0.28563,51.45543,0
+            -0.2858,51.45554,0
+            -0.28601,51.45562,0
+            -0.28676,51.45554,0
+            -0.28695,51.45543,0
+            -0.28708,51.4553,0
+            -0.28714,51.45489,0
+            -0.2873,51.45485,0
+            -0.28747,51.45485,0
+            -0.2877,51.45474,0
+            -0.28797,51.45453,0
+            -0.28848,51.45424,0
+            -0.2887,51.45403,0
+            -0.28948,51.4535,0
+            -0.29049,51.45287,0
+            -0.29124,51.45258,0
+            -0.29165,51.45246,0
+            -0.29235,51.4522,0
+            -0.29303,51.45188,0
+            -0.29487,51.45076,0
+            -0.29497,51.45064,0
+            -0.29502,51.45049,0
+            -0.29499,51.45034,0
+            -0.295043,51.449862,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Coffee at Cafe Terra</name>
+        <description>Post run coffee and breakfast at Cafe Terra in Cedars Health Club behind The Richmond Gate Hotel.</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            -0.296867,51.451426,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toilets - opening hours may vary</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -0.296202,51.449835,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

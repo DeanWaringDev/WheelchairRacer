@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Amager Strandpark parkrun</name>
+    <description>Amager Strandpark parkrun</description>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3F5BA9-5263-nodesc-normal">
+      <LineStyle>
+        <color>ffa95b3f</color>
+        <width>5.263</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3F5BA9-5263-nodesc-highlight">
+      <LineStyle>
+        <color>ffa95b3f</color>
+        <width>7.8945</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3F5BA9-5263-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3F5BA9-5263-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3F5BA9-5263-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Amager Strandpark ruten</name>
+        <styleUrl>#line-3F5BA9-5263-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            12.636992,55.662754,0
+            12.637977,55.663723,0
+            12.638481,55.664261,0
+            12.639029,55.664757,0
+            12.63934,55.665139,0
+            12.639447,55.665296,0
+            12.639458,55.665387,0
+            12.639393,55.665453,0
+            12.639479,55.665496,0
+            12.639597,55.665447,0
+            12.639576,55.66532,0
+            12.639544,55.665229,0
+            12.639479,55.665127,0
+            12.639404,55.665012,0
+            12.638556,55.664146,0
+            12.637473,55.663081,0
+            12.63772,55.662996,0
+            12.637956,55.662912,0
+            12.638074,55.662833,0
+            12.638353,55.662736,0
+            12.638589,55.662603,0
+            12.638642,55.66244,0
+            12.638717,55.662288,0
+            12.6389,55.662131,0
+            12.638932,55.662046,0
+            12.638921,55.661913,0
+            12.63896,55.661753,0
+            12.639041,55.661592,0
+            12.639164,55.661441,0
+            12.639486,55.661196,0
+            12.639647,55.660972,0
+            12.639715,55.660788,0
+            12.639715,55.660539,0
+            12.639715,55.660358,0
+            12.639765,55.660237,0
+            12.639958,55.660164,0
+            12.640151,55.660143,0
+            12.64028,55.660098,0
+            12.640387,55.660031,0
+            12.64042,55.659862,0
+            12.640402,55.659662,0
+            12.640495,55.659598,0
+            12.64065,55.659556,0
+            12.641026,55.659511,0
+            12.641239,55.659474,0
+            12.641353,55.659414,0
+            12.641378,55.659275,0
+            12.641466,55.659229,0
+            12.641621,55.65919,0
+            12.642013,55.659132,0
+            12.642238,55.659038,0
+            12.642269,55.658917,0
+            12.642215,55.65879,0
+            12.642129,55.658621,0
+            12.642129,55.658463,0
+            12.642227,55.658252,0
+            12.642297,55.658119,0
+            12.642022,55.65807,0
+            12.641593,55.658022,0
+            12.641099,55.657949,0
+            12.640488,55.657846,0
+            12.639942,55.657792,0
+            12.639867,55.657783,0
+            12.639812,55.657774,0
+            12.638041,55.657537,0
+            12.636657,55.657356,0
+            12.633879,55.660152,0
+            12.633042,55.661066,0
+            12.632323,55.661956,0
+            12.632119,55.662161,0
+            12.632559,55.662234,0
+            12.633836,55.662385,0
+            12.637002,55.662754,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Amager Strandpark parkrun start</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            12.639497,55.66529,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Amager Strandpark parkrun mål</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            12.63799,55.663674,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

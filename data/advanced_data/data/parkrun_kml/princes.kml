@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Princes parkrun</name>
+    <description>Princes parkrun</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Princes parkrun Course</name>
+        <description><![CDATA[Prince parkrun Course<br>(main loop)]]></description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -2.95375,53.38906,0
+            -2.95359,53.38864,0
+            -2.95343,53.38775,0
+            -2.95352,53.38746,0
+            -2.95371,53.3873,0
+            -2.954,53.38723,0
+            -2.95428,53.3872,0
+            -2.95499,53.38722,0
+            -2.95567,53.3873,0
+            -2.95641,53.38718,0
+            -2.95681,53.38704,0
+            -2.95707,53.38685,0
+            -2.957253,53.38649,0
+            -2.952839,53.385978,0
+            -2.957253,53.38649,0
+            -2.95718,53.38607,0
+            -2.95702,53.38572,0
+            -2.95628,53.38479,0
+            -2.95575,53.38441,0
+            -2.95516,53.38406,0
+            -2.95481,53.384,0
+            -2.95436,53.38401,0
+            -2.95396,53.38408,0
+            -2.95362,53.38419,0
+            -2.95316,53.38449,0
+            -2.95277,53.38484,0
+            -2.95215,53.38556,0
+            -2.951889,53.385699,0
+            -2.952839,53.385978,0
+            -2.951889,53.385699,0
+            -2.950816,53.385978,0
+            -2.950988,53.38608,0
+            -2.951186,53.386202,0
+            -2.951208,53.386419,0
+            -2.951331,53.386579,0
+            -2.951202,53.386854,0
+            -2.950784,53.387264,0
+            -2.950634,53.387469,0
+            -2.950644,53.387654,0
+            -2.950526,53.387852,0
+            -2.950344,53.388083,0
+            -2.95124,53.3885,0
+            -2.95203,53.38873,0
+            -2.9528,53.38899,0
+            -2.95392,53.38945,0
+            -2.95387,53.38925,0
+            -2.95375,53.38906,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Princes parkrun Start</name>
+        <description>Princes parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -2.957259,53.38649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Princes parkrun Finish</name>
+        <description>Princes parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -2.955328,53.386272,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

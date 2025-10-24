@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Oldham parkrun</name>
+    <description>Oldham parkrun</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-33-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-33-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-33">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-33-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-33-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Oldham parkrun Course</name>
+        <description><![CDATA[Oldham parkrun Course<br>Please note - the route follows the same paths around the park on all laps (apart from the final Northern section), but the laps have been drawn side by side, to make clear the number of laps.]]></description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -2.105244,53.534862,0
+            -2.101972,53.533899,0
+            -2.101715,53.534097,0
+            -2.102079,53.534454,0
+            -2.102294,53.534499,0
+            -2.102723,53.534639,0
+            -2.103013,53.534652,0
+            -2.103163,53.534563,0
+            -2.103828,53.534792,0
+            -2.104365,53.534907,0
+            -2.104923,53.535258,0
+            -2.10577,53.535372,0
+            -2.106092,53.535347,0
+            -2.106714,53.535608,0
+            -2.107358,53.535602,0
+            -2.108678,53.534499,0
+            -2.108388,53.533523,0
+            -2.107841,53.533179,0
+            -2.107165,53.532898,0
+            -2.105427,53.532363,0
+            -2.104751,53.533109,0
+            -2.103796,53.532936,0
+            -2.102745,53.532834,0
+            -2.101511,53.532943,0
+            -2.10061,53.533089,0
+            -2.100191,53.533249,0
+            -2.098882,53.533969,0
+            -2.100019,53.534116,0
+            -2.10121,53.534199,0
+            -2.101833,53.533734,0
+            -2.106661,53.535187,0
+            -2.106671,53.535347,0
+            -2.106768,53.535455,0
+            -2.107004,53.5355,0
+            -2.107176,53.535468,0
+            -2.107326,53.535385,0
+            -2.10797,53.534881,0
+            -2.108345,53.534467,0
+            -2.108291,53.534078,0
+            -2.108109,53.533644,0
+            -2.107873,53.53344,0
+            -2.107637,53.5333,0
+            -2.10724,53.533089,0
+            -2.106789,53.532898,0
+            -2.105588,53.532535,0
+            -2.104901,53.533319,0
+            -2.103742,53.533051,0
+            -2.102755,53.532962,0
+            -2.102079,53.533051,0
+            -2.101597,53.533083,0
+            -2.100738,53.533211,0
+            -2.099934,53.533529,0
+            -2.099301,53.533855,0
+            -2.10017,53.533982,0
+            -2.101092,53.534052,0
+            -2.101822,53.533638,0
+            -2.105545,53.534735,0
+            -2.106864,53.535143,0
+            -2.107165,53.535309,0
+            -2.107712,53.534894,0
+            -2.108098,53.534454,0
+            -2.107884,53.533689,0
+            -2.106897,53.533083,0
+            -2.105609,53.532701,0
+            -2.105019,53.533504,0
+            -2.10371,53.533211,0
+            -2.102691,53.533134,0
+            -2.101661,53.533179,0
+            -2.100567,53.533415,0
+            -2.099719,53.533804,0
+            -2.101071,53.533938,0
+            -2.101725,53.533517,0
+            -2.104139,53.534186,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Oldham parkrun Start</name>
+        <description>Oldham parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -2.104118,53.534186,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Oldham parkrun Finish</name>
+        <description>Oldham parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -2.105201,53.534849,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1km</name>
+        <description>1km mark on first lap</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.107787,53.533632,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2km</name>
+        <description>2km mark on second lap</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.101425,53.533089,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3km</name>
+        <description>3km mark at end of second lap</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.104225,53.534441,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4km</name>
+        <description>4km mark on third lap</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.107809,53.533153,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hazard - Steps</name>
+        <description>Please use extreme caution when climbing flight of steps just after turning onto the northern section towards the end of the final lap.</description>
+        <styleUrl>#icon-33</styleUrl>
+        <Point>
+          <coordinates>
+            -2.106714,53.535647,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toilets</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -2.104193,53.53293,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toilets</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -2.108914,53.535015,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Park</name>
+        <description>Car Park</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.108077,53.535602,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Park</name>
+        <description>Car Park</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.09988,53.533217,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Car Park</name>
+        <description>Car Park</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -2.106339,53.532184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

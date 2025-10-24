@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Banstead Woods parkrun</name>
+    <description>The Banstead Woods parkrun is a free 5km run which takes place every Saturday at 9.00am.</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3366FF-6000-normal">
+      <LineStyle>
+        <color>ffff6633</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-3366FF-6000-highlight">
+      <LineStyle>
+        <color>ffff6633</color>
+        <width>9</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-3366FF-6000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3366FF-6000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3366FF-6000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Banstead Woods parkrun Start</name>
+        <description>The Banstead Woods parkrun (http://www.parkrun.org.uk/banstead-woods/Home.aspx) Start is at the top of slight rise in the path.</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -0.184225,51.307646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Banstead Woods parkrun Finish</name>
+        <description>The Banstead Woods parkrun (http://www.parkrun.org.uk/banstead-woods/Home.aspx) Finish is half way along the northern edge of the course.</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -0.180845,51.308296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Banstead Woods parkrun Course</name>
+        <description>The Banstead Woods parkrun (http://www.parkrun.org.uk/banstead-woods/Home.aspx) course is just under two complete anti-clockwise laps, around this roughly rectangular course. There are many paths in the woods and you are well advised to familiarise yourself with the route before running.</description>
+        <styleUrl>#line-3366FF-6000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.18191,51.30835,0
+            -0.18349,51.30843,0
+            -0.18417,51.3077,0
+            -0.18711,51.3058,0
+            -0.18942,51.3048,0
+            -0.19093,51.304286,0
+            -0.192411,51.303816,0
+            -0.191402,51.303212,0
+            -0.19033,51.30271,0
+            -0.18791,51.30195,0
+            -0.18575,51.30288,0
+            -0.18456,51.30334,0
+            -0.182841,51.304259,0
+            -0.18003,51.3062,0
+            -0.17775,51.30816,0
+            -0.18191,51.30835,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

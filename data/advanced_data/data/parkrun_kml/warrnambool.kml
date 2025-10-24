@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Warrnambool parkrun</name>
+    <description/>
+    <Style id="icon-503-4186F0-nodesc-normal">
+      <IconStyle>
+        <color>fff08641</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-4186F0-nodesc-highlight">
+      <IconStyle>
+        <color>fff08641</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-4186F0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-4186F0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-4186F0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-F4EB37-nodesc-normal">
+      <IconStyle>
+        <color>ff37ebf4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-F4EB37-nodesc-highlight">
+      <IconStyle>
+        <color>ff37ebf4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-F4EB37-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-F4EB37-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-F4EB37-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0288D1-4875-nodesc-normal">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>4.875</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0288D1-4875-nodesc-highlight">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>7.3125</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0288D1-4875-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0288D1-4875-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0288D1-4875-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-0288D1-4875-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            142.479399,-38.39286,0
+            142.481284,-38.392157,0
+            142.481515,-38.392082,0
+            142.481698,-38.392028,0
+            142.481899,-38.391981,0
+            142.48192,-38.39185,0
+            142.481915,-38.39164,0
+            142.48192,-38.391548,0
+            142.481926,-38.391468,0
+            142.481778,-38.391356,0
+            142.481577,-38.391308,0
+            142.481368,-38.391136,0
+            142.481539,-38.390816,0
+            142.481711,-38.390463,0
+            142.481818,-38.390076,0
+            142.481794,-38.389887,0
+            142.481646,-38.389723,0
+            142.481338,-38.389406,0
+            142.480767,-38.388928,0
+            142.480193,-38.388575,0
+            142.479471,-38.387993,0
+            142.479218,-38.387798,0
+            142.478954,-38.387675,0
+            142.4786,-38.387486,0
+            142.478149,-38.3872,0
+            142.477076,-38.386595,0
+            142.476411,-38.386258,0
+            142.475349,-38.38571,0
+            142.474684,-38.385602,0
+            142.4739,-38.385888,0
+            142.473385,-38.386645,0
+            142.473128,-38.387352,0
+            142.472935,-38.388411,0
+            142.472892,-38.389555,0
+            142.472784,-38.390867,0
+            142.472776,-38.391895,0
+            142.47285,-38.392076,0
+            142.472853,-38.39227,0
+            142.47275,-38.392792,0
+            142.472684,-38.393002,0
+            142.472635,-38.393211,0
+            142.472598,-38.39332,0
+            142.472547,-38.393417,0
+            142.472502,-38.39361,0
+            142.472444,-38.394016,0
+            142.472327,-38.394418,0
+            142.472182,-38.39493,0
+            142.472125,-38.395242,0
+            142.472041,-38.395531,0
+            142.472026,-38.395711,0
+            142.47196,-38.396016,0
+            142.472051,-38.39642,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Turn around point</name>
+        <styleUrl>#icon-503-4186F0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            142.472051,-38.39642,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-503-F4EB37-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            142.479399,-38.39286,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

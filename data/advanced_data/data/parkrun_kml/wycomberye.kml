@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Wycombe Rye parkrun</name>
+    <description/>
+    <Style id="icon-503-62AF44-normal">
+      <IconStyle>
+        <color>ff44af62</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-62AF44-highlight">
+      <IconStyle>
+        <color>ff44af62</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-62AF44">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-62AF44-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-62AF44-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-962-F4EB37-normal">
+      <IconStyle>
+        <color>ff37ebf4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/962-wht-diamond-blank.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-962-F4EB37-highlight">
+      <IconStyle>
+        <color>ff37ebf4</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/962-wht-diamond-blank.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-962-F4EB37">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-962-F4EB37-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-962-F4EB37-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-4186F0-4314-nodesc-normal">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>4.314</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-4186F0-4314-nodesc-highlight">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>6.471</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-4186F0-4314-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-4186F0-4314-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-4186F0-4314-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Wycombe Rye parkrun</name>
+      <Placemark>
+        <name>Start</name>
+        <description>Start</description>
+        <styleUrl>#icon-503-62AF44</styleUrl>
+        <Point>
+          <coordinates>
+            -0.7403,51.624784,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <description>Finish</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            -0.738251,51.623672,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-4186F0-4314-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.7403,51.624784,0
+            -0.737726,51.623492,0
+            -0.738251,51.6236504,0
+            -0.737726,51.623492,0
+            -0.737618,51.623259,0
+            -0.736642,51.622846,0
+            -0.736374,51.622873,0
+            -0.735977,51.623958,0
+            -0.736985,51.624424,0
+            -0.738637,51.62519,0
+            -0.738691,51.625364,0
+            -0.741255,51.62601,0
+            -0.741448,51.626116,0
+            -0.742221,51.62627,0
+            -0.742425,51.626263,0
+            -0.743573,51.626662,0
+            -0.745118,51.626756,0
+            -0.746759,51.626596,0
+            -0.74647,51.626203,0
+            -0.74648,51.62581,0
+            -0.746684,51.625377,0
+            -0.747049,51.624957,0
+            -0.743197,51.623732,0
+            -0.742103,51.623412,0
+            -0.740526,51.622892,0
+            -0.739635,51.622786,0
+            -0.738562,51.622513,0
+            -0.737221,51.62176,0
+            -0.736352,51.621933,0
+            -0.735655,51.622733,0
+            -0.733455,51.62202,0
+            -0.733541,51.621754,0
+            -0.733863,51.62154,0
+            -0.735537,51.621367,0
+            -0.735784,51.621028,0
+            -0.736792,51.621327,0
+            -0.737715,51.621727,0
+            -0.7378561,51.6221133,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>1 km</name>
+        <description>1 km</description>
+        <styleUrl>#icon-962-F4EB37</styleUrl>
+        <Point>
+          <coordinates>
+            -0.7428,51.626416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2 km</name>
+        <description>2 km</description>
+        <styleUrl>#icon-962-F4EB37</styleUrl>
+        <Point>
+          <coordinates>
+            -0.742017,51.623385,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3 km</name>
+        <description>3 km</description>
+        <styleUrl>#icon-962-F4EB37</styleUrl>
+        <Point>
+          <coordinates>
+            -0.743122,51.623712,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4 km</name>
+        <description>4 km</description>
+        <styleUrl>#icon-962-F4EB37</styleUrl>
+        <Point>
+          <coordinates>
+            -0.74471,51.626762,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

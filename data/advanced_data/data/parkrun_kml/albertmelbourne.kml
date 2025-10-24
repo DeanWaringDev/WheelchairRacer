@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Albert parkrun, Melbourne</name>
+    <description>Albert parkrun, Melbourne</description>
+    <Style id="icon-141-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-141-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-141-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-33-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-33-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/33-caution.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-33">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-33-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-33-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-39-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/39-cycling.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-39-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/39-cycling.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-39">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-39-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-39-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-61-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-61-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3333FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3333FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Albert Melbourne parkrun</name>
+        <styleUrl>#line-3333FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            144.965958,-37.841999,0
+            144.964478,-37.842098,0
+            144.963867,-37.842369,0
+            144.963501,-37.84267,0
+            144.963181,-37.843159,0
+            144.963226,-37.843491,0
+            144.963348,-37.843632,0
+            144.964554,-37.844238,0
+            144.966599,-37.84507,0
+            144.966827,-37.84528,0
+            144.966904,-37.845409,0
+            144.966904,-37.845589,0
+            144.967255,-37.84576,0
+            144.967453,-37.84584,0
+            144.967636,-37.84581,0
+            144.967926,-37.845638,0
+            144.968033,-37.845661,0
+            144.971375,-37.848251,0
+            144.971497,-37.848358,0
+            144.971634,-37.848652,0
+            144.971756,-37.848759,0
+            144.972366,-37.849079,0
+            144.972763,-37.849419,0
+            144.974304,-37.850868,0
+            144.975784,-37.85244,0
+            144.976715,-37.853111,0
+            144.977066,-37.853191,0
+            144.977386,-37.853149,0
+            144.978104,-37.852791,0
+            144.978302,-37.852619,0
+            144.978104,-37.852184,0
+            144.977844,-37.8517,0
+            144.977615,-37.851231,0
+            144.977188,-37.85062,0
+            144.976974,-37.850208,0
+            144.976929,-37.849991,0
+            144.976761,-37.849701,0
+            144.976456,-37.84935,0
+            144.975906,-37.849098,0
+            144.974335,-37.848831,0
+            144.973663,-37.848549,0
+            144.972107,-37.847488,0
+            144.971573,-37.847069,0
+            144.971054,-37.846539,0
+            144.970718,-37.846008,0
+            144.970474,-37.845291,0
+            144.970444,-37.844501,0
+            144.970779,-37.84293,0
+            144.971207,-37.84137,0
+            144.971375,-37.840229,0
+            144.971283,-37.83968,0
+            144.970932,-37.839241,0
+            144.970612,-37.839001,0
+            144.970215,-37.83881,0
+            144.969589,-37.83865,0
+            144.968719,-37.838612,0
+            144.968109,-37.838638,0
+            144.96701,-37.838741,0
+            144.966476,-37.838909,0
+            144.966339,-37.838982,0
+            144.966293,-37.839088,0
+            144.966263,-37.839241,0
+            144.966507,-37.840382,0
+            144.966492,-37.840637,0
+            144.966431,-37.840794,0
+            144.966324,-37.840935,0
+            144.966171,-37.841076,0
+            144.965988,-37.841202,0
+            144.965302,-37.841419,0
+            144.965027,-37.841579,0
+            144.964783,-37.841736,0
+            144.964554,-37.84201,0
+            144.963776,-37.84243,0
+            144.963486,-37.84267,0
+            144.963287,-37.842918,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start</name>
+        <styleUrl>#icon-61-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.965958,-37.842003,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1 km mark</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.969131,-37.846535,9.8
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2 km mark</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.97673,-37.853115,8.6
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3 km mark</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.97226,-37.84758,10
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4 km mark</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.970932,-37.839249,9.6
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.963287,-37.842922,6.4
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pre-run meeting point</name>
+        <description>Meet here at 7.50am every Saturday</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            144.963058,-37.843014,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lead Bike / Marshal</name>
+        <description>Lead Bike rider stops here and acts as a marshal to manage interactions between the runners and any rowing boats coming out of the sheds. This is also the half-way point.</description>
+        <styleUrl>#icon-39</styleUrl>
+        <Point>
+          <coordinates>
+            144.976913,-37.850197,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marshal</name>
+        <description>Marshal that monitors cars going into the park. There is a pedestrian crossing here but runners should take care.</description>
+        <styleUrl>#icon-33</styleUrl>
+        <Point>
+          <coordinates>
+            144.966278,-37.83905,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parking</name>
+        <description>$1.50 per hour on weekends.</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            144.963638,-37.841579,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Post-run coffee</name>
+        <description>356 Clarendon Street, South Melbourne VIC 3205</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            144.961212,-37.834972,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Public Toilets</name>
+        <styleUrl>#icon-141-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.963211,-37.842316,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Public Toilets</name>
+        <styleUrl>#icon-141-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            144.966568,-37.838982,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

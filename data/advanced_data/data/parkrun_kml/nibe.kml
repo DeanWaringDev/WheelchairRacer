@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Nibe parkrun (from May 2023)</name>
+    <description>Nibe parkrun</description>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-7000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-7000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>10.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-7000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-7000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-7000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Nibe parkrun Ruten</name>
+        <description>Nibe parkrun Ruten</description>
+        <styleUrl>#line-0000FF-7000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            9.654804,56.987102,0
+            9.656296,56.988908,0
+            9.656478,56.988967,0
+            9.656907,56.989265,0
+            9.658624,56.989014,0
+            9.658967,56.989031,0
+            9.65901,56.989166,0
+            9.658881,56.989306,0
+            9.65886,56.989458,0
+            9.658946,56.989621,0
+            9.659311,56.989896,0
+            9.660373,56.990755,0
+            9.661124,56.991854,0
+            9.661757,56.99297,0
+            9.661403,56.993526,0
+            9.660974,56.994069,0
+            9.659461,56.993958,0
+            9.658356,56.993672,0
+            9.656725,56.992181,0
+            9.655287,56.991375,0
+            9.653914,56.990691,0
+            9.651639,56.989177,0
+            9.649569,56.987529,0
+            9.651511,56.988733,0
+            9.652723,56.989575,0
+            9.653077,56.989768,0
+            9.655459,56.989581,0
+            9.656918,56.989265,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Nibe parkrun Start & Mål]]></name>
+        <description><![CDATA[Nibe parkrun Start & Mål]]></description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            9.654847,56.987137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2km</name>
+        <description>2km</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            9.64958,56.987529,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4km</name>
+        <description>4km</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            9.652476,56.989797,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1km</name>
+        <description>1km</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            9.66033,56.994052,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3km</name>
+        <description>3km</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            9.661059,56.991667,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

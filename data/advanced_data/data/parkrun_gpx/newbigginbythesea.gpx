@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="WheelchairRacer KML→GPX Converter" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Parkrun Course</name>
+    <trkseg>
+      <trkpt lat="55.18562" lon="-1.505192">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1857667" lon="-1.5069063">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1855401" lon="-1.5081079">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1848051" lon="-1.5105005">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1837943" lon="-1.5122707">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1848602" lon="-1.5106292">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1833778" lon="-1.5129144">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1811419" lon="-1.5147705">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1803945" lon="-1.5151353">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1799105" lon="-1.515307">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.179675" lon="-1.515492">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.178894" lon="-1.515749">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1786669" lon="-1.5158971">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1765226" lon="-1.5157147">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.176051" lon="-1.515744">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.175659" lon="-1.515567">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1756649" lon="-1.5165193">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.17735" lon="-1.516602">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.1773803" lon="-1.5159614">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.184854" lon="-1.510508">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="55.18562" lon="-1.505192">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

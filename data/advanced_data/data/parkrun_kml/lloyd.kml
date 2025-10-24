@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Lloyd parkrun</name>
+    <description/>
+    <Style id="icon-1899-FFEA00-nodesc-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FFEA00-nodesc-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFEA00-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-0288D1-2000-0-nodesc-normal">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00d18802</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-0288D1-2000-0-nodesc-highlight">
+      <LineStyle>
+        <color>ffd18802</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00d18802</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-0288D1-2000-0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-0288D1-2000-0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-0288D1-2000-0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Lloyd parkrun, Croydon</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#poly-0288D1-2000-0-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -0.080588,51.365003,0
+                -0.079719,51.364702,0
+                -0.078946,51.364662,0
+                -0.078807,51.364481,0
+                -0.078646,51.364313,0
+                -0.076028,51.363925,0
+                -0.073764,51.363623,0
+                -0.072981,51.36373,0
+                -0.07281,51.364012,0
+                -0.073217,51.365754,0
+                -0.073679,51.365881,0
+                -0.073958,51.365954,0
+                -0.073958,51.366075,0
+                -0.073636,51.366162,0
+                -0.071994,51.366196,0
+                -0.072338,51.366966,0
+                -0.073604,51.366785,0
+                -0.075063,51.366906,0
+                -0.075642,51.3672,0
+                -0.075084,51.367455,0
+                -0.072659,51.368198,0
+                -0.072477,51.368453,0
+                -0.072681,51.368493,0
+                -0.075191,51.367596,0
+                -0.07591,51.367361,0
+                -0.076146,51.367267,0
+                -0.07871,51.367066,0
+                -0.079783,51.366979,0
+                -0.080524,51.366678,0
+                -0.080588,51.366396,0
+                -0.081425,51.365693,0
+                -0.081994,51.365023,0
+                -0.081049,51.364869,0
+                -0.080588,51.365003,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Start and finish</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.080588,51.365003,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

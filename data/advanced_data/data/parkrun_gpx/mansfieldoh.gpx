@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="WheelchairRacer KML→GPX Converter" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Parkrun Course</name>
+    <trkseg>
+      <trkpt lat="40.767615" lon="-82.538374">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.767314" lon="-82.539908">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.766867" lon="-82.541099">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.764421" lon="-82.546324">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.76087" lon="-82.553512">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.75996" lon="-82.555379">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.759334" lon="-82.556151">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.758294" lon="-82.557052">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.757896" lon="-82.557342">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.757132" lon="-82.557728">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.756336" lon="-82.558072">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.755596" lon="-82.558694">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.754548" lon="-82.559767">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.753979" lon="-82.560335">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.767672" lon="-82.538599">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="40.767696" lon="-82.538449">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

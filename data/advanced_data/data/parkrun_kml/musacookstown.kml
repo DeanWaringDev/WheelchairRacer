@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>MUSA Cookstown parkrun </name>
+    <description/>
+    <Style id="icon-503-62AF44-nodesc-normal">
+      <IconStyle>
+        <color>ff44af62</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-62AF44-nodesc-highlight">
+      <IconStyle>
+        <color>ff44af62</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-62AF44-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-62AF44-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-62AF44-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-503-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-503-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-4186F0-4314-nodesc-normal">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>4.314</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-4186F0-4314-nodesc-highlight">
+      <LineStyle>
+        <color>fff08641</color>
+        <width>6.471</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-4186F0-4314-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-4186F0-4314-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-4186F0-4314-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Start</name>
+        <styleUrl>#icon-503-62AF44-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -6.7357295,54.615185,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -6.7385082,54.6149113,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-4186F0-4314-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -6.7358637,54.6154615,0
+            -6.7355311,54.6148154,0
+            -6.7354774,54.6146787,0
+            -6.7354989,54.6145669,0
+            -6.7356277,54.6143743,0
+            -6.7356814,54.6141444,0
+            -6.7357242,54.6140388,0
+            -6.7378271,54.613287,0
+            -6.7382991,54.6129826,0
+            -6.7384171,54.612995,0
+            -6.7391145,54.6130634,0
+            -6.7396724,54.612995,0
+            -6.7401552,54.6128273,0
+            -6.7404878,54.6126595,0
+            -6.7408419,54.6123551,0
+            -6.7409706,54.6121811,0
+            -6.7411745,54.6121873,0
+            -6.7416465,54.612964,0
+            -6.742065,54.6131814,0
+            -6.7425907,54.6133616,0
+            -6.7426229,54.6134237,0
+            -6.7412066,54.6142376,0
+            -6.7401123,54.6136225,0
+            -6.740123,54.6134983,0
+            -6.7408311,54.613287,0
+            -6.7398334,54.6129453,0
+            -6.7396939,54.6129888,0
+            -6.7391145,54.6130571,0
+            -6.7384171,54.6129888,0
+            -6.7383099,54.6129764,0
+            -6.7379558,54.6132187,0
+            -6.7379665,54.6133181,0
+            -6.7395866,54.6143805,0
+            -6.7395973,54.6144861,0
+            -6.7395651,54.6145917,0
+            -6.7370868,54.6153311,0
+            -6.7359978,54.6155361,0
+            -6.7358637,54.6154615,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

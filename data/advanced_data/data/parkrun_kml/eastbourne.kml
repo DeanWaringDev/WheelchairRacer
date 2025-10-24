@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Eastbourne parkrun</name>
+    <description>Eastbourne parkrun</description>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0000FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Eastbourne parkrun course</name>
+        <styleUrl>#line-0000FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            0.290365,50.806287,0
+            0.28985,50.806274,0
+            0.289207,50.806613,0
+            0.288606,50.806301,0
+            0.288992,50.805867,0
+            0.289121,50.805691,0
+            0.289593,50.805826,0
+            0.289786,50.805501,0
+            0.2897,50.805325,0
+            0.289979,50.805067,0
+            0.29103,50.804755,0
+            0.291438,50.804796,0
+            0.291739,50.80466,0
+            0.292253,50.803765,0
+            0.291996,50.802951,0
+            0.292275,50.802246,0
+            0.292275,50.80146,0
+            0.291846,50.800714,0
+            0.291846,50.800605,0
+            0.289593,50.800592,0
+            0.289271,50.80066,0
+            0.289314,50.801338,0
+            0.289013,50.802111,0
+            0.288155,50.802992,0
+            0.286868,50.803819,0
+            0.284829,50.804877,0
+            0.282555,50.806138,0
+            0.28101,50.807087,0
+            0.27983,50.808009,0
+            0.279465,50.808687,0
+            0.27983,50.809067,0
+            0.280581,50.809311,0
+            0.280581,50.809582,0
+            0.281417,50.810247,0
+            0.282211,50.810423,0
+            0.283048,50.810233,0
+            0.283713,50.809867,0
+            0.284593,50.809786,0
+            0.285108,50.80984,0
+            0.285752,50.809528,0
+            0.286245,50.809108,0
+            0.286868,50.808809,0
+            0.28734,50.808226,0
+            0.287597,50.807765,0
+            0.287855,50.807494,0
+            0.28764,50.807087,0
+            0.287962,50.806803,0
+            0.288177,50.806491,0
+            0.288606,50.806301,0
+            0.288627,50.806301,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Eastbourne parkrun course start</name>
+        <styleUrl>#line-0000FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            0.29043,50.80626,0
+            0.290902,50.806314,0
+            0.291266,50.806192,0
+            0.292532,50.806382,0
+            0.294206,50.804552,0
+            0.293477,50.804375,0
+            0.293069,50.804389,0
+            0.292361,50.804104,0
+            0.291803,50.804416,0
+            0.291653,50.804972,0
+            0.291095,50.805243,0
+            0.29043,50.80626,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start/Finish</name>
+        <description>Start/Finish Eastbourne parkrun</description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            0.290451,50.806233,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parking</name>
+        <description>Parking near Eastbourne parkrun</description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            0.289378,50.808525,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1K point (approx)</name>
+        <description>1K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            0.288906,50.805772,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2K point (approx)</name>
+        <description>2K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            0.289164,50.801351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3K point (approx)</name>
+        <description>3K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            0.279808,50.807887,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4K point (approx)</name>
+        <description>4K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            0.287704,50.80702,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toby Carvery</name>
+        <description>Toby Carvery - Eastbourne parkrun post-run coffee location</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            0.289614,50.798096,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

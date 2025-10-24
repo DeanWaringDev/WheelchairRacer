@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="WheelchairRacer KML→GPX Converter" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Parkrun Course</name>
+    <trkseg>
+      <trkpt lat="54.774302" lon="-1.566121">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7745787" lon="-1.5666511">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7747219" lon="-1.5669045">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775156" lon="-1.567537">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775502" lon="-1.567806">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7757805" lon="-1.567527">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7758177" lon="-1.5675269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.776139" lon="-1.567848">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7761825" lon="-1.5678375">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.776455" lon="-1.569093">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7759098" lon="-1.5665899">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7755193" lon="-1.5639367">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775329" lon="-1.562538">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775415" lon="-1.562538">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775484" lon="-1.562409">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775422" lon="-1.56228">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775199" lon="-1.562345">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7755502" lon="-1.5652778">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775708" lon="-1.5669354">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775706" lon="-1.567076">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.7758177" lon="-1.5675269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="54.775388" lon="-1.563058">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

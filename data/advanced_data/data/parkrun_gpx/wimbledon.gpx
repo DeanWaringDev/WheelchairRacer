@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="WheelchairRacer KML→GPX Converter" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Parkrun Course</name>
+    <trkseg>
+      <trkpt lat="51.442078" lon="-0.232215">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.4380454" lon="-0.2299509">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44067" lon="-0.23189">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.43944" lon="-0.23047">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.43902" lon="-0.23033">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.43911" lon="-0.22961">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.4393" lon="-0.22897">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.43915" lon="-0.22791">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44019" lon="-0.22483">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.4454" lon="-0.22318">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44587" lon="-0.22549">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44522" lon="-0.22745">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44503" lon="-0.22756">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44489" lon="-0.22776">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44472" lon="-0.22863">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44413" lon="-0.22947">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44286" lon="-0.2327">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44181" lon="-0.23204">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.44067" lon="-0.23189">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.43902" lon="-0.23033">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.4386478" lon="-0.2302449">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.4383535" lon="-0.2302664">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="51.4380458" lon="-0.2299767">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

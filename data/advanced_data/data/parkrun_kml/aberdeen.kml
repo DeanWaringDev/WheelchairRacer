@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Aberdeen parkrun</name>
+    <description>Aberdeen parkrun</description>
+    <Style id="icon-157-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-157-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-157-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-22-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-22-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/22-blue-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-22">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-22-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-22-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-0000FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Aberdeen parkrun Course</name>
+        <styleUrl>#line-0000FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -2.07913,57.16677,0
+            -2.07902,57.16805,0
+            -2.0785,57.17068,0
+            -2.07847,57.17162,0
+            -2.078519,57.172469,0
+            -2.078637,57.17287,0
+            -2.079002,57.173376,0
+            -2.079463,57.173644,0
+            -2.080117,57.173853,0
+            -2.080718,57.173958,0
+            -2.081512,57.173923,0
+            -2.082188,57.173795,0
+            -2.082853,57.173783,0
+            -2.084516,57.173981,0
+            -2.082843,57.173783,0
+            -2.082199,57.173795,0
+            -2.081523,57.173929,0
+            -2.08075,57.173958,0
+            -2.080128,57.173859,0
+            -2.079463,57.173644,0
+            -2.078991,57.173376,0
+            -2.078615,57.17287,0
+            -2.078562,57.172661,0
+            -2.07853,57.172457,0
+            -2.078497,57.172172,0
+            -2.078229,57.172149,0
+            -2.07827,57.17133,0
+            -2.07841,57.17016,0
+            -2.07875,57.1682,0
+            -2.0789,57.1669,0
+            -2.07897,57.16609,0
+            -2.07894,57.16574,0
+            -2.07902,57.16541,0
+            -2.07936,57.16082,0
+            -2.07916,57.15844,0
+            -2.07919,57.15783,0
+            -2.07868,57.15538,0
+            -2.07866,57.15477,0
+            -2.07877,57.15456,0
+            -2.07884,57.15528,0
+            -2.07909,57.15619,0
+            -2.07944,57.15788,0
+            -2.07958,57.16101,0
+            -2.07913,57.16676,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-157-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -2.08457,57.174039,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1K point (approx)</name>
+        <description>1K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -2.079206,57.167734,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2K point (approx)</name>
+        <description>2K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -2.079592,57.158589,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3K point (approx)</name>
+        <description>3K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -2.079206,57.158635,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4K point (approx)</name>
+        <description>4K point (approx)</description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            -2.078819,57.167711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

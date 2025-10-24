@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Esbjerg parkrun</name>
+    <description>Esbjerg parkrun</description>
+    <Style id="icon-157-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-157-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-157">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Esbjerg parkrun Ruten</name>
+        <description>Esbjerg parkrun Ruten</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            8.442746,55.482362,0
+            8.443626,55.4821,0
+            8.444538,55.481839,0
+            8.445579,55.483188,0
+            8.446437,55.483839,0
+            8.446491,55.484039,0
+            8.446383,55.484611,0
+            8.446212,55.485188,0
+            8.445107,55.486264,0
+            8.444366,55.486605,0
+            8.442811,55.486763,0
+            8.441545,55.48731,0
+            8.440322,55.48793,0
+            8.440107,55.487863,0
+            8.439828,55.487997,0
+            8.439646,55.488179,0
+            8.439549,55.48855,0
+            8.439056,55.488708,0
+            8.438734,55.488933,0
+            8.438487,55.489042,0
+            8.438144,55.489121,0
+            8.437725,55.489073,0
+            8.437296,55.488933,0
+            8.437006,55.488617,0
+            8.436899,55.488362,0
+            8.437114,55.488185,0
+            8.437446,55.488046,0
+            8.438326,55.488088,0
+            8.439399,55.487729,0
+            8.439989,55.487188,0
+            8.440772,55.48672,0
+            8.441223,55.485973,0
+            8.441352,55.485815,0
+            8.441566,55.485687,0
+            8.441792,55.485559,0
+            8.442435,55.485383,0
+            8.442982,55.485176,0
+            8.443959,55.484678,0
+            8.444088,55.484532,0
+            8.444173,55.48424,0
+            8.444195,55.483541,0
+            8.444227,55.482824,0
+            8.442736,55.480544,0
+            8.442822,55.480325,0
+            8.443251,55.480459,0
+            8.444527,55.481833,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Esbjerg parkrun Start/Mål </name>
+        <description>Esbjerg parkrun Start/Mål</description>
+        <styleUrl>#icon-157</styleUrl>
+        <Point>
+          <coordinates>
+            8.442703,55.482349,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

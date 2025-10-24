@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ipswich QLD parkrun</name>
+    <description/>
+    <Style id="icon-157-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-157-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/157-yellow-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-157-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-157-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-157-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-164-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/164-ltblu-pushpin.png</href>
+        </Icon>
+        <hotSpot x="10" xunits="pixels" y="31" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-164-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/164-ltblu-pushpin.png</href>
+        </Icon>
+        <hotSpot x="10" xunits="pixels" y="31" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-164-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-164-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-164-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3333FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-3333FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff3333</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-3333FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3333FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3333FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Course</name>
+        <styleUrl>#line-3333FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            152.764925,-27.625506,0
+            152.76504,-27.62578,0
+            152.76496,-27.62629,0
+            152.76504,-27.6264,0
+            152.76514,-27.62643,0
+            152.76539,-27.62641,0
+            152.76565,-27.62628,0
+            152.76601,-27.62626,0
+            152.76636,-27.62597,0
+            152.76682,-27.62595,0
+            152.76696,-27.62588,0
+            152.76708,-27.62589,0
+            152.76731,-27.62616,0
+            152.76743,-27.6262,0
+            152.76734,-27.62554,0
+            152.76744,-27.62505,0
+            152.76759,-27.62482,0
+            152.76761,-27.62464,0
+            152.76753,-27.62424,0
+            152.76762,-27.62408,0
+            152.768058,-27.623943,0
+            152.768492,-27.623928,0
+            152.76895,-27.62395,0
+            152.76928,-27.62411,0
+            152.76921,-27.62458,0
+            152.76924,-27.62491,0
+            152.76908,-27.62578,0
+            152.76881,-27.62609,0
+            152.76814,-27.6264,0
+            152.76786,-27.62643,0
+            152.767714,-27.626438,0
+            152.76758,-27.6264,0
+            152.767473,-27.626324,0
+            152.767435,-27.626214,0
+            152.767344,-27.625549,0
+            152.767441,-27.62505,0
+            152.76758,-27.624831,0
+            152.767607,-27.62467,0
+            152.767543,-27.624247,0
+            152.767607,-27.624085,0
+            152.767194,-27.623672,0
+            152.766765,-27.623534,0
+            152.76632,-27.623543,0
+            152.766212,-27.623448,0
+            152.766271,-27.622854,0
+            152.767038,-27.622559,0
+            152.767274,-27.622559,0
+            152.767687,-27.622474,0
+            152.76809,-27.621961,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Turn around point</name>
+        <styleUrl>#icon-164-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            152.768111,-27.621965,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Start / Finish</name>
+        <styleUrl>#icon-157-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            152.764919,-27.625506,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

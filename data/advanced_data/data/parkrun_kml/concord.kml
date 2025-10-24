@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Concord parkrun</name>
+    <description>Concord parkrun</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Concord parkrun Course</name>
+        <description>Concord parkrun Course consists of two anti-clockwise laps.</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.441591,53.424008,0
+            -1.44069,53.424162,0
+            -1.439713,53.424405,0
+            -1.438597,53.424756,0
+            -1.438158,53.424967,0
+            -1.437943,53.425217,0
+            -1.437814,53.425703,0
+            -1.437417,53.426137,0
+            -1.436774,53.426399,0
+            -1.436087,53.426591,0
+            -1.435647,53.426547,0
+            -1.435325,53.42638,0
+            -1.434896,53.42585,0
+            -1.434746,53.425779,0
+            -1.434553,53.425786,0
+            -1.430283,53.426911,0
+            -1.429178,53.427224,0
+            -1.428877,53.42741,0
+            -1.428652,53.42762,0
+            -1.428609,53.427857,0
+            -1.428652,53.428042,0
+            -1.428781,53.428215,0
+            -1.430036,53.429167,0
+            -1.431431,53.429858,0
+            -1.43216,53.43003,0
+            -1.432793,53.430069,0
+            -1.433201,53.429986,0
+            -1.433566,53.429685,0
+            -1.434478,53.42849,0
+            -1.43496,53.42787,0
+            -1.435357,53.427665,0
+            -1.435905,53.426847,0
+            -1.436108,53.426732,0
+            -1.436387,53.426623,0
+            -1.437042,53.426425,0
+            -1.437632,53.426348,0
+            -1.438318,53.426336,0
+            -1.43893,53.426278,0
+            -1.43922,53.426144,0
+            -1.439424,53.425939,0
+            -1.439413,53.425524,0
+            -1.439542,53.425115,0
+            -1.440604,53.425172,0
+            -1.441559,53.42507,0
+            -1.441891,53.424955,0
+            -1.442052,53.424782,0
+            -1.44217,53.424571,0
+            -1.442106,53.424175,0
+            -1.44202,53.424085,0
+            -1.44187,53.424021,0
+            -1.441602,53.424015,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Concord parkrun Start</name>
+        <description>Concord parkrun Start</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.441612,53.424008,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Concord parkrun Finish</name>
+        <description>Concord parkrun Finish</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -1.441634,53.425025,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

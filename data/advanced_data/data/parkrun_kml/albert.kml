@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Albert parkrun</name>
+    <description>Free 5km timed run every Saturday at 9am</description>
+    <Style id="icon-123-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-123-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-123">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-141-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-141-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/141-toilets.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-141">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-141-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-141-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-35-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-35-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/35-coffeehouse.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-35">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-35-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-35-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-61-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-61">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-5000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-5000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Albert parkrun start</name>
+        <description>Albert parkrun (http://www.parkrun.org.uk/albert/Home.aspx) starts behind the cafe (which is adacent to the finish line).</description>
+        <styleUrl>#icon-61</styleUrl>
+        <Point>
+          <coordinates>
+            -1.231788,54.564971,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Albert parkrun finish</name>
+        <description>Albert parkrun (http://www.parkrun.org.uk/albert/Home.aspx) Finish line is adjacent to the cafe.</description>
+        <styleUrl>#icon-123</styleUrl>
+        <Point>
+          <coordinates>
+            -1.230791,54.564523,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Albert parkrun Course</name>
+        <description>Albert parkrun (http://www.parkrun.org.uk/albert/Home.aspx) starts behind the cafe art 9am every Saturday. The course consiste of one clock wise circuit aroun the north east quadrant of the park, followed by two laps around the perimeter. The finish is in front of the cafe.</description>
+        <styleUrl>#line-0000FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -1.231799,54.564934,0
+            -1.235227,54.564865,0
+            -1.235404,54.564971,0
+            -1.235576,54.565108,0
+            -1.235195,54.566598,0
+            -1.234782,54.566663,0
+            -1.234299,54.566682,0
+            -1.233419,54.566595,0
+            -1.231724,54.566529,0
+            -1.229589,54.566392,0
+            -1.229407,54.566284,0
+            -1.229492,54.565988,0
+            -1.229557,54.565861,0
+            -1.229707,54.565777,0
+            -1.230115,54.565693,0
+            -1.23027,54.565599,0
+            -1.230319,54.565375,0
+            -1.23027,54.565198,0
+            -1.230388,54.56498,0
+            -1.230662,54.564735,0
+            -1.230866,54.564449,0
+            -1.231145,54.564063,0
+            -1.231467,54.563932,0
+            -1.231665,54.563771,0
+            -1.231713,54.563484,0
+            -1.231863,54.563242,0
+            -1.231821,54.563036,0
+            -1.232325,54.562937,0
+            -1.233044,54.562981,0
+            -1.233569,54.562893,0
+            -1.234138,54.562949,0
+            -1.234782,54.562937,0
+            -1.236176,54.562974,0
+            -1.236863,54.562962,0
+            -1.237324,54.56308,0
+            -1.237732,54.563248,0
+            -1.238043,54.563447,0
+            -1.23873,54.563136,0
+            -1.239234,54.562974,0
+            -1.239588,54.562949,0
+            -1.23993,54.56304,0
+            -1.240125,54.563142,0
+            -1.240264,54.563316,0
+            -1.240296,54.563584,0
+            -1.240157,54.563882,0
+            -1.239835,54.564212,0
+            -1.239814,54.564299,0
+            -1.239878,54.564424,0
+            -1.239889,54.564598,0
+            -1.239696,54.564778,0
+            -1.239583,54.564924,0
+            -1.239631,54.565089,0
+            -1.239631,54.565313,0
+            -1.239535,54.565456,0
+            -1.238955,54.565792,0
+            -1.238312,54.566234,0
+            -1.237893,54.566234,0
+            -1.237432,54.566364,0
+            -1.236885,54.566427,0
+            -1.235983,54.566731,0
+            -1.235425,54.566707,0
+            -1.2352,54.566595,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Cafe</name>
+        <description>Please join us for an after run coffee at the cafe overlooking the lake.</description>
+        <styleUrl>#icon-35</styleUrl>
+        <Point>
+          <coordinates>
+            -1.23122,54.564361,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Toilets</name>
+        <description>Toliets are in the same building as the cafe</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -1.231241,54.564231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1k</name>
+        <description>The 1km mark</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -1.23031,54.565119,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3k</name>
+        <description>the 3km mark</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -1.230573,54.564817,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2k</name>
+        <description>The 2km mark</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -1.23969,54.564781,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4k</name>
+        <description>The 4km mark</description>
+        <styleUrl>#icon-141</styleUrl>
+        <Point>
+          <coordinates>
+            -1.239626,54.565039,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Preston Park parkrun</name>
+    <description>course for Preston Park parkrun, Brighton UK</description>
+    <Style id="icon-123-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-123-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/123-red-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-123-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-123-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-123-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-61-nodesc-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-61-nodesc-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/61-green-dot.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-61-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-61-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-61-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-3366FF-5000-normal">
+      <LineStyle>
+        <color>ffff6633</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-3366FF-5000-highlight">
+      <LineStyle>
+        <color>ffff6633</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-3366FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-3366FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-3366FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-6633FF-5000-normal">
+      <LineStyle>
+        <color>ffff3366</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-6633FF-5000-highlight">
+      <LineStyle>
+        <color>ffff3366</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-6633FF-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-6633FF-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-6633FF-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FF0000-5000-normal">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>5</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FF0000-5000-highlight">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>7.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FF0000-5000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FF0000-5000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FF0000-5000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Start</name>
+        <styleUrl>#icon-61-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.14881,50.84156,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lap 1</name>
+        <description>L shaped lap, down to the U turn point and back to start.</description>
+        <styleUrl>#line-3366FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.148813,50.84156,0
+            -0.14989,50.8414,0
+            -0.15022,50.841228,0
+            -0.15034,50.841011,0
+            -0.14928,50.839882,0
+            -0.14632,50.838322,0
+            -0.14354,50.836769,0
+            -0.14931,50.839859,0
+            -0.1504,50.841042,0
+            -0.15061,50.841419,0
+            -0.14989,50.841419,0
+            -0.148838,50.841583,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Lap 2 & 3]]></name>
+        <description>2 P shaped laps</description>
+        <styleUrl>#line-6633FF-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.14876,50.84162,0
+            -0.14803,50.84143,0
+            -0.14719,50.84093,0
+            -0.147092,50.840866,0
+            -0.14714,50.84048,0
+            -0.14697,50.84017,0
+            -0.14632,50.83937,0
+            -0.14631,50.83905,0
+            -0.14658,50.83886,0
+            -0.14667,50.83858,0
+            -0.1435,50.83676,0
+            -0.14354,50.83675,0
+            -0.14935,50.83985,0
+            -0.15046,50.84106,0
+            -0.15066,50.84145,0
+            -0.14989,50.84145,0
+            -0.14877,50.84162,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>To finish</name>
+        <description>From the end of lap 3, continuing to finish</description>
+        <styleUrl>#line-FF0000-5000</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -0.148761,50.841599,0
+            -0.148361,50.841492,0
+            -0.147969,50.841354,0
+            -0.147589,50.841152,0
+            -0.147221,50.840908,0
+            -0.147162,50.840687,0
+            -0.147232,50.840462,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Finish</name>
+        <styleUrl>#icon-123-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.147232,50.84046,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
